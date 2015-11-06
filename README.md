@@ -1,9 +1,13 @@
 # dotakeract
-Dodekeract's Dota 2 Configuration.
+Dota 2 configuration builder.
 
 ## Installation
+- Install [node.js](https://nodejs.org)
 - Clone or download this repository.
-- Copy the contents of the `source` folder to your Dota 2 configuration folder. (most likely `C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta\game\dota\cfg`)
+- Execute `node build`.
+
+## Advanced Build
+- Execute `node build preset-name`, where `preset-name` is the name of the preset you want to build.
 
 ## Special Thanks
 - ["The Core"-Config by loopuleasa](https://github.com/loopuleasa/dota2-thecore-config-engine)

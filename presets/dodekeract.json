@@ -1,0 +1,100 @@
+{
+    "layouts": [{
+            "keybinds": {
+                "Q": ["ability", "quickcast", 0],
+                "W": ["ability", "quickcast", 1],
+                "E": ["ability", "quickcast", 2],
+                "D": ["ability", "quickcast", 3],
+                "F": ["ability", "quickcast", 4],
+                "R": ["ability", "quickcast", 5],
+
+                "T": ["item", "quickcast", 0],
+                "X": ["item", "quickcast", 1],
+                "C": ["item", "quickcast", 2],
+                "V": ["item", "quickcast", 3],
+                "B": ["item", "quickcast", 4],
+                "N": ["item", "quickcast", 5],
+
+                "A": ["command", "mc_attack"],
+                "S": ["command", "dota_stop"],
+                "ENTER": ["command", "say"],
+                "H": ["command", "+voicerecord"],
+                "Z": ["command", "use_item_client current_hero taunt"],
+                "A_WITH_DIAERESIS": ["command", "toggleconsole"],
+
+                "F3": ["command", "dota_courier_deliver"],
+                "F4": ["command", "dota_purchase_quickbuy"],
+                "F9": ["command", "dota_pause"],
+
+                "1": ["command", "+dota_camera_follow"],
+                "2": ["command", "+dota_control_group 2"],
+                "3": ["command", "+dota_control_group 3"],
+                "4": ["command", "+dota_control_group 4"],
+                "5": ["command", "dota_select_courier"],
+
+                "TAB": ["command", "dota_cycle_selected"],
+
+                "CARET": ["view", "rune"],
+
+                "SPACE": ["layout", 1],
+                "Y": ["chatwheel", 0],
+                "F11": ["reload"]
+            }
+        },{
+            "keybinds": {
+                "Q": ["ability", "selfcast", 0],
+                "W": ["ability", "selfcast", 1],
+                "E": ["ability", "selfcast", 2],
+                "D": ["ability", "selfcast", 3],
+                "F": ["ability", "selfcast", 4],
+                "R": ["ability", "selfcast", 5],
+
+                "T": ["item", "selfcast", 0],
+                "X": ["item", "selfcast", 1],
+                "C": ["item", "selfcast", 2],
+                "V": ["item", "selfcast", 3],
+                "B": ["item", "selfcast", 4],
+                "N": ["item", "selfcast", 5],
+
+                "y": ["chatwheel", 1],
+
+                "SPACE": ["layout", 1],
+
+                "A_WITH_DIAERESIS": ["command", "toggleconsole"],
+                "F11": ["reload"]
+            }
+        },{
+            "keybinds": {
+                "Q": ["ability", "normalcast", 0],
+                "W": ["ability", "normalcast", 1],
+                "E": ["ability", "normalcast", 2],
+                "D": ["ability", "normalcast", 3],
+                "F": ["ability", "normalcast", 4],
+                "R": ["ability", "normalcast", 5],
+
+                "A_WITH_DIAERESIS": ["command", "toggleconsole"],
+                "F11": ["reload"]
+            }
+        }
+    ],
+    "chatwheels": [
+        [8, 1, 2, 3, 29, 54, 6, 61],
+        [30, 66, 78, 41, 79, 70, 23, 68]
+    ],
+    "loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
+    "netgraph": true,
+    "autoRepeatRightMouse": true,
+    "forceMovementDirection": true,
+    "unifiedUnitOrders": true,
+    "respawnCamera": true,
+    "disableAutoAttack": true,
+    "disableAutoAttackAfterSpell": true,
+    "rangefinder": true,
+    "playerNames": true,
+    "gridView": true,
+    "disableHeroFinder": true,
+    "disableZoom": true,
+    "minimapProximityScale": true,
+    "minimapProximityScaleDistance": 20,
+    "cameraSpeed": 9999
+}
