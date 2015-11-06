@@ -56,7 +56,7 @@
                 "B": ["item", "selfcast", 4],
                 "N": ["item", "selfcast", 5],
 
-                "y": ["chatwheel", 1],
+                "Y": ["chatwheel", 1],
 
                 "SPACE": ["layout", 1],
 
