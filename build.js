@@ -9,14 +9,25 @@ process.stdout.write('\033c');
 
 var pDestination = 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\dota 2 beta\\game\\dota\\cfg';
 
-var autoexec = '', dependencies = [];
+var autoexec = '// generated using https://github.com/dodekeract/manta-config-engine\n',
+    dependencies = [],
+    layout;
+
+var prefix = 'custom',
+    separator = '_';
 
 var i, j;
 
-var layout, key;
-
-var prefix = 'custom';
-var separator = '_';
+var positions = {
+    rune: {
+        top: '-2273 1800',
+        bottom: '3035 -2350'
+    },
+    base: {
+        radiant: '-7000 -6500',
+        dire: '7000 6250'
+    }
+};
 
 // preparing functions used for parsing
 
@@ -65,11 +76,11 @@ Layout.prototype.bindKey = function (key, options) {
     var command = '';
     switch (options[0]) {
         case "ability":
-            command = prefix + separator + options[1] + separator + 'ability' + separator + options[2];
+            command = prefix + separator + 'ability' + separator + options[1] + 'cast' + separator + options[2];
             depend(options);
         break;
         case "item":
-            command = prefix + separator + options[1] + separator + 'item' + separator + options[2];
+            command = prefix + separator + 'item' + separator + options[1] + 'cast' + separator + options[2];
             depend(options);
         break;
         case "layout":
@@ -85,8 +96,66 @@ Layout.prototype.bindKey = function (key, options) {
         case "command":
             command = options[1];
         break;
+        case "open":
+            switch (options[1]) {
+                case "console":
+                    command = 'toggleconsole';
+                break;
+                case "chat":
+                    command = 'say';
+                break;
+                case "shop":
+                    command = 'show_sf_shop';
+                break;
+                case "shared-units":
+                    command = 'show_shared_units';
+                break;
+                case "scoreboard":
+                    command = '+showscores';
+                break;
+            }
+        break;
+        case "courier":
+            switch (options[1]) {
+                case "deliver":
+                    command = 'dota_courier_deliver';
+                break;
+                case "select":
+                    command = 'dota_select_courier';
+                break;
+            }
+        break;
+        case "buy":
+            switch (options[1]) {
+                case "quick":
+                    command = 'dota_purchase_quickbuy';
+                break;
+                case "sticky":
+                    command = 'dota_purchase_stickybuy';
+                break;
+            }
+        break;
+        case "pause":
+            command = 'dota_pause';
+        break;
+        case "chat":
+            switch (options[1]) {
+                case "all":
+                    command = 'say "' + options[2] + '"';
+                break;
+                case "team":
+                    command = 'say_team "' + options[2] + '"';
+                break;
+                case "student":
+                    command = 'say_student "' + options[2] + '"';
+                break;
+            }
+        break;
+        case "phrase":
+            command = 'chatwheel_say ' + options[1];
+        break;
         case "view":
-            command = '+' + prefix + separator + 'view' + separator + options[1];
+            command = '+' + prefix + separator + 'view' + separator + options[1] + separator + options[2];
             depend(options);
         break;
     }
@@ -115,8 +184,8 @@ setting(config.autoRepeatRightMouse, 'dota_player_auto_repeat_right_mouse');
 setting(config.forceMovementDirection, 'cl_dota_alt_unit_movetodirection')
 setting(config.unifiedUnitOrders, 'dota_player_multipler_orders');
 setting(config.respawnCamera, 'dota_reset_camera_on_spawn');
-setting(config.disableAutoAttack, 'dota_player_units_auto_attack');
-setting(config.disableAutoAttackAfterSpell, 'dota_player_units_auto_attack_after_spell');
+setting(config.disableAutoAttack, 'dota_player_units_auto_attack', true);
+setting(config.disableAutoAttackAfterSpell, 'dota_player_units_auto_attack_after_spell', true);
 setting(config.rangefinder, 'dota_enable_range_finder');
 setting(config.playerNames, 'dota_always_show_player_names');
 setting(config.gridView, 'dota_shop_view_mode');
@@ -149,40 +218,78 @@ for (i = 0; i < dependencies.length; i++) {
     switch (dep[0]) {
         case "ability":
             switch (dep[1]) {
-                case "quickcast":
-                    append('alias "' + prefix + separator + 'quickcast' + separator + 'ability' + separator + dep[2] + '" "dota_ability_quickcast ' + dep[2] + '"');
+                case "quick":
+                    append('alias "' + prefix + separator + 'ability' + separator + 'quickcast' + separator + dep[2] + '" "dota_ability_quickcast ' + dep[2] + '"');
                 break;
-                case "selfcast":
-                    append('alias "' + prefix + separator + 'selfcast' + separator + 'ability' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '; dota_ability_execute ' + dep[2] + '"');
+                case "self":
+                    append('alias "' + prefix + separator + 'ability' + separator + 'selfcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '; dota_ability_execute ' + dep[2] + '"');
                 break;
-                case "normalcast":
-                    append('alias "' + prefix + separator + 'normalcast' + separator + 'ability' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '"');
+                case "normal":
+                    append('alias "' + prefix + separator + 'ability' + separator + 'normalcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '"');
                 break;
             }
         break;
         case "item":
             switch (dep[1]) {
-                case "quickcast":
-                    append('alias "' + prefix + separator + 'quickcast' + separator + 'item' + separator + dep[2] + '" "dota_item_quick_cast ' + dep[2] + '"');
+                case "quick":
+                    append('alias "' + prefix + separator + 'item' + separator + 'quickcast' + separator + dep[2] + '" "dota_item_quick_cast ' + dep[2] + '"');
                 break;
-                case "selfcast":
-                    append('alias "' + prefix + separator + 'selfcast' + separator + 'item' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '; dota_item_execute ' + dep[2] + '"');
+                case "self":
+                    append('alias "' + prefix + separator + 'item' + separator + 'selfcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '; dota_item_execute ' + dep[2] + '"');
                 break;
-                case "normalcast":
-                    append('alias "' + prefix + separator + 'normalcast' + separator + 'item' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '"');
+                case "normal":
+                    append('alias "' + prefix + separator + 'item' + separator + 'normalcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '"');
                 break;
             }
         break;
         case "view":
             switch (dep[1]) {
                 case "rune":
-                    var rune = prefix + separator + 'view' + separator + 'rune';
-                    var topRune = prefix + separator + 'view' + separator + 'rune' + separator + 'top';
-                    var bottomRune = prefix + separator + 'view' + separator + 'rune' + separator + 'bottom';
-                    append('alias "+' + rune + '" "' + topRune + '"');
-                    append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                    append('alias "' + topRune + '" "dota_camera_set_lookatpos -2273 1800; alias +' + rune + ' ' + bottomRune + '"');
-                    append('alias "' + bottomRune + '" "dota_camera_set_lookatpos 3035 -2350; alias +' + rune + ' ' + topRune + '"');
+                    switch (dep[2]) {
+                        case "toggle":
+                            var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'toggle';
+                            var topRune = rune + separator + 'top';
+                            var bottomRune = rune + separator + 'bottom';
+                            append('alias "+' + rune + '" "' + topRune + '"');
+                            append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+                            append('alias "' + topRune + '" "dota_camera_set_lookatpos ' + positions.rune.top + '; alias +' + rune + ' ' + bottomRune + '"');
+                            append('alias "' + bottomRune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom + '; alias +' + rune + ' ' + topRune + '"');
+                        break;
+                        case "top":
+                            var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'top';
+                            append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.top + '"');
+                            append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+                        break;
+                        case "bottom":
+                            var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'bottom';
+                            append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom + '"');
+                            append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+                        break;
+                    }
+                break;
+                case "base":
+                    switch (dep[2]) {
+                        case "toggle":
+                            var base = prefix + separator + 'view' + separator + 'base' + separator + 'toggle';
+                            var direBase = base + separator + 'dire';
+                            var radiantBase = base + separator + 'radiant';
+
+                            append('alias "+' + base + '" "' + radiantBase + '"');
+                            append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+                            append('alias "' + direBase + '" "dota_camera_set_lookatpos ' + positions.base.dire + '; alias +' + base + ' ' + radiantBase + '"');
+                            append('alias "' + radiantBase + '" "dota_camera_set_lookatpos ' + positions.base.radiant + '; alias +' + base + ' ' + direBase + '"');
+                        break;
+                        case "radiant":
+                            var base = prefix + separator + 'view' + separator + 'base' + separator + 'radiant';
+                            append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.radiant + '"');
+                            append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+                        break;
+                        case "dire":
+                            var base = prefix + separator + 'view' + separator + 'base' + separator + 'dire';
+                            append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.dire + '"');
+                            append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+                        break;
+                    }
                 break;
             }
         break;

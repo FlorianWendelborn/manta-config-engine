@@ -1,5 +1,5 @@
-# dotakeract
-Dota 2 configuration builder.
+# Manta Config Engine
+Dota 2 configuration builder. Compiles `JSON` to `autoexec`.
 
 ## Installation
 - Install [node.js](https://nodejs.org)
