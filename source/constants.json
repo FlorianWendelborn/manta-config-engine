@@ -1,0 +1,5 @@
+{
+    "prefix": "custom",
+    "separator": "_",
+    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n"
+}
