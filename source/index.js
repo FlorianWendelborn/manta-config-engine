@@ -115,6 +115,11 @@ function compile (preset, callback) {
                     case "normal":
                         append('alias "' + prefix + separator + 'ability' + separator + 'normalcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '"');
                     break;
+                    case "smart":
+                        var name = prefix + separator + 'ability' + separator + 'smartcast' + separator + dep[2];
+                        append('alias "+' + name + '" "dota_ability_execute ' + dep[2] + '; alias -' + name + ' dota_ability_quickcast ' + dep[2] + '"');
+                        append('alias "-' + name + '" "dota_ability_quickcast ' + dep[2] + '"');
+                    break;
                 }
             break;
             case "item":
@@ -127,6 +132,11 @@ function compile (preset, callback) {
                     break;
                     case "normal":
                         append('alias "' + prefix + separator + 'item' + separator + 'normalcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '"');
+                    break;
+                    case "smart":
+                        var name = prefix + separator + 'item' + separator + 'smartcast' + separator + dep[2];
+                        append('alias "+' + name + '" "dota_item_execute ' + dep[2] + '; alias -' + name + ' dota_item_quick_cast ' + dep[2] + '"');
+                        append('alias "-' + name + '" "dota_item_quick_cast ' + dep[2] + '"');
                     break;
                 }
             break;

@@ -15,7 +15,11 @@ Layout.prototype.bindKey = function (key, options) {
     var command = '';
     switch (options[0]) {
         case "ability":
-            command = prefix + separator + 'ability' + separator + options[1] + 'cast' + separator + options[2];
+            if (options[1] === 'smart') {
+                command = '+' + prefix + separator + 'ability' + separator + options[1] + 'cast' + separator + options[2];
+            } else {
+                command = prefix + separator + 'ability' + separator + options[1] + 'cast' + separator + options[2];
+            }
             this.depend(options);
         break;
         case "item":
@@ -25,6 +29,10 @@ Layout.prototype.bindKey = function (key, options) {
                 break;
                 case "taunt":
                     command = 'use_item_client current_hero taunt';
+                break;
+                case "smart":
+                    command = '+' + prefix + separator + 'item' + separator + options[1] + 'cast' + separator + options[2];
+                    this.depend(options);
                 break;
                 default:
                     command = prefix + separator + 'item' + separator + options[1] + 'cast' + separator + options[2];
