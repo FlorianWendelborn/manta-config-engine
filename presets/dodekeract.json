@@ -15,30 +15,32 @@
                 "B": ["item", "quick", 4],
                 "N": ["item", "quick", 5],
 
-                "A": ["command", "mc_attack"],
-                "S": ["command", "dota_stop"],
+                "A": ["attack"],
+                "S": ["stop"],
                 "ENTER": ["open", "chat"],
-                "H": ["command", "+voicerecord"],
-                "Z": ["command", "use_item_client current_hero taunt"],
-                "A_WITH_DIAERESIS": ["open", "console"],
+                "H": ["voice", "team"],
+                "Y": ["item", "taunt"],
+                "U": ["learn", "stats"],
+                "'": ["open", "console"],
 
                 "F3": ["courier", "deliver"],
-                "F4": ["buy", "quick"],
+                "F4": ["open", "scoreboard"],
+                "F5": ["buy", "quick"],
                 "F6": ["buy", "sticky"],
                 "F9": ["pause"],
 
-                "1": ["command", "+dota_camera_follow"],
-                "2": ["command", "+dota_control_group 2"],
-                "3": ["command", "+dota_control_group 3"],
-                "4": ["command", "+dota_control_group 4"],
-                "5": ["courier", "select"],
+                "1": ["select", "hero"],
+                "2": ["select", "other-units"],
+                "3": ["select", "controlgroup", "3"],
+                "4": ["select", "controlgroup", "4"],
+                "5": ["select", "courier"],
 
                 "TAB": ["command", "dota_cycle_selected"],
 
-                "CARET": ["view", "rune", "toggle"],
+                "`": ["view", "rune", "toggle"],
 
                 "SPACE": ["layout", 1],
-                "Y": ["chatwheel", 0],
+                "Z": ["chatwheel", 0],
 
                 "KP_0": ["chat", "team", "no"],
                 "KP_1": ["chat", "team", "yes"],
@@ -67,9 +69,9 @@
                 "B": ["item", "self", 4],
                 "N": ["item", "self", 5],
 
-                "Y": ["chatwheel", 1],
+                "Z": ["chatwheel", 1],
 
-                "CARET": ["view", "base", "toggle"],
+                "`": ["view", "base", "toggle"],
 
                 "SPACE": ["layout", 1],
 

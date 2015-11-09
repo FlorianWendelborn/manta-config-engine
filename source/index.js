@@ -30,7 +30,7 @@ function compile (preset, callback) {
                     score++;
                 }
             }
-            if (score == dependencies[i].length) {
+            if (score === dependencies[i].length) {
                 return;
             }
         }

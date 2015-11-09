@@ -19,8 +19,17 @@ Layout.prototype.bindKey = function (key, options) {
             this.depend(options);
         break;
         case "item":
-            command = prefix + separator + 'item' + separator + options[1] + 'cast' + separator + options[2];
-            this.depend(options);
+            switch (options[1]) {
+                case "action":
+                    command = 'use_item_client actions action_item';
+                break;
+                case "taunt":
+                    command = 'use_item_client current_hero taunt';
+                break;
+                default:
+                    command = prefix + separator + 'item' + separator + options[1] + 'cast' + separator + options[2];
+                    this.depend(options);
+            }
         break;
         case "layout":
             command = '"+' + prefix + separator + 'layout' + separator + options[1] + '"';
@@ -54,13 +63,33 @@ Layout.prototype.bindKey = function (key, options) {
                 break;
             }
         break;
+        case "voice":
+            switch (options[1]) {
+                case "team":
+                    command = '+voicerecord';
+                break;
+            }
+        break;
+        case "select":
+            switch (options[1]) {
+                case "hero":
+                    command = '+dota_camera_follow';
+                break;
+                case "other-units":
+                    command = 'dota_select_all_others';
+                break;
+                case "courier":
+                    command = 'dota_select_courier';
+                break;
+                case "controlgroup":
+                    command = '+dota_control_group ' + options[2];
+                break;
+            }
+        break;
         case "courier":
             switch (options[1]) {
                 case "deliver":
                     command = 'dota_courier_deliver';
-                break;
-                case "select":
-                    command = 'dota_select_courier';
                 break;
             }
         break;
@@ -76,6 +105,25 @@ Layout.prototype.bindKey = function (key, options) {
         break;
         case "pause":
             command = 'dota_pause';
+        break;
+        case "stop":
+            command = 'dota_stop';
+        break;
+        case "attack":
+            command = 'mc_attack';
+        break;
+        case "hold":
+            command = 'dota_hold';
+        break;
+        case "glyph":
+            command = 'dota_glyph';
+        break;
+        case "learn":
+            switch (options[1]) {
+                case "stats":
+                    command = 'dota_learn_stats';
+                break;
+            }
         break;
         case "chat":
             switch (options[1]) {

@@ -1,5 +1,5 @@
 {
     "prefix": "custom",
     "separator": "_",
-    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n"
+    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\ninput_button_code_is_scan_code 1\n"
 }
