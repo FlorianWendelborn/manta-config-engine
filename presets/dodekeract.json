@@ -73,6 +73,8 @@
 
                 "`": ["view", "base", "toggle"],
 
+                "F3": ["courier", "burst"],
+
                 "SPACE": ["layout", 1],
 
                 "F11": ["reload"]

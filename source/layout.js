@@ -75,6 +75,9 @@ Layout.prototype.bindKey = function (key, options) {
                 case "hero":
                     command = '+dota_camera_follow';
                 break;
+                case "all-units":
+                    command = 'dota_select_all';
+                break;
                 case "other-units":
                     command = 'dota_select_all_others';
                 break;
@@ -90,6 +93,9 @@ Layout.prototype.bindKey = function (key, options) {
             switch (options[1]) {
                 case "deliver":
                     command = 'dota_courier_deliver';
+                break;
+                case "burst":
+                    command = 'dota_courier_burst';
                 break;
             }
         break;
@@ -114,6 +120,9 @@ Layout.prototype.bindKey = function (key, options) {
         break;
         case "hold":
             command = 'dota_hold';
+        break;
+        case "move":
+            command = 'mc_move';
         break;
         case "glyph":
             command = 'dota_glyph';
