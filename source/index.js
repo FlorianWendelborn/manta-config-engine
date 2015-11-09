@@ -2,6 +2,7 @@ var constants = require('./constants.json');
 var prefix = constants.prefix;
 var separator = constants.separator;
 
+var phrases = require('./phrases.json');
 var positions = require('./positions.json');
 
 var Layout = require('./layout');
@@ -207,5 +208,6 @@ function compile (preset, callback) {
 }
 
 module.exports = {
-    compile: compile
+    compile: compile,
+    phrases: phrases
 };
