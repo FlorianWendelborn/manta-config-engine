@@ -35,6 +35,11 @@
                 "4": ["select", "controlgroup", "4"],
                 "5": ["select", "courier"],
 
+                "I": ["camera", "up"],
+                "J": ["camera", "left"],
+                "K": ["camera", "down"],
+                "L": ["camera", "right"],
+
                 "TAB": ["command", "dota_cycle_selected"],
 
                 "`": ["view", "rune", "toggle"],

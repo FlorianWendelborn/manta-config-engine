@@ -155,6 +155,22 @@ Layout.prototype.bindKey = function (key, options) {
                 break;
             }
         break;
+        case "camera":
+            switch (options[1]) {
+                case "up":
+                    command = '+forward';
+                break;
+                case "left":
+                    command = '+moveleft';
+                break;
+                case "down":
+                    command = '+back';
+                break;
+                case "right":
+                    command = '+moveright';
+                break;
+            }
+        break;
         case "phrase":
             command = 'chatwheel_say ' + options[1];
         break;
