@@ -5,6 +5,7 @@ var separator = constants.separator;
 function Layout (options) {
     this.text = 'unbindall\n';
     this.keybinds = options.keybinds;
+    this.preset = options.preset;
 }
 
 Layout.prototype.append = function (s) {
@@ -39,6 +40,9 @@ Layout.prototype.bindKey = function (key, options) {
                     this.depend(options);
             }
         break;
+        case "health":
+            command = 'dota_health_per_vertical_marker ' + options[1];
+        break;
         case "layout":
             command = '"+' + prefix + separator + 'layout' + separator + options[1] + '"';
             this.depend(options);
@@ -51,6 +55,19 @@ Layout.prototype.bindKey = function (key, options) {
         break;
         case "command":
             command = options[1];
+        break;
+        case "cycle":
+            if (options[2] === 'reset') {
+                var name = prefix + separator + 'cycle' + separator + options[1];
+                command = 'alias ' + name + ' ' + name + separator + 0;
+            } else {
+                for (var i = 0; i < this.preset.cycles[options[1]].length; i++) {
+                    command = this.bindKey(false, this.preset.cycles[options[1]][i]);
+                    this.depend(['include', 'alias "' + prefix + separator + 'cycle' + separator + options[1] + separator + 'command' + separator + i + '" ' + command]);
+                }
+                command = prefix + separator + 'cycle' + separator + options[1];
+                this.depend(options);
+            }
         break;
         case "open":
             switch (options[1]) {
@@ -179,7 +196,12 @@ Layout.prototype.bindKey = function (key, options) {
             this.depend(options);
         break;
     }
-    this.append('bind "' + key + '" ' + command);
+
+    if (key !== false) {
+        this.append('bind "' + key + '" ' + command);
+    }
+
+    return command;
 }
 
 module.exports = Layout;

@@ -23,6 +23,9 @@
                 "U": ["learn", "stats"],
                 "'": ["open", "console"],
 
+                "O": ["cycle", 0],
+                "PGUP": ["cycle", 1],
+
                 "F3": ["courier", "deliver"],
                 "F4": ["open", "scoreboard"],
                 "F5": ["buy", "quick"],
@@ -35,10 +38,10 @@
                 "4": ["select", "controlgroup", "4"],
                 "5": ["select", "courier"],
 
-                "I": ["camera", "up"],
-                "J": ["camera", "left"],
-                "K": ["camera", "down"],
-                "L": ["camera", "right"],
+                "UPARROW": ["camera", "up"],
+                "LEFTARROW": ["camera", "left"],
+                "DOWNARROW": ["camera", "down"],
+                "RIGHTARROW": ["camera", "right"],
 
                 "TAB": ["command", "dota_cycle_selected"],
 
@@ -98,6 +101,18 @@
     "chatwheels": [
         [8, 1, 2, 3, 29, 54, 6, 61],
         [30, 66, 78, 41, 79, 70, 23, 68]
+    ],
+    "cycles": [
+        [
+            ["health", 250],
+            ["health", 325],
+            ["health", 450],
+            ["health", 550]
+        ],[
+            ["ability", "quick", 3],
+            ["item", "quick", 4],
+            ["ability", "quick", 3]
+        ]
     ],
     "loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
     "netgraph": true,

@@ -91,7 +91,10 @@ function compile (preset, callback) {
 
     // build all keyboard layouts
     for (i = 0; i < preset.layouts.length; i++) {
-        var layout = new Layout(preset.layouts[i]);
+        var layout = new Layout({
+            keybinds: preset.layouts[i].keybinds,
+            preset: preset
+        });
         layout.depend = depend;
         for (j in layout.keybinds) {
             layout.bindKey(j, layout.keybinds[j]);
@@ -139,6 +142,18 @@ function compile (preset, callback) {
                         append('alias "-' + name + '" "dota_item_quick_cast ' + dep[2] + '"');
                     break;
                 }
+            break;
+            case "cycle":
+                var name = prefix + separator + 'cycle' + separator + dep[1];
+                var cycle = preset.cycles[dep[1]];
+                for (var j = 0; j < cycle.length; j++) {
+                    if (j !== cycle.length-1) { // not the last item
+                        append('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + (j+1) + '; ' + name + separator + 'command' + separator + j + '"');
+                    } else { // the last item
+                        append('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + 0 + '; ' + name + separator + 'command' + separator + j + '"');
+                    }
+                }
+                append('alias ' + name + ' ' + name + separator + 0);
             break;
             case "view":
                 switch (dep[1]) {
@@ -194,6 +209,9 @@ function compile (preset, callback) {
             case "layout":
                 append('alias +' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-' + dep[1] + '.cfg"');
                 append('alias -' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-0.cfg"');
+            break;
+            case "include":
+                append(dep[1]);
             break;
             default:
                 console.error('unresolved dependency', dep);
