@@ -68,21 +68,27 @@ function compile (preset, callback) {
 
     // game settings
     setting(preset.netgraph, 'dota_hud_netgraph');
+
+    setting(preset.autoAttack, 'dota_player_units_auto_attack');
+    setting(preset.autoAttackAfterSpell, 'dota_player_units_auto_attack_after_spell');
+    setting(preset.autoSelectSummonedUnits, 'dota_player_add_summoned_to_selection');
+
     setting(preset.autoRepeatRightMouse, 'dota_player_auto_repeat_right_mouse');
     setting(preset.forceMovementDirection, 'cl_dota_alt_unit_movetodirection')
     setting(preset.unifiedUnitOrders, 'dota_player_multipler_orders');
-    setting(preset.respawnCamera, 'dota_reset_camera_on_spawn');
-    setting(preset.disableAutoAttack, 'dota_player_units_auto_attack', true);
-    setting(preset.disableAutoAttackAfterSpell, 'dota_player_units_auto_attack_after_spell', true);
-    setting(preset.rangefinder, 'dota_enable_range_finder');
+    setting(preset.rangeFinder, 'dota_enable_range_finder');
+
     setting(preset.playerNames, 'dota_always_show_player_names');
     setting(preset.gridView, 'dota_shop_view_mode');
-    setting(preset.disableHeroFinder, 'dota_show_hero_finder', true);
-    setting(preset.disableZoom, 'dota_camera_disable_zoom');
+    setting(preset.heroFinder, 'dota_show_hero_finder');
+
+    setting(preset.cameraZoom, 'dota_camera_disable_zoom', true);
+    setting(preset.cameraMoveOnRespawn, 'dota_reset_camera_on_spawn');
+    settingValue(preset.cameraSpeed, 'dota_camera_speed');
+
     setting(preset.minimapProximityScale, 'dota_minimap_hero_scalar');
     settingValue(preset.minimapProximityScaleDistance, 'dota_minimap_hero_scalar_distance');
     settingValue(preset.minimapProximityScaleMinimum, 'dota_minimap_hero_scalar_minimum');
-    settingValue(preset.cameraSpeed, 'dota_camera_speed');
 
     // build all chatwheels
     for (i = 0; i < preset.chatwheels.length; i++) {

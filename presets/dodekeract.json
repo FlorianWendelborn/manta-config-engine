@@ -115,19 +115,26 @@
         ]
     ],
     "loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
+
     "netgraph": true,
+
+    "autoAttack": false,
+    "autoAttackAfterSpell": false,
+
     "autoRepeatRightMouse": true,
     "forceMovementDirection": true,
     "unifiedUnitOrders": true,
-    "respawnCamera": false,
-    "disableAutoAttack": true,
-    "disableAutoAttackAfterSpell": true,
-    "rangefinder": true,
-    "playerNames": true,
+    "autoSelectSummonedUnits": true,
+
     "gridView": true,
-    "disableHeroFinder": true,
-    "disableZoom": true,
+    "playerNames": true,
+    "heroFinder": false,
+    "rangeFinder": true,
+
+    "cameraZoom": false,
+    "cameraMoveOnRespawn": false,
+    "cameraSpeed": 9999,
+
     "minimapProximityScale": true,
-    "minimapProximityScaleDistance": 20,
-    "cameraSpeed": 9999
+    "minimapProximityScaleDistance": 20
 }
