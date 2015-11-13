@@ -3,14 +3,22 @@ var prefix = constants.prefix;
 var separator = constants.separator;
 
 function Layout (options) {
-    this.text = 'unbindall\n';
+    this.autoexec = constants.layouts.initialText.replace('{id}', options.id);
     this.keybinds = options.keybinds;
     this.preset = options.preset;
+    this.depend = options.depend;
 }
 
 Layout.prototype.append = function (s) {
-    this.text += s + '\n';
+    this.autoexec += s + '\n';
 }
+
+Layout.prototype.parse = function () {
+    for (var j in this.keybinds) {
+        this.bindKey(j, this.keybinds[j]);
+    }
+    return this.autoexec;
+};
 
 Layout.prototype.bindKey = function (key, options) {
     var command = '';

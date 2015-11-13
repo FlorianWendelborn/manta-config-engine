@@ -1,5 +1,29 @@
 {
     "prefix": "custom",
     "separator": "_",
-    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\ninput_button_code_is_scan_code 1\n"
+    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n// graphical user-interface available at https://manta.dodekeract.report\ninput_button_code_is_scan_code 1\n\n",
+    "bindPrimaryLayout": {
+        "initialText": "// # Primary Layout:\nexec layout-0.cfg\n"
+    },
+    "settings": {
+        "initialText": "// Settings:\n",
+        "gameplayInitialText": "//---// Gameplay:",
+        "performanceInitialText": "//---// Performance:",
+        "performanceMultiCoreText": "//---//---// Multicore-Support:",
+        "engineInitialText": "//---// Engine:",
+        "loadIndicator": {
+            "initialText": "// # Load Indicator:\n"
+        }
+    },
+    "dependencies": {
+        "initialText": "// # Dependencies:\n",
+        "cycleText": "//---// Cycle {id}:"
+    },
+    "chatwheels": {
+        "initialText": "// # Chatwheels:\n",
+        "chatwheelText": "//---// Chatwheel {id}:"
+    },
+    "layouts": {
+        "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n// graphical user-interface available at https://manta.dodekeract.report\n\n// # Layout {id}:\nunbindall\n\n"
+    }
 }

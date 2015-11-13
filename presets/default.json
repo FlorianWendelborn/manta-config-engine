@@ -87,15 +87,6 @@
 
                 "F11": ["reload"]
             }
-        },{
-            "keybinds": {
-                "Q": ["ability", "normal", 0],
-                "W": ["ability", "normal", 1],
-                "E": ["ability", "normal", 2],
-                "D": ["ability", "normal", 3],
-                "F": ["ability", "normal", 4],
-                "R": ["ability", "normal", 5]
-            }
         }
     ],
     "chatwheels": [
@@ -108,10 +99,6 @@
             ["health", 325],
             ["health", 450],
             ["health", 550]
-        ],[
-            ["ability", "quick", 3],
-            ["item", "quick", 4],
-            ["ability", "quick", 3]
         ]
     ],
     "settings": {
@@ -135,17 +122,13 @@
 
             "cameraZoom": false,
             "cameraMoveOnRespawn": false,
-            "cameraSpeed": 9999,
 
-            "minimapProximityScale": true,
-            "minimapProximityScaleDistance": 20
+            "minimapProximityScale": true
         },
         "performance": {
             "screenShake": true,
-            "maximumFramerate": 0,
             "highQualityWater": true,
             "highQualityDashboard": true,
-            "levelOfDetail": 5,
             "animatePortrait": true,
             "ambientCreatures": true,
             "ambientOcclusion": true,
@@ -155,15 +138,10 @@
             "specularBloom": true,
             "specularHighlight": true,
             "altTabIdle": true,
-            "shadowQuality": 2,
             "serverForcePreload": true,
             "clientForcePreload": true,
             "doubleShadowUpdates": true,
-            "multiCore": true,
-            "gpuLevel": 3,
-            "cpuLevel": 2,
-            "gpuMemoryLevel": 2,
-            "memoryLevel": 2
+            "multiCore": true
         },
         "engine": {
             "loadIndicator": ["sound", "ui/coins_big.vsnd_c"]

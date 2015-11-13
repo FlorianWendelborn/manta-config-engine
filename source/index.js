@@ -1,23 +1,20 @@
 var constants = require('./constants.json');
-var prefix = constants.prefix;
-var separator = constants.separator;
 
 var phrases = require('./phrases.json');
 var positions = require('./positions.json');
 
-var Layout = require('./layout');
+var SettingParser = require('./setting-parser');
+var DependencyParser = require('./dependency-parser');
+var ChatwheelParser = require('./chatwheel-parser');
+var LayoutParser = require('./layout-parser');
 
 function compile (preset, callback) {
-    // used variables
-
+    // parsing variables
     var result = {};
-
     var autoexec = constants.initialText;
         dependencies = [];
 
-    var i, j;
-
-    // preparing functions used for parsing
+    // parsing functions
 
     function append (s) {
         autoexec += s + '\n';
@@ -38,203 +35,47 @@ function compile (preset, callback) {
         dependencies.push(options);
     }
 
-    function addChatwheel (id, options) {
-        var command = '';
-        for (var i = 0; i < options.length; i++) {
-            command += 'chat_wheel_phrase_' + i + ' ' + options[i] + ';';
-            if (i === options.length-1) {
-                command += ' +chatwheel';
-            }
-        }
-        append('alias +' + prefix + separator + 'chatwheel' + separator + id + ' "' + command + '"');
-        append('alias -' + prefix + separator + 'chatwheel' + separator + id + ' "-chatwheel"');
-    }
+    // ### parsing
+    // settings
+    var settingParser = new SettingParser(preset.settings);
+    var settings = settingParser.parse();
 
-    function setting (condition, command, inverse) {
-        if (!inverse && condition || inverse && !condition) {
-            append(command + ' 1');
-        } else {
-            append(command + ' 0');
-        }
-    }
+    // chatwheels
+    var chatwheelParser = new ChatwheelParser({
+        chatwheels: preset.chatwheels
+    });
 
-    function settingValue (value, command) {
-        if (value !== undefined && value !== null) {
-            append(command + ' ' + value);
-        }
-    }
-
-    // start parsing
-
-    // game settings
-    setting(preset.netgraph, 'dota_hud_netgraph');
-
-    setting(preset.autoAttack, 'dota_player_units_auto_attack');
-    setting(preset.autoAttackAfterSpell, 'dota_player_units_auto_attack_after_spell');
-    setting(preset.autoSelectSummonedUnits, 'dota_player_add_summoned_to_selection');
-
-    setting(preset.autoRepeatRightMouse, 'dota_player_auto_repeat_right_mouse');
-    setting(preset.forceMovementDirection, 'cl_dota_alt_unit_movetodirection')
-    setting(preset.unifiedUnitOrders, 'dota_player_multipler_orders');
-    setting(preset.rangeFinder, 'dota_enable_range_finder');
-
-    setting(preset.playerNames, 'dota_always_show_player_names');
-    setting(preset.gridView, 'dota_shop_view_mode');
-    setting(preset.heroFinder, 'dota_show_hero_finder');
-
-    setting(preset.cameraZoom, 'dota_camera_disable_zoom', true);
-    setting(preset.cameraMoveOnRespawn, 'dota_reset_camera_on_spawn');
-    settingValue(preset.cameraSpeed, 'dota_camera_speed');
-
-    setting(preset.minimapProximityScale, 'dota_minimap_hero_scalar');
-    settingValue(preset.minimapProximityScaleDistance, 'dota_minimap_hero_scalar_distance');
-    settingValue(preset.minimapProximityScaleMinimum, 'dota_minimap_hero_scalar_minimum');
-
-    // build all chatwheels
-    for (i = 0; i < preset.chatwheels.length; i++) {
-        addChatwheel(i, preset.chatwheels[i]);
-    }
-
-    // build all keyboard layouts
-    for (i = 0; i < preset.layouts.length; i++) {
-        var layout = new Layout({
+    // keyboard layouts
+    for (var i = 0; i < preset.layouts.length; i++) {
+        var layout = new LayoutParser({
             keybinds: preset.layouts[i].keybinds,
-            preset: preset
+            preset: preset,
+            depend: depend,
+            id: i
         });
-        layout.depend = depend;
-        for (j in layout.keybinds) {
-            layout.bindKey(j, layout.keybinds[j]);
-        }
 
-        result['layout-' + i + '.cfg'] = layout.text;
+        var layoutResult = layout.parse();
+
+        result['layout-' + i + '.cfg'] = layoutResult;
     }
 
-    // build dependencies
-    for (i = 0; i < dependencies.length; i++) {
-        var dep = dependencies[i];
-        switch (dep[0]) {
-            case "ability":
-                switch (dep[1]) {
-                    case "quick":
-                        append('alias "' + prefix + separator + 'ability' + separator + 'quickcast' + separator + dep[2] + '" "dota_ability_quickcast ' + dep[2] + '"');
-                    break;
-                    case "self":
-                        append('alias "' + prefix + separator + 'ability' + separator + 'selfcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '; dota_ability_execute ' + dep[2] + '"');
-                    break;
-                    case "normal":
-                        append('alias "' + prefix + separator + 'ability' + separator + 'normalcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '"');
-                    break;
-                    case "smart":
-                        var name = prefix + separator + 'ability' + separator + 'smartcast' + separator + dep[2];
-                        append('alias "+' + name + '" "dota_ability_execute ' + dep[2] + '; alias -' + name + ' dota_ability_quickcast ' + dep[2] + '"');
-                        append('alias "-' + name + '" "dota_ability_quickcast ' + dep[2] + '"');
-                    break;
-                }
-            break;
-            case "item":
-                switch (dep[1]) {
-                    case "quick":
-                        append('alias "' + prefix + separator + 'item' + separator + 'quickcast' + separator + dep[2] + '" "dota_item_quick_cast ' + dep[2] + '"');
-                    break;
-                    case "self":
-                        append('alias "' + prefix + separator + 'item' + separator + 'selfcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '; dota_item_execute ' + dep[2] + '"');
-                    break;
-                    case "normal":
-                        append('alias "' + prefix + separator + 'item' + separator + 'normalcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '"');
-                    break;
-                    case "smart":
-                        var name = prefix + separator + 'item' + separator + 'smartcast' + separator + dep[2];
-                        append('alias "+' + name + '" "dota_item_execute ' + dep[2] + '; alias -' + name + ' dota_item_quick_cast ' + dep[2] + '"');
-                        append('alias "-' + name + '" "dota_item_quick_cast ' + dep[2] + '"');
-                    break;
-                }
-            break;
-            case "cycle":
-                var name = prefix + separator + 'cycle' + separator + dep[1];
-                var cycle = preset.cycles[dep[1]];
-                for (var j = 0; j < cycle.length; j++) {
-                    if (j !== cycle.length-1) { // not the last item
-                        append('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + (j+1) + '; ' + name + separator + 'command' + separator + j + '"');
-                    } else { // the last item
-                        append('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + 0 + '; ' + name + separator + 'command' + separator + j + '"');
-                    }
-                }
-                append('alias ' + name + ' ' + name + separator + 0);
-            break;
-            case "view":
-                switch (dep[1]) {
-                    case "rune":
-                        switch (dep[2]) {
-                            case "toggle":
-                                var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'toggle';
-                                var topRune = rune + separator + 'top';
-                                var bottomRune = rune + separator + 'bottom';
-                                append('alias "+' + rune + '" "' + topRune + '"');
-                                append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                                append('alias "' + topRune + '" "dota_camera_set_lookatpos ' + positions.rune.top + '; alias +' + rune + ' ' + bottomRune + '"');
-                                append('alias "' + bottomRune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom + '; alias +' + rune + ' ' + topRune + '"');
-                            break;
-                            case "top":
-                                var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'top';
-                                append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.top + '"');
-                                append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                            break;
-                            case "bottom":
-                                var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'bottom';
-                                append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom + '"');
-                                append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                            break;
-                        }
-                    break;
-                    case "base":
-                        switch (dep[2]) {
-                            case "toggle":
-                                var base = prefix + separator + 'view' + separator + 'base' + separator + 'toggle';
-                                var direBase = base + separator + 'dire';
-                                var radiantBase = base + separator + 'radiant';
+    // dependencies
+    var dependencyParser = new DependencyParser({
+        dependencies: dependencies,
+        cycles: preset.cycles
+    });
 
-                                append('alias "+' + base + '" "' + radiantBase + '"');
-                                append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                                append('alias "' + direBase + '" "dota_camera_set_lookatpos ' + positions.base.dire + '; alias +' + base + ' ' + radiantBase + '"');
-                                append('alias "' + radiantBase + '" "dota_camera_set_lookatpos ' + positions.base.radiant + '; alias +' + base + ' ' + direBase + '"');
-                            break;
-                            case "radiant":
-                                var base = prefix + separator + 'view' + separator + 'base' + separator + 'radiant';
-                                append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.radiant + '"');
-                                append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                            break;
-                            case "dire":
-                                var base = prefix + separator + 'view' + separator + 'base' + separator + 'dire';
-                                append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.dire + '"');
-                                append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                            break;
-                        }
-                    break;
-                }
-            break;
-            case "layout":
-                append('alias +' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-' + dep[1] + '.cfg"');
-                append('alias -' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-0.cfg"');
-            break;
-            case "include":
-                append(dep[1]);
-            break;
-            default:
-                console.error('unresolved dependency', dep);
-        }
-    }
+    // ### assembling
+    // settings, chatwheels, dependencies
+    append(settings[0]);
+    append(chatwheelParser.parse());
+    append(dependencyParser.parse());
 
-    // bind primary layout
-    append('exec layout-0.cfg');
+    // primary layout
+    append(constants.bindPrimaryLayout.initialText);
 
-    // should the user be notified that the autoexec ran?
-    if (preset.loadIndicator) {
-        if (preset.loadIndicator[0] === 'sound') {
-            append('playsound sounds/' + preset.loadIndicator[1]);
-        } else if (preset.loadIndicator[0] === 'text') {
-            append('exec "' + preset.loadIndicator[1] + '"');
-        }
-    }
+    // load indicator
+    append(settings[1]);
 
     result['autoexec.cfg'] = autoexec;
 
@@ -243,5 +84,11 @@ function compile (preset, callback) {
 
 module.exports = {
     compile: compile,
-    phrases: phrases
+    phrases: phrases,
+    positions: positions,
+
+    LayoutParser: LayoutParser,
+    SettingParser: SettingParser,
+    ChatwheelParser: ChatwheelParser,
+    DependencyParser: DependencyParser
 };
