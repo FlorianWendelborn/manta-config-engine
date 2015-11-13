@@ -24,7 +24,6 @@
                 "'": ["open", "console"],
 
                 "O": ["cycle", 0],
-                "PGUP": ["cycle", 1],
 
                 "F3": ["courier", "deliver"],
                 "F4": ["open", "scoreboard"],
