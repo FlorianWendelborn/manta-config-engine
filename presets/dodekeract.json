@@ -135,7 +135,7 @@
 
             "cameraZoom": false,
             "cameraMoveOnRespawn": false,
-            "cameraSpeed": 9999,
+            "cameraSpeed": 8000,
 
             "minimapProximityScale": true,
             "minimapProximityScaleDistance": 20

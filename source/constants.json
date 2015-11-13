@@ -6,7 +6,7 @@
         "initialText": "// # Primary Layout:\nexec layout-0.cfg\n"
     },
     "settings": {
-        "initialText": "// Settings:\n",
+        "initialText": "// # Settings:\n",
         "gameplayInitialText": "//---// Gameplay:",
         "performanceInitialText": "//---// Performance:",
         "performanceMultiCoreText": "//---//---// Multicore-Support:",

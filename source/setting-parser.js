@@ -46,6 +46,8 @@ SettingParser.prototype.parseGameplay = function () {
 	this.parseBoolean(this.gameplay.gridView, 'dota_shop_view_mode');
 	this.parseBoolean(this.gameplay.heroFinder, 'dota_show_hero_finder');
 
+	this.parseBoolean(this.gameplay.muteChat, 'dota_chat_mute_all');
+
 	this.parseBoolean(this.gameplay.cameraZoom, 'dota_camera_disable_zoom', true);
 	this.parseBoolean(this.gameplay.cameraMoveOnRespawn, 'dota_reset_camera_on_spawn');
 	this.parseInteger(this.gameplay.cameraSpeed, 'dota_camera_speed');
