@@ -14,7 +14,7 @@ Beware that the CLI will assume that your Dota 2 is installed in the default Ste
 - Require manta in your code `var manta = require('dota2-manta-config-engine')`
 
 ## CLI options
-- `--path customPath` set a custom output path
+- `--path=customPath` set a custom output path
 
 ## Library usage
 

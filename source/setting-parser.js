@@ -122,6 +122,11 @@ SettingParser.prototype.parseEngine = function () {
 	}
 	this.append(constants.settings.engineInitialText);
 
+	// alt-key
+	if (this.engine.altKey.toUpperCase() !== 'ALT') {
+		this.append('dota_remap_alt_key "' + this.engine.altKey + '"');
+	}
+
 	// load indicator
 	if (this.engine.loadIndicator) {
 		var name = prefix + separator + 'load' + separator + 'indicator';

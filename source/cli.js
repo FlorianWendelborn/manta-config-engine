@@ -4,11 +4,11 @@ var path = require('path');
 var fs = require('fs');
 var os = require('os');
 
-var argv = require('minimist');
+var argv = require('minimist')(process.argv.slice(2));
 
 // guess preset
 
-var preset = argv._ ? argv._[0] : __dirname + '/../presets/default.json';
+var preset = argv._ && argv._.length ? argv._[0] : __dirname + '/../presets/default.json';
 
 // guess default path
 
@@ -24,6 +24,8 @@ switch (os.platform()) {
     default:
         defaultPath = os.homedir() + '/.local/share/Steam/SteamApps/common/dota 2 beta/dota/cfg/autoexec.cfg';
 }
+
+console.log(argv.path);
 
 var pDestination = argv.path ? path.join(process.cwd(), argv.path) : defaultPath;
 

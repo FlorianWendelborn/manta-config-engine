@@ -120,6 +120,9 @@ Layout.prototype.bindKey = function (key, options) {
                 case "controlgroup":
                     command = '+dota_control_group ' + options[2];
                 break;
+                case "next-unit":
+                    command = 'dota_cycle_selected';
+                break;
             }
         break;
         case "courier":
