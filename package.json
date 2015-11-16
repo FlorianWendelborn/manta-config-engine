@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/dodekeract/manta-config-engine/issues"
   },
-  "homepage": "https://github.com/dodekeract/manta-config-engine#readme"
+  "homepage": "https://github.com/dodekeract/manta-config-engine#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
