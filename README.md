@@ -1,4 +1,11 @@
 # Manta Config Engine
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![Code Climate](https://codeclimate.com/github/dodekeract/manta-config-engine/badges/gpa.svg)](https://codeclimate.com/github/dodekeract/manta-config-engine)
+[![NPM Downloads](https://img.shields.io/npm/dm/dota2-manta-config-engine.svg)](https://npmjs.com/package/dota2-manta-config-engine)
+[![NPM Dependencies](https://david-dm.org/dodekeract/dota2-manta-config-engine.png)](https://david-dm.org/dodekeract/dota2-manta-config-engine)
+[![Code Documentation](https://inch-ci.org/github/dodekeract/manta-config-engine.svg)](https://inch-ci.org/github/dodekeract/manta-config-engine)
+
 Dota 2 configuration builder. Compiles `JSON` to `autoexec`.
 
 ## CLI Installation
