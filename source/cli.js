@@ -8,7 +8,7 @@ var argv = require('minimist')(process.argv.slice(2));
 
 // guess preset
 
-var preset = argv._ && argv._.length ? argv._[0] : __dirname + '/../presets/default.json';
+var preset = argv._ && argv._.length ? path.join(process.cwd(), argv._[0]) : __dirname + '/../presets/default.json';
 
 // guess default path
 

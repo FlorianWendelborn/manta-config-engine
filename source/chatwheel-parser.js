@@ -8,7 +8,7 @@ function ChatwheelParser (options) {
 }
 
 ChatwheelParser.prototype.parse = function () {
-	for (i = 0; i < this.chatwheels.length; i++) {
+	for (var i = 0; i < this.chatwheels.length; i++) {
         this.parseOne(i);
     }
 	return this.autoexec;

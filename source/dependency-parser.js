@@ -11,7 +11,7 @@ function DependencyParser (options) {
 }
 
 DependencyParser.prototype.parse = function () {
-	for (i = 0; i < this.dependencies.length; i++) {
+	for (var i = 0; i < this.dependencies.length; i++) {
         var dep = this.dependencies[i];
         switch (dep[0]) {
             case "ability":
@@ -50,6 +50,25 @@ DependencyParser.prototype.parse = function () {
                     break;
                 }
             break;
+			case "extension":
+				this.append(constants.extensions.initialText.replace('{id}', dep[1] + '/' + dep[2]));
+				// #TODO
+			break;
+			// case "toggle":
+			// 	var name = prefix + separator + 'toggle' + separator + dep[1];
+			// 	this.append('alias "' + name + '" "' + name + separator + constants.toggle.enabledText + '"');
+			// 	switch (dep[1]) {
+			// 		case "auto-attack":
+			// 			this.append('alias "' + name + separator + constants.toggle.enabledText + '" "dota_player_units_auto_attack 1;dota_player_units_auto_attack_after_spell 1;alias ' + name + ' ' + name + separator + constants.toggle.disabledText + ';"');
+			// 			this.append('alias "' + name + separator + constants.toggle.disabledText + '" "dota_player_units_auto_attack 0;dota_player_units_auto_attack_after_spell 0;alias ' + name + ' ' + name + separator + constants.toggle.enabledText + ';"');
+			// 		break;
+			// 		/*
+			// 			alias aaToggle "aaOn"
+			// 			alias aaOn "dota_player_units_auto_attack 1;dota_player_units_auto_attack_after_spell 1;alias aaToggle aaOff;playuisound DOTA_Item.Hand_Of_Midas"
+			// 			alias aaOff "dota_player_units_auto_attack 0;dota_player_units_auto_attack_after_spell 0;alias aaToggle aaOn;playuisound DOTA_Item.MagicStick.Activate"
+			// 		*/
+			// 	}
+			// break;
             case "cycle":
 				this.append(constants.dependencies.cycleText.replace('{id}', dep[1]));
                 var name = prefix + separator + 'cycle' + separator + dep[1];

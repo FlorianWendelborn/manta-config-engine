@@ -122,6 +122,8 @@ SettingParser.prototype.parseEngine = function () {
 	}
 	this.append(constants.settings.engineInitialText);
 
+	this.parseBoolean(this.engine.inputButtonCodeIsScanCode, 'input_button_code_is_scan_code');
+
 	// alt-key
 	if (this.engine.altKey.toUpperCase() !== 'ALT') {
 		this.append('dota_remap_alt_key "' + this.engine.altKey + '"');

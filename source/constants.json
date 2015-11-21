@@ -1,7 +1,7 @@
 {
     "prefix": "custom",
     "separator": "_",
-    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n// graphical user-interface available at https://manta.dodekeract.report\ninput_button_code_is_scan_code 1\n\n",
+    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n// graphical user-interface available at https://manta.dodekeract.report\n\n",
     "bindPrimaryLayout": {
         "initialText": "// # Primary Layout:\nexec layout-0.cfg\n"
     },
@@ -14,6 +14,13 @@
         "loadIndicator": {
             "initialText": "// # Load Indicator:\n"
         }
+    },
+    "extensions": {
+        "initialText": "//--// Extension {id}:\n"
+    },
+    "toggle": {
+        "enabledText": "enabled",
+        "disabledText": "disabled"
     },
     "dependencies": {
         "initialText": "// # Dependencies:\n",

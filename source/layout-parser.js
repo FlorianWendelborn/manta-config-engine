@@ -48,6 +48,10 @@ Layout.prototype.bindKey = function (key, options) {
                     this.depend(options);
             }
         break;
+        case "extension":
+            command = prefix + separator + 'extension' + separator + options[1] + separator + options[2];
+            this.depend(options);
+        break;
         case "health":
             command = 'dota_health_per_vertical_marker ' + options[1];
         break;

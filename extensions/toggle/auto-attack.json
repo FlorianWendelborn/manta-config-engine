@@ -1,0 +1,15 @@
+{
+	"name": "Toggle Auto-Attack",
+	"cycle": [
+		[
+			"setting",
+			"auto-attack",
+			"0"
+		],
+		[
+			"setting",
+			"auto-attack",
+			"1"
+		]
+	]
+}
