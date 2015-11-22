@@ -1,64 +1,61 @@
 {
-    "layouts": [{
+    "layouts": [
+        {
             "keybinds": {
+                "1": ["select", "hero"],
+                "2": ["select", "other-units"],
+                "3": ["select", "controlgroup", "3"],
+                "4": ["select", "controlgroup", "4"],
+                "5": ["select", "courier"],
+                "6": ["select", "controlgroup", "6"],
+                "7": ["select", "controlgroup", "7"],
+                "8": ["select", "controlgroup", "8"],
+                "9": ["select", "controlgroup", "9"],
                 "Q": ["ability", "quick", 0],
                 "W": ["ability", "quick", 1],
                 "E": ["ability", "quick", 2],
                 "D": ["ability", "quick", 3],
                 "F": ["ability", "quick", 4],
                 "R": ["ability", "quick", 5],
-
                 "T": ["item", "quick", 0],
                 "X": ["item", "quick", 1],
                 "C": ["item", "quick", 2],
                 "V": ["item", "quick", 3],
                 "B": ["item", "quick", 4],
                 "N": ["item", "quick", 5],
-
                 "A": ["attack"],
                 "S": ["stop"],
                 "ENTER": ["open", "chat"],
-                "H": ["voice", "team"],
-                "Y": ["item", "taunt"],
+                "Y": ["glyph"],
                 "U": ["learn", "stats"],
                 "'": ["open", "console"],
-
                 "O": ["cycle", 0],
-
                 "F3": ["courier", "deliver"],
-                "F4": ["open", "scoreboard"],
-                "F5": ["buy", "quick"],
-                "F6": ["buy", "sticky"],
+                "F5": ["buy", "sticky"],
                 "F9": ["pause"],
-
-                "1": ["select", "hero"],
-                "2": ["select", "other-units"],
-                "3": ["select", "controlgroup", "3"],
-                "4": ["select", "controlgroup", "4"],
-                "5": ["select", "courier"],
-
                 "UPARROW": ["camera", "up"],
                 "LEFTARROW": ["camera", "left"],
                 "DOWNARROW": ["camera", "down"],
                 "RIGHTARROW": ["camera", "right"],
-
                 "TAB": ["select", "next-unit"],
-
                 "`": ["view", "rune", "toggle"],
-
                 "SPACE": ["layout", 1],
                 "Z": ["chatwheel", 0],
-
                 "KP_0": ["chat", "team", "no"],
                 "KP_1": ["chat", "team", "yes"],
-                "KP_2": ["chat", "team", "no"],
-                "KP_3": ["chat", "student", "test"],
-                "KP_4": ["phrase", 9],
-                "KP_5": ["phrase", 10],
-                "KP_6": ["phrase", 11],
-                "KP_7": ["chat", "all", "> That just happened."],
+                "KP_7": ["phrase", 65],
                 "KP_8": ["phrase", 53],
-                "KP_9": ["phrase", 85]
+                "KP_9": ["phrase", 85],
+                "KP_2": ["phrase", 59],
+                "KP_3": ["phrase", 81],
+                "KP_6": ["phrase", 82],
+                "KP_5": ["phrase", 76],
+                "KP_4": ["phrase", 75],
+                "G": ["voice", "team"],
+                "F1": ["open", "scoreboard"],
+                "F2": ["open", "shop"],
+                "F4": ["buy", "quick"],
+                "F11": ["reload"]
             }
         },{
             "keybinds": {
@@ -68,23 +65,20 @@
                 "D": ["ability", "self", 3],
                 "F": ["ability", "self", 4],
                 "R": ["ability", "self", 5],
-
                 "T": ["item", "self", 0],
                 "X": ["item", "self", 1],
                 "C": ["item", "self", 2],
                 "V": ["item", "self", 3],
                 "B": ["item", "self", 4],
                 "N": ["item", "self", 5],
-
+                "1": ["phrase", 9],
+                "2": ["phrase", 10],
+                "3": ["phrase", 11],
                 "Z": ["chatwheel", 1],
-
                 "`": ["view", "base", "toggle"],
-
                 "F3": ["courier", "burst"],
-
                 "SPACE": ["layout", 1],
-
-                "F11": ["reload"]
+                "G": ["item", "taunt"]
             }
         }
     ],
@@ -103,43 +97,28 @@
     "settings": {
         "gameplay": {
             "netgraph": true,
-
             "autoAttack": false,
             "autoAttackAfterSpell": false,
-
             "autoRepeatRightMouse": true,
             "forceMovementDirection": true,
             "forceRightClickAttack": true,
-
             "unifiedUnitOrders": true,
-            "autoSelectSummonedUnits": true,
-
             "gridView": true,
             "playerNames": true,
-            "heroFinder": false,
+            "heroFinder": true,
             "rangeFinder": true,
-
             "cameraZoom": false,
             "cameraMoveOnRespawn": false,
-
-            "minimapProximityScale": true
+            "minimapProximityScale": true,
+            "minimapShowHeroIcons": true,
+            "minimapAlwaysShowHeroIcons": true,
+            "minimapProximityScaleDistance": 20,
+            "minimapProximityScaleMinimum": 400
         },
         "performance": {
-            "screenShake": true,
-            "highQualityWater": true,
-            "highQualityDashboard": true,
-            "animatePortrait": true,
-            "ambientCreatures": true,
-            "ambientOcclusion": true,
-            "heightFog": true,
-            "worldLighting": true,
-            "additiveLightPass": true,
-            "specularBloom": true,
-            "specularHighlight": true,
             "altTabIdle": true,
             "serverForcePreload": true,
             "clientForcePreload": true,
-            "doubleShadowUpdates": true,
             "multiCore": true
         },
         "engine": {
