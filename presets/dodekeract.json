@@ -166,7 +166,10 @@
             "memoryLevel": 2
         },
         "engine": {
-            "loadIndicator": ["sound", "ui/coins_big.vsnd_c"]
+            "loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
+            "altKey": "ALT",
+            "keyboardLayout": "en-US",
+            "inputButtonCodeIsScanCode": true
         }
     }
 }
