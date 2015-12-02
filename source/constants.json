@@ -1,7 +1,7 @@
 {
     "prefix": "custom",
     "separator": "_",
-    "initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n// graphical user-interface available at https://manta.dodekeract.report\n\n",
+    "initialText": "// generated using https://github.com/dodekeract/manta-config-engine\n// graphical user-interface available at https://manta.dodekeract.report\n\n",
     "bindPrimaryLayout": {
         "initialText": "// # Primary Layout:\nexec layout-0.cfg\n"
     },
