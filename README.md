@@ -6,7 +6,7 @@
 [![NPM Dependencies](https://david-dm.org/dodekeract/manta-config-engine.png)](https://david-dm.org/dodekeract/manta-config-engine)
 [![Code Documentation](https://inch-ci.org/github/dodekeract/manta-config-engine.svg)](https://inch-ci.org/github/dodekeract/manta-config-engine)
 
-Dota 2 configuration builder. Compiles `JSON` to `autoexec`.
+Dota 2 configuration builder. Compiles `JSON` to `autoexec`. There also is [a web-app](https://github.com/dodekeract/manta-config-engine-app) to easily create presets and build your own autoexec. The app [is hosted on my personal server](https://manta.dodekeract.report), so you don't have to set it up to use it.
 
 ## CLI Installation
 - Install [node.js](https://nodejs.org)
