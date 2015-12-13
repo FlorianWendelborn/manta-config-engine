@@ -1,5 +1,7 @@
 # Manta Config Engine
 
+[![Join the chat at https://gitter.im/dodekeract/manta-config-engine](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dodekeract/manta-config-engine?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 [![Code Climate](https://codeclimate.com/github/dodekeract/manta-config-engine/badges/gpa.svg)](https://codeclimate.com/github/dodekeract/manta-config-engine)
 [![NPM Downloads](https://img.shields.io/npm/dm/dota2-manta-config-engine.svg)](https://npmjs.com/package/dota2-manta-config-engine)
