@@ -92,17 +92,17 @@ DependencyParser.prototype.parse = function () {
                                 var bottomRune = rune + separator + 'bottom';
                                 this.append('alias "+' + rune + '" "' + topRune + '"');
                                 this.append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                                this.append('alias "' + topRune + '" "dota_camera_set_lookatpos ' + positions.rune.top + '; alias +' + rune + ' ' + bottomRune + '"');
-                                this.append('alias "' + bottomRune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom + '; alias +' + rune + ' ' + topRune + '"');
+                                this.append('alias "' + topRune + '" "dota_camera_set_lookatpos ' + positions.rune.top.join(' ') + '; alias +' + rune + ' ' + bottomRune + '"');
+                                this.append('alias "' + bottomRune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom.join(' ') + '; alias +' + rune + ' ' + topRune + '"');
                             break;
                             case "top":
                                 var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'top';
-                                this.append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.top + '"');
+                                this.append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.top.join(' ') + '"');
                                 this.append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
                             break;
                             case "bottom":
                                 var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'bottom';
-                                this.append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom + '"');
+                                this.append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom.join(' ') + '"');
                                 this.append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
                             break;
                         }
@@ -116,17 +116,17 @@ DependencyParser.prototype.parse = function () {
 
                                 this.append('alias "+' + base + '" "' + radiantBase + '"');
                                 this.append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-                                this.append('alias "' + direBase + '" "dota_camera_set_lookatpos ' + positions.base.dire + '; alias +' + base + ' ' + radiantBase + '"');
-                                this.append('alias "' + radiantBase + '" "dota_camera_set_lookatpos ' + positions.base.radiant + '; alias +' + base + ' ' + direBase + '"');
+                                this.append('alias "' + direBase + '" "dota_camera_set_lookatpos ' + positions.base.dire.join(' ') + '; alias +' + base + ' ' + radiantBase + '"');
+                                this.append('alias "' + radiantBase + '" "dota_camera_set_lookatpos ' + positions.base.radiant.join(' ') + '; alias +' + base + ' ' + direBase + '"');
                             break;
                             case "radiant":
                                 var base = prefix + separator + 'view' + separator + 'base' + separator + 'radiant';
-                                this.append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.radiant + '"');
+                                this.append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.radiant.join(' ') + '"');
                                 this.append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
                             break;
                             case "dire":
                                 var base = prefix + separator + 'view' + separator + 'base' + separator + 'dire';
-                                this.append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.dire + '"');
+                                this.append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.dire.join(' ') + '"');
                                 this.append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
                             break;
                         }
