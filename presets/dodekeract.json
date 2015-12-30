@@ -1,175 +1,175 @@
 {
-    "layouts": [{
-            "keybinds": {
-                "Q": ["ability", "quick", 0],
-                "W": ["ability", "quick", 1],
-                "E": ["ability", "quick", 2],
-                "D": ["ability", "quick", 3],
-                "F": ["ability", "quick", 4],
-                "R": ["ability", "quick", 5],
+	"layouts": [{
+			"keybinds": {
+				"Q": ["ability", "quick", 0],
+				"W": ["ability", "quick", 1],
+				"E": ["ability", "quick", 2],
+				"D": ["ability", "quick", 3],
+				"F": ["ability", "quick", 4],
+				"R": ["ability", "quick", 5],
 
-                "T": ["item", "quick", 0],
-                "X": ["item", "quick", 1],
-                "C": ["item", "quick", 2],
-                "V": ["item", "quick", 3],
-                "B": ["item", "quick", 4],
-                "N": ["item", "quick", 5],
+				"T": ["item", "quick", 0],
+				"X": ["item", "quick", 1],
+				"C": ["item", "quick", 2],
+				"V": ["item", "quick", 3],
+				"B": ["item", "quick", 4],
+				"N": ["item", "quick", 5],
 
-                "A": ["attack"],
-                "S": ["stop"],
-                "ENTER": ["open", "chat"],
-                "H": ["voice", "team"],
-                "Y": ["item", "taunt"],
-                "U": ["learn", "stats"],
-                "'": ["open", "console"],
+				"A": ["attack"],
+				"S": ["stop"],
+				"ENTER": ["open", "chat"],
+				"H": ["voice", "team"],
+				"Y": ["item", "taunt"],
+				"U": ["learn", "stats"],
+				"'": ["open", "console"],
 
-                "O": ["cycle", 0],
-                "PGUP": ["cycle", 1],
+				"O": ["cycle", 0],
+				"PGUP": ["cycle", 1],
 
-                "F3": ["courier", "deliver"],
-                "F4": ["open", "scoreboard"],
-                "F5": ["buy", "quick"],
-                "F6": ["buy", "sticky"],
-                "F9": ["pause"],
+				"F3": ["courier", "deliver"],
+				"F4": ["open", "scoreboard"],
+				"F5": ["buy", "quick"],
+				"F6": ["buy", "sticky"],
+				"F9": ["pause"],
 
-                "1": ["select", "hero"],
-                "2": ["select", "other-units"],
-                "3": ["select", "controlgroup", "3"],
-                "4": ["select", "controlgroup", "4"],
-                "5": ["select", "courier"],
+				"1": ["select", "hero"],
+				"2": ["select", "other-units"],
+				"3": ["select", "controlgroup", "3"],
+				"4": ["select", "controlgroup", "4"],
+				"5": ["select", "courier"],
 
-                "UPARROW": ["camera", "up"],
-                "LEFTARROW": ["camera", "left"],
-                "DOWNARROW": ["camera", "down"],
-                "RIGHTARROW": ["camera", "right"],
+				"UPARROW": ["camera", "up"],
+				"LEFTARROW": ["camera", "left"],
+				"DOWNARROW": ["camera", "down"],
+				"RIGHTARROW": ["camera", "right"],
 
-                "TAB": ["command", "dota_cycle_selected"],
+				"TAB": ["command", "dota_cycle_selected"],
 
-                "`": ["view", "rune", "toggle"],
+				"`": ["view", "rune", "toggle"],
 
-                "SPACE": ["layout", 1],
-                "Z": ["chatwheel", 0],
+				"SPACE": ["layout", 1],
+				"Z": ["chatwheel", 0],
 
-                "KP_0": ["chat", "team", "no"],
-                "KP_1": ["chat", "team", "yes"],
-                "KP_2": ["chat", "team", "no"],
-                "KP_3": ["chat", "student", "test"],
-                "KP_4": ["phrase", 9],
-                "KP_5": ["phrase", 10],
-                "KP_6": ["phrase", 11],
-                "KP_7": ["chat", "all", "> That just happened."],
-                "KP_8": ["phrase", 53],
-                "KP_9": ["phrase", 85]
-            }
-        },{
-            "keybinds": {
-                "Q": ["ability", "self", 0],
-                "W": ["ability", "self", 1],
-                "E": ["ability", "self", 2],
-                "D": ["ability", "self", 3],
-                "F": ["ability", "self", 4],
-                "R": ["ability", "self", 5],
+				"KP_0": ["chat", "team", "no"],
+				"KP_1": ["chat", "team", "yes"],
+				"KP_2": ["chat", "team", "no"],
+				"KP_3": ["chat", "student", "test"],
+				"KP_4": ["phrase", 9],
+				"KP_5": ["phrase", 10],
+				"KP_6": ["phrase", 11],
+				"KP_7": ["chat", "all", "> That just happened."],
+				"KP_8": ["phrase", 53],
+				"KP_9": ["phrase", 85]
+			}
+		},{
+			"keybinds": {
+				"Q": ["ability", "self", 0],
+				"W": ["ability", "self", 1],
+				"E": ["ability", "self", 2],
+				"D": ["ability", "self", 3],
+				"F": ["ability", "self", 4],
+				"R": ["ability", "self", 5],
 
-                "T": ["item", "self", 0],
-                "X": ["item", "self", 1],
-                "C": ["item", "self", 2],
-                "V": ["item", "self", 3],
-                "B": ["item", "self", 4],
-                "N": ["item", "self", 5],
+				"T": ["item", "self", 0],
+				"X": ["item", "self", 1],
+				"C": ["item", "self", 2],
+				"V": ["item", "self", 3],
+				"B": ["item", "self", 4],
+				"N": ["item", "self", 5],
 
-                "Z": ["chatwheel", 1],
+				"Z": ["chatwheel", 1],
 
-                "`": ["view", "base", "toggle"],
+				"`": ["view", "base", "toggle"],
 
-                "F3": ["courier", "burst"],
+				"F3": ["courier", "burst"],
 
-                "SPACE": ["layout", 1],
+				"SPACE": ["layout", 1],
 
-                "F11": ["reload"]
-            }
-        },{
-            "keybinds": {
-                "Q": ["ability", "normal", 0],
-                "W": ["ability", "normal", 1],
-                "E": ["ability", "normal", 2],
-                "D": ["ability", "normal", 3],
-                "F": ["ability", "normal", 4],
-                "R": ["ability", "normal", 5]
-            }
-        }
-    ],
-    "chatwheels": [
-        [8, 1, 2, 3, 29, 54, 6, 61],
-        [30, 66, 78, 41, 79, 70, 23, 68]
-    ],
-    "cycles": [
-        [
-            ["health", 250],
-            ["health", 325],
-            ["health", 450],
-            ["health", 550]
-        ],[
-            ["ability", "quick", 3],
-            ["item", "quick", 4],
-            ["ability", "quick", 3]
-        ]
-    ],
-    "settings": {
-        "gameplay": {
-            "netgraph": true,
+				"F11": ["reload"]
+			}
+		},{
+			"keybinds": {
+				"Q": ["ability", "normal", 0],
+				"W": ["ability", "normal", 1],
+				"E": ["ability", "normal", 2],
+				"D": ["ability", "normal", 3],
+				"F": ["ability", "normal", 4],
+				"R": ["ability", "normal", 5]
+			}
+		}
+	],
+	"chatwheels": [
+		[8, 1, 2, 3, 29, 54, 6, 61],
+		[30, 66, 78, 41, 79, 70, 23, 68]
+	],
+	"cycles": [
+		[
+			["health", 250],
+			["health", 325],
+			["health", 450],
+			["health", 550]
+		],[
+			["ability", "quick", 3],
+			["item", "quick", 4],
+			["ability", "quick", 3]
+		]
+	],
+	"settings": {
+		"gameplay": {
+			"netgraph": true,
 
-            "autoAttack": false,
-            "autoAttackAfterSpell": false,
+			"autoAttack": false,
+			"autoAttackAfterSpell": false,
 
-            "autoRepeatRightMouse": true,
-            "forceMovementDirection": true,
-            "forceRightClickAttack": true,
+			"autoRepeatRightMouse": true,
+			"forceMovementDirection": true,
+			"forceRightClickAttack": true,
 
-            "unifiedUnitOrders": true,
-            "autoSelectSummonedUnits": true,
+			"unifiedUnitOrders": true,
+			"autoSelectSummonedUnits": true,
 
-            "gridView": true,
-            "playerNames": true,
-            "heroFinder": false,
-            "rangeFinder": true,
+			"gridView": true,
+			"playerNames": true,
+			"heroFinder": false,
+			"rangeFinder": true,
 
-            "cameraZoom": false,
-            "cameraMoveOnRespawn": false,
-            "cameraSpeed": 8000,
+			"cameraZoom": false,
+			"cameraMoveOnRespawn": false,
+			"cameraSpeed": 8000,
 
-            "minimapProximityScale": true,
-            "minimapProximityScaleDistance": 20
-        },
-        "performance": {
-            "screenShake": true,
-            "maximumFramerate": 0,
-            "highQualityWater": true,
-            "highQualityDashboard": true,
-            "levelOfDetail": 5,
-            "animatePortrait": true,
-            "ambientCreatures": true,
-            "ambientOcclusion": true,
-            "heightFog": true,
-            "worldLighting": true,
-            "additiveLightPass": true,
-            "specularBloom": true,
-            "specularHighlight": true,
-            "altTabIdle": true,
-            "shadowQuality": 2,
-            "serverForcePreload": true,
-            "clientForcePreload": true,
-            "doubleShadowUpdates": true,
-            "multiCore": true,
-            "gpuLevel": 3,
-            "cpuLevel": 2,
-            "gpuMemoryLevel": 2,
-            "memoryLevel": 2
-        },
-        "engine": {
-            "loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
-            "altKey": "ALT",
-            "keyboardLayout": "en-US",
-            "inputButtonCodeIsScanCode": true
-        }
-    }
+			"minimapProximityScale": true,
+			"minimapProximityScaleDistance": 20
+		},
+		"performance": {
+			"screenShake": true,
+			"maximumFramerate": 0,
+			"highQualityWater": true,
+			"highQualityDashboard": true,
+			"levelOfDetail": 5,
+			"animatePortrait": true,
+			"ambientCreatures": true,
+			"ambientOcclusion": true,
+			"heightFog": true,
+			"worldLighting": true,
+			"additiveLightPass": true,
+			"specularBloom": true,
+			"specularHighlight": true,
+			"altTabIdle": true,
+			"shadowQuality": 2,
+			"serverForcePreload": true,
+			"clientForcePreload": true,
+			"doubleShadowUpdates": true,
+			"gpuLevel": 3,
+			"cpuLevel": 2,
+			"gpuMemoryLevel": 2,
+			"memoryLevel": 2,
+			"multiCore": true
+		},
+		"engine": {
+			"loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
+			"altKey": "ALT",
+			"keyboardLayout": "en-US",
+			"inputButtonCodeIsScanCode": true
+		}
+	}
 }

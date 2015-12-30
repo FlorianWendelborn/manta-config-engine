@@ -27,25 +27,29 @@ Beware that the CLI will assume that your Dota 2 is installed in the default Ste
 ## Library usage
 
 ### manta.compile(preset, callback)
-- Expects a valid preset, see `prests/defaut.json`.
+- Expects a valid preset, see `presets/default.json`.
 - Calls `callback` with `err` and `data`. Data is an object containing the `.cfg` filenames and their compiled data.
 
-### manta.positions
+### manta.data
+
+#### manta.data.positions
 - Returns an object with all camera positions manta currently uses
 
-### manta.phrases
+#### manta.data.phrases
 - Returns an object containing all current chatwheel phrases
 
-### manta.LayoutParser
+### manta.parser
+
+#### manta.parser.Layout
 - internally used class to parse layouts
 
-### manta.SettingParser
+#### manta.parser.Setting
 - internally used class to parse settings
 
-### manta.ChatwheelParser
+#### manta.parser.Chatwheel
 - internally used class to parse chatwheels
 
-### manta.DependencyParser
+#### manta.parser.Dependency
 - internally used class to resolve dependencies
 
 ## Contribute Your Presets

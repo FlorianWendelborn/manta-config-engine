@@ -1,4 +1,5 @@
-var constants = require('./constants');
+var manta = require('../');
+var constants = manta.data.constants;
 var prefix = constants.prefix;
 var separator = constants.separator;
 
@@ -9,8 +10,8 @@ function ChatwheelParser (options) {
 
 ChatwheelParser.prototype.parse = function () {
 	for (var i = 0; i < this.chatwheels.length; i++) {
-        this.parseOne(i);
-    }
+		this.parseOne(i);
+	}
 	return this.autoexec;
 };
 

@@ -1,0 +1,94 @@
+{
+	"gameplay":  {
+		"autoAttack": { "type": "boolean", "label": "Auto Attack", "commands": ["b:dota_player_units_auto_attack"] },
+		"autoAttackAfterSpell": { "type": "boolean", "label": "Auto Attack After Spell", "commands": ["b:dota_player_units_auto_attack_after_spell"] },
+		"autoSelectSummonedUnits": { "type": "boolean", "label": "Auto-Select Summoned Units", "commands": ["b:dota_player_add_summoned_to_selection"] },
+		"unifiedUnitOrders": { "type": "boolean", "label": "Unified Unit Orders", "commands": ["b:dota_player_multipler_orders"] },
+
+		"autoRepeatRightMouse": { "type": "boolean", "label": "Auto-Repeat Right Mouse", "commands": ["b:dota_player_auto_repeat_right_mouse"] },
+		"forceMovementDirection": { "type": "boolean", "label": "Force Movement Direction", "commands": ["b:cl_dota_alt_unit_movetodirection"] },
+		"forceRightClickAttack": { "type": "boolean", "label": "Force Right-Click Attack", "commands": ["b:dota_force_right_click_attack"] },
+
+		"netgraph": { "type": "boolean", "label": "Show Net Graph", "commands": ["b:dota_hud_netgraph"] },
+		"playerNames": { "type": "boolean", "label": "Show Player Names", "commands": ["b:dota_always_show_player_names"] },
+		"rangeFinder": { "type": "boolean", "label": "Show Range Finder", "commands": ["b:dota_enable_range_finder"] },
+		"heroFinder": { "type": "boolean", "label": "Show Hero Finder", "commands": ["b:dota_show_hero_finder"] },
+
+		"cameraZoom": { "type": "boolean", "label": "Mousewheel Zoom", "commands": ["b:!dota_camera_disable_zoom"] },
+		"cameraMoveOnRespawn": { "type": "boolean", "label": "Move Camera On Respawn", "commands": ["b:dota_reset_camera_on_spawn"] },
+		"cameraSpeed": { "type": "range", "min": 2000, "max": 8000, "label": "Camera Speed", "commands": ["i:dota_camera_speed"] },
+
+		"minimapHeroSize ": { "type": "range", "min": 0, "max": 2000, "label": "Hero Size", "commands": ["i:dota_minimap_hero_size"] },
+		"minimapRuneSize ": { "type": "range", "min": 0, "max": 2000, "label": "Rune Size", "commands": ["i:dota_minimap_rune_size"] },
+		"minimapCreepScale ": { "type": "range", "min": 0, "max": 3, "label": "Creep Scale", "commands": ["i:dota_minimap_creep_scale"] },
+
+		"minimapProximityScale": { "type": "boolean", "label": "Proximity Scale", "commands": ["b:dota_minimap_hero_scalar"] },
+		"minimapProximityScaleDistance": { "type": "range", "min": 0, "max": 100, "label": "Proximity Scale Distance", "commands": ["i:dota_minimap_hero_scalar_distance"] },
+		"minimapProximityScaleMinimum ": { "type": "range", "min": 0, "max": 2000, "label": "Proximity Scale Minimum", "commands": ["i:dota_minimap_hero_scalar_minimum"] },
+
+		"minimapShowHeroIcons ": { "type": "boolean", "label": "Show Hero Icons", "commands": ["b:dota_minimap_show_hero_icon"] },
+		"minimapAlwaysShowHeroIcons ": { "type": "boolean", "label": "Always Show Hero Icons", "commands": ["b:dota_minimap_always_draw_hero_icons"] },
+		"minimapBackground ": { "type": "boolean", "label": "Background", "commands": ["b:dota_minimap_hide_background"] },
+		"minimapSimpleColors ": { "type": "boolean", "label": "Simple Colors", "commands": ["b:dota_minimap_simple_colors"] },
+
+		"minimapMisclickTime ": { "type": "range", "min": 0, "max": 10000, "label": "Misclick Time (ms)", "commands": ["i:dota_minimap_misclick_time::1000"] },
+		"minimapRightClick ": { "type": "boolean", "label": "Right Click", "commands": ["b:!dota_minimap_disable_right_click"] },
+
+		"minimapTowerDefendDistance ": { "type": "range", "min": 0, "max": 2000, "label": "Tower Defend Distance", "commands": ["i:dota_minimap_tower_defend_distance"] },
+		"minimapPingDuration ": { "type": "range", "min": 0, "max": 60000, "label": "Ping Duration (ms)", "commands": ["i:dota_minimap_ping_duration::1000"] },
+
+		"gridView": { "type": "boolean", "label": "Always Show Grid-View", "commands": ["b:dota_shop_view_mode"] },
+
+		"muteChat": { "type": "boolean", "label": "Mute Chat", "commands": ["b:dota_chat_mute_all"] }
+	},
+	"performance": {
+		"screenShake": { "type": "boolean", "label": "Screen Shake", "commands": ["b:dota_screen_shake"] },
+		"animatePortrait": { "type": "boolean", "label": "Animate Portrait", "commands": ["b:dota_portrait_animate"] },
+		"ambientCreatures": { "type": "boolean", "label": "Ambient Creatures", "commands": ["b:dota_ambient_creatures"] },
+
+		"ambientOcclusion": { "type": "boolean", "label": "Ambient Occlusion", "commands": ["b:r_ssao"] },
+		"highQualityWater": { "type": "boolean", "label": "High Quality Water", "commands": ["b:!dota_cheap_water"] },
+		"highQualityDashboard": { "type": "boolean", "label": "High Quality Dashboard", "commands": ["b:dota_embers"] },
+		"heightFog": { "type": "boolean", "label": "Height Fog", "commands": ["b:r_deffered_height_fog"] },
+		"worldLighting": { "type": "boolean", "label": "World Lighting", "commands": ["b:!r_deffered_simple_light"] },
+		"additiveLightPass": { "type": "boolean", "label": "Additive Light Pass", "commands": ["b:!r_deffered_additive_pass"] },
+		"specularBloom": { "type": "boolean", "label": "Specular Bloom", "commands": ["b:r_deffered_specular_bloom"] },
+		"specularHighlight": { "type": "boolean", "label": "Specular Highlight", "commands": ["b:r_deffered_specular"] },
+		"doubleShadowUpdates": { "type": "boolean", "label": "Double Shadow Updates", "commands": ["b:!r_shadow_half_update_rate"] },
+
+		"multiCore": { "type": "boolean", "label": "Use Multi-Core", "commands": [
+			"b:r_threaded_shadow_clip",
+			"b:r_queued_decals",
+			"b:r_queued_post_processing",
+			"b:cl_threaded_bone_setup",
+			"b:cl_threaded_init",
+			"b:snd_mix_async",
+			"c:2:0:mat_que_mode"
+		] },
+		"altTabIdle": { "type": "boolean", "label": "Alt-Tab Idle", "commands": ["b:engine_no_focus_sleep"] },
+		"maximumFramerate": { "type": "range", "min": 0, "max": 288, "label": "Maximum Framerate", "commands": ["i:fps_max"] },
+
+		"clientForcePreload": { "type": "boolean", "label": "Force Client-Data Preload", "commands": ["b:cl_forcepreload"] },
+		"serverForcePreload": { "type": "boolean", "label": "Force Server-Data Preload", "commands": ["b:sv_forcepreload"] },
+
+		"levelOfDetail": { "type": "range", "min": 0, "max": 5, "label": "Level Of Detail", "commands": ["i:r_lod:5"] },
+		"shadowQuality": { "type": "range", "min": 0, "max": 3, "label": "Shadow Quality", "commands": ["i:cl_globallight_shadow_mode"] },
+
+		"gpuLevel": { "type": "range", "min": 0, "max": 3, "label": "GPU Level", "commands": ["i:gpu_level"] },
+		"cpuLevel": { "type": "range", "min": 0, "max": 2, "label": "CPU Level", "commands": ["i:cpu_level"] },
+		"gpuMemoryLevel": { "type": "range", "min": 0, "max": 2, "label": "GPU Memory Level", "commands": ["i:gpu_mem_level"] },
+		"memoryLevel": { "type": "range", "min": 0, "max": 2, "label": "Memory Level", "commands": ["i:mem_level"] }
+	},
+	"engine": {
+		"keyboardLayout": {
+			"type": "choice",
+			"options": [
+				{ "label": "Default Layout (English)", "id": "en-us" },
+				{ "label": "QWERTZ (German)", "id": "de-de" },
+				{ "label": "Razer Blackwidow Chroma (English)", "id": "en-rz" }
+			],
+			"label": "Keyboard Layout"
+		},
+		"inputButtonCodeIsScanCode": { "type": "boolean", "label": "Input Button Code Is Scan Code" }
+	}
+}
