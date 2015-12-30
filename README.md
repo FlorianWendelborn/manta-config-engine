@@ -33,24 +33,24 @@ Beware that the CLI will assume that your Dota 2 is installed in the default Ste
 ### manta.data
 
 #### manta.data.positions
-- Returns an object with all camera positions manta currently uses
+Returns an object with all camera positions manta currently uses
 
 #### manta.data.phrases
-- Returns an object containing all current chatwheel phrases
+Returns an object containing all current chatwheel phrases
 
 ### manta.parser
 
 #### manta.parser.Layout
-- internally used class to parse layouts
+internally used class to parse layouts
 
 #### manta.parser.Setting
-- internally used class to parse settings
+internally used class to parse settings
 
 #### manta.parser.Chatwheel
-- internally used class to parse chatwheels
+internally used class to parse chatwheels
 
 #### manta.parser.Dependency
-- internally used class to resolve dependencies
+internally used class to resolve dependencies
 
 ## Contribute Your Presets
 - Fork this project.
