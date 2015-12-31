@@ -18,24 +18,24 @@
 		"cameraMoveOnRespawn": { "type": "boolean", "label": "Move Camera On Respawn", "commands": ["b:dota_reset_camera_on_spawn"] },
 		"cameraSpeed": { "type": "range", "min": 2000, "max": 8000, "label": "Camera Speed", "commands": ["i:dota_camera_speed"] },
 
-		"minimapHeroSize ": { "type": "range", "min": 0, "max": 2000, "label": "Hero Size", "commands": ["i:dota_minimap_hero_size"] },
-		"minimapRuneSize ": { "type": "range", "min": 0, "max": 2000, "label": "Rune Size", "commands": ["i:dota_minimap_rune_size"] },
-		"minimapCreepScale ": { "type": "range", "min": 0, "max": 3, "label": "Creep Scale", "commands": ["i:dota_minimap_creep_scale"] },
+		"minimapHeroSize": { "type": "range", "min": 0, "max": 2000, "label": "Hero Size", "commands": ["i:dota_minimap_hero_size"] },
+		"minimapRuneSize": { "type": "range", "min": 0, "max": 2000, "label": "Rune Size", "commands": ["i:dota_minimap_rune_size"] },
+		"minimapCreepScale": { "type": "range", "min": 0, "max": 3, "label": "Creep Scale", "commands": ["i:dota_minimap_creep_scale"] },
 
 		"minimapProximityScale": { "type": "boolean", "label": "Proximity Scale", "commands": ["b:dota_minimap_hero_scalar"] },
 		"minimapProximityScaleDistance": { "type": "range", "min": 0, "max": 100, "label": "Proximity Scale Distance", "commands": ["i:dota_minimap_hero_scalar_distance"] },
-		"minimapProximityScaleMinimum ": { "type": "range", "min": 0, "max": 2000, "label": "Proximity Scale Minimum", "commands": ["i:dota_minimap_hero_scalar_minimum"] },
+		"minimapProximityScaleMinimum": { "type": "range", "min": 0, "max": 2000, "label": "Proximity Scale Minimum", "commands": ["i:dota_minimap_hero_scalar_minimum"] },
 
-		"minimapShowHeroIcons ": { "type": "boolean", "label": "Show Hero Icons", "commands": ["b:dota_minimap_show_hero_icon"] },
-		"minimapAlwaysShowHeroIcons ": { "type": "boolean", "label": "Always Show Hero Icons", "commands": ["b:dota_minimap_always_draw_hero_icons"] },
-		"minimapBackground ": { "type": "boolean", "label": "Background", "commands": ["b:dota_minimap_hide_background"] },
-		"minimapSimpleColors ": { "type": "boolean", "label": "Simple Colors", "commands": ["b:dota_minimap_simple_colors"] },
+		"minimapShowHeroIcons": { "type": "boolean", "label": "Show Hero Icons", "commands": ["b:dota_minimap_show_hero_icon"] },
+		"minimapAlwaysShowHeroIcons": { "type": "boolean", "label": "Always Show Hero Icons", "commands": ["b:dota_minimap_always_draw_hero_icons"] },
+		"minimapBackground": { "type": "boolean", "label": "Background", "commands": ["b:dota_minimap_hide_background"] },
+		"minimapSimpleColors": { "type": "boolean", "label": "Simple Colors", "commands": ["b:dota_minimap_simple_colors"] },
 
-		"minimapMisclickTime ": { "type": "range", "min": 0, "max": 10000, "label": "Misclick Time (ms)", "commands": ["i:dota_minimap_misclick_time::1000"] },
-		"minimapRightClick ": { "type": "boolean", "label": "Right Click", "commands": ["b:!dota_minimap_disable_right_click"] },
+		"minimapMisclickTime": { "type": "range", "min": 0, "max": 10000, "label": "Misclick Time (ms)", "commands": ["i:dota_minimap_misclick_time::1000"] },
+		"minimapRightClick": { "type": "boolean", "label": "Right Click", "commands": ["b:!dota_minimap_disable_right_click"] },
 
-		"minimapTowerDefendDistance ": { "type": "range", "min": 0, "max": 2000, "label": "Tower Defend Distance", "commands": ["i:dota_minimap_tower_defend_distance"] },
-		"minimapPingDuration ": { "type": "range", "min": 0, "max": 60000, "label": "Ping Duration (ms)", "commands": ["i:dota_minimap_ping_duration::1000"] },
+		"minimapTowerDefendDistance": { "type": "range", "min": 0, "max": 2000, "label": "Tower Defend Distance", "commands": ["i:dota_minimap_tower_defend_distance"] },
+		"minimapPingDuration": { "type": "range", "min": 0, "max": 60000, "label": "Ping Duration (ms)", "commands": ["i:dota_minimap_ping_duration::1000"] },
 
 		"gridView": { "type": "boolean", "label": "Always Show Grid-View", "commands": ["b:dota_shop_view_mode"] },
 
