@@ -1,30 +1,30 @@
 {
 	"gameplay":  {
-		"autoAttack": { "type": "boolean", "label": "Auto Attack", "commands": ["b:dota_player_units_auto_attack"] },
-		"autoAttackAfterSpell": { "type": "boolean", "label": "Auto Attack After Spell", "commands": ["b:dota_player_units_auto_attack_after_spell"] },
-		"autoSelectSummonedUnits": { "type": "boolean", "label": "Auto-Select Summoned Units", "commands": ["b:dota_player_add_summoned_to_selection"] },
-		"unifiedUnitOrders": { "type": "boolean", "label": "Unified Unit Orders", "commands": ["b:dota_player_multipler_orders"] },
+		"autoAttack": { "type": "boolean", "label": "Auto Attack", "info": "Never blink into trees just to get spotted by your auto-attack again.", "commands": ["b:dota_player_units_auto_attack"] },
+		"autoAttackAfterSpell": { "type": "boolean", "label": "Auto Attack After Spell", "info": "Disables auto-attacks after using spells, but also disables auto-attack after auto-attack (will only kill one creep, then stop).", "commands": ["b:dota_player_units_auto_attack_after_spell"] },
+		"autoSelectSummonedUnits": { "type": "boolean", "label": "Auto-Select Summoned Units", "info": "Adds all newly summoned units to your currently selected group.", "commands": ["b:dota_player_add_summoned_to_selection"] },
+		"unifiedUnitOrders": { "type": "boolean", "label": "Unified Unit Orders", "info": "Holding CTRL will allow you to issue orders to all controlled units.", "commands": ["b:dota_player_multipler_orders"] },
 
-		"autoRepeatRightMouse": { "type": "boolean", "label": "Auto-Repeat Right Mouse", "commands": ["b:dota_player_auto_repeat_right_mouse"] },
-		"forceMovementDirection": { "type": "boolean", "label": "Force Movement Direction", "commands": ["b:cl_dota_alt_unit_movetodirection"] },
-		"forceRightClickAttack": { "type": "boolean", "label": "Force Right-Click Attack", "commands": ["b:dota_force_right_click_attack"] },
+		"autoRepeatRightMouse": { "type": "boolean", "label": "Auto-Repeat Right Mouse", "info": "Get those bounty runes, without breaking your mouse.", "commands": ["b:dota_player_auto_repeat_right_mouse"] },
+		"forceMovementDirection": { "type": "boolean", "label": "Force Movement Direction", "info": "Holding ALT when moving will first turn your hero, then move. Useful for playing Shadow Fiend or using Force Staff.", "commands": ["b:cl_dota_alt_unit_movetodirection"] },
+		"forceRightClickAttack": { "type": "boolean", "label": "Force Right-Click Attack", "info": "Use the right mouse button to deny stuff.", "commands": ["b:dota_force_right_click_attack"] },
 
-		"netgraph": { "type": "boolean", "label": "Show Net Graph", "commands": ["b:dota_hud_netgraph"] },
-		"playerNames": { "type": "boolean", "label": "Show Player Names", "commands": ["b:dota_always_show_player_names"] },
-		"rangeFinder": { "type": "boolean", "label": "Show Range Finder", "commands": ["b:dota_enable_range_finder"] },
-		"heroFinder": { "type": "boolean", "label": "Show Hero Finder", "commands": ["b:dota_show_hero_finder"] },
+		"netgraph": { "type": "boolean", "label": "Show Net Graph", "info": "Shows ping & framerate in the top-right corner.", "commands": ["b:dota_hud_netgraph"] },
+		"playerNames": { "type": "boolean", "label": "Show Player Names", "info": "Displays player names above heroes.", "commands": ["b:dota_always_show_player_names"] },
+		"rangeFinder": { "type": "boolean", "label": "Show Range Finder", "info": "Shows cast ranges for normal- and smartcast.", "commands": ["b:dota_enable_range_finder"] },
+		"heroFinder": { "type": "boolean", "label": "Show Hero Finder", "info": "When pressing ALT, show a green arrow over your hero.", "commands": ["b:dota_show_hero_finder"] },
 
 		"cameraZoom": { "type": "boolean", "label": "Mousewheel Zoom", "commands": ["b:!dota_camera_disable_zoom"] },
-		"cameraMoveOnRespawn": { "type": "boolean", "label": "Move Camera On Respawn", "commands": ["b:dota_reset_camera_on_spawn"] },
+		"cameraMoveOnRespawn": { "type": "boolean", "label": "Move Camera On Respawn", "info": "Disables accidental teleporting to your base.", "commands": ["b:dota_reset_camera_on_spawn"] },
 		"cameraSpeed": { "type": "range", "min": 2000, "max": 8000, "label": "Camera Speed", "commands": ["i:dota_camera_speed"] },
 
 		"minimapHeroSize": { "type": "range", "min": 0, "max": 2000, "label": "Hero Size", "commands": ["i:dota_minimap_hero_size"] },
 		"minimapRuneSize": { "type": "range", "min": 0, "max": 2000, "label": "Rune Size", "commands": ["i:dota_minimap_rune_size"] },
 		"minimapCreepScale": { "type": "range", "min": 0, "max": 3, "label": "Creep Scale", "commands": ["i:dota_minimap_creep_scale"] },
 
-		"minimapProximityScale": { "type": "boolean", "label": "Proximity Scale", "commands": ["b:dota_minimap_hero_scalar"] },
-		"minimapProximityScaleDistance": { "type": "range", "min": 0, "max": 100, "label": "Proximity Scale Distance", "commands": ["i:dota_minimap_hero_scalar_distance"] },
-		"minimapProximityScaleMinimum": { "type": "range", "min": 0, "max": 2000, "label": "Proximity Scale Minimum", "commands": ["i:dota_minimap_hero_scalar_minimum"] },
+		"minimapProximityScale": { "type": "boolean", "label": "Proximity Scale", "info": "Enables resizing of hero icons, when they're near each other.", "commands": ["b:dota_minimap_hero_scalar"] },
+		"minimapProximityScaleDistance": { "type": "range", "min": 0, "max": 100, "label": "Proximity Scale Distance", "info": "Specifies how close together the heroes have to be to enable resizing.", "commands": ["i:dota_minimap_hero_scalar_distance"] },
+		"minimapProximityScaleMinimum": { "type": "range", "min": 0, "max": 2000, "label": "Proximity Scale Minimum", "info": "Hero icon-size, when completely scaled down.", "commands": ["i:dota_minimap_hero_scalar_minimum"] },
 
 		"minimapShowHeroIcons": { "type": "boolean", "label": "Show Hero Icons", "commands": ["b:dota_minimap_show_hero_icon"] },
 		"minimapAlwaysShowHeroIcons": { "type": "boolean", "label": "Always Show Hero Icons", "commands": ["b:dota_minimap_always_draw_hero_icons"] },
@@ -32,31 +32,31 @@
 		"minimapSimpleColors": { "type": "boolean", "label": "Simple Colors", "commands": ["b:dota_minimap_simple_colors"] },
 
 		"minimapMisclickTime": { "type": "range", "min": 0, "max": 10000, "label": "Misclick Time (ms)", "commands": ["i:dota_minimap_misclick_time::1000"] },
-		"minimapRightClick": { "type": "boolean", "label": "Right Click", "commands": ["b:!dota_minimap_disable_right_click"] },
+		"minimapRightClick": { "type": "boolean", "label": "Right Click", "info": "Disabling this will not allow you to move using the minimap, only useful if you misclick a lot.", "commands": ["b:!dota_minimap_disable_right_click"] },
 
 		"minimapTowerDefendDistance": { "type": "range", "min": 0, "max": 2000, "label": "Tower Defend Distance", "commands": ["i:dota_minimap_tower_defend_distance"] },
 		"minimapPingDuration": { "type": "range", "min": 0, "max": 60000, "label": "Ping Duration (ms)", "commands": ["i:dota_minimap_ping_duration::1000"] },
 
-		"gridView": { "type": "boolean", "label": "Always Show Grid-View", "commands": ["b:dota_shop_view_mode"] },
+		"gridView": { "type": "boolean", "label": "Always Show Grid-View", "info": "Switch between Grid-View (only icons, but all items) & List-View (only some items, but with names).", "commands": ["b:dota_shop_view_mode"] },
 
-		"muteChat": { "type": "boolean", "label": "Mute Chat", "commands": ["b:dota_chat_mute_all"] }
+		"muteChat": { "type": "boolean", "label": "Mute Chat", "info": "Never get flamed again, but never read tips & dank memes either.", "commands": ["b:dota_chat_mute_all"] }
 	},
 	"performance": {
-		"screenShake": { "type": "boolean", "label": "Screen Shake", "commands": ["b:dota_screen_shake"] },
-		"animatePortrait": { "type": "boolean", "label": "Animate Portrait", "commands": ["b:dota_portrait_animate"] },
-		"ambientCreatures": { "type": "boolean", "label": "Ambient Creatures", "commands": ["b:dota_ambient_creatures"] },
+		"screenShake": { "type": "boolean", "label": "Screen Shake", "info": "Determines how powerful Echo Slams look.", "commands": ["b:dota_screen_shake"] },
+		"animatePortrait": { "type": "boolean", "label": "Animate Portrait", "info": "The 'portrait' is the image of your hero next to the minimap.", "commands": ["b:dota_portrait_animate"] },
+		"ambientCreatures": { "type": "boolean", "label": "Ambient Creatures", "info": "Adds some small animals to the Dota 2 world.", "commands": ["b:dota_ambient_creatures"] },
 
-		"ambientOcclusion": { "type": "boolean", "label": "Ambient Occlusion", "commands": ["b:r_ssao"] },
+		"ambientOcclusion": { "type": "boolean", "label": "Ambient Occlusion", "info": "Enables a more natural lighting.", "commands": ["b:r_ssao"] },
 		"highQualityWater": { "type": "boolean", "label": "High Quality Water", "commands": ["b:!dota_cheap_water"] },
 		"highQualityDashboard": { "type": "boolean", "label": "High Quality Dashboard", "commands": ["b:dota_embers"] },
 		"heightFog": { "type": "boolean", "label": "Height Fog", "commands": ["b:r_deffered_height_fog"] },
-		"worldLighting": { "type": "boolean", "label": "World Lighting", "commands": ["b:!r_deffered_simple_light"] },
-		"additiveLightPass": { "type": "boolean", "label": "Additive Light Pass", "commands": ["b:!r_deffered_additive_pass"] },
-		"specularBloom": { "type": "boolean", "label": "Specular Bloom", "commands": ["b:r_deffered_specular_bloom"] },
-		"specularHighlight": { "type": "boolean", "label": "Specular Highlight", "commands": ["b:r_deffered_specular"] },
-		"doubleShadowUpdates": { "type": "boolean", "label": "Double Shadow Updates", "commands": ["b:!r_shadow_half_update_rate"] },
+		"worldLighting": { "type": "boolean", "label": "World Lighting", "info": "Adds dynamic lights and shadows to the game world.", "commands": ["b:!r_deffered_simple_light"] },
+		"additiveLightPass": { "type": "boolean", "label": "Additive Light Pass", "info": "Improves lighting.", "commands": ["b:!r_deffered_additive_pass"] },
+		"specularBloom": { "type": "boolean", "label": "Specular Bloom", "info": "Makes things glow.", "commands": ["b:r_deffered_specular_bloom"] },
+		"specularHighlight": { "type": "boolean", "label": "Specular Highlight", "info": "Makes things shiny.", "commands": ["b:r_deffered_specular"] },
+		"doubleShadowUpdates": { "type": "boolean", "label": "Double Shadow Updates", "info": "Deactivating this will cause Dota to refresh shadows only every second frame, which might look worse.", "commands": ["b:!r_shadow_half_update_rate"] },
 
-		"multiCore": { "type": "boolean", "label": "Use Multi-Core", "commands": [
+		"multiCore": { "type": "boolean", "label": "Use Multi-Core", "info": "Tells the game to use multiple CPUs, should improve performance on nearly every computer.", "commands": [
 			"b:r_threaded_shadow_clip",
 			"b:r_queued_decals",
 			"b:r_queued_post_processing",
@@ -65,19 +65,19 @@
 			"b:snd_mix_async",
 			"c:2:0:mat_que_mode"
 		] },
-		"altTabIdle": { "type": "boolean", "label": "Alt-Tab Idle", "commands": ["b:engine_no_focus_sleep"] },
-		"maximumFramerate": { "type": "range", "min": 0, "max": 288, "label": "Maximum Framerate", "commands": ["i:fps_max"] },
+		"altTabIdle": { "type": "boolean", "label": "Alt-Tab Idle", "info": "Lowers the framerate, when the game loses focus. Useful to save power.", "commands": ["b:engine_no_focus_sleep"] },
+		"maximumFramerate": { "type": "range", "min": 0, "max": 288, "label": "Maximum framerate", "info": "Set how many frames per second you want at most. Setting this to 0 will grant maximum frames per second.", "commands": ["i:fps_max"] },
 
-		"clientForcePreload": { "type": "boolean", "label": "Force Client-Data Preload", "commands": ["b:cl_forcepreload"] },
-		"serverForcePreload": { "type": "boolean", "label": "Force Server-Data Preload", "commands": ["b:sv_forcepreload"] },
+		"clientForcePreload": { "type": "boolean", "label": "Force Client-Data Preload", "info": "Is said to improve performance for some people.", "commands": ["b:cl_forcepreload"] },
+		"serverForcePreload": { "type": "boolean", "label": "Force Server-Data Preload", "info": "Is said to improve performance for some people.", "commands": ["b:sv_forcepreload"] },
 
-		"levelOfDetail": { "type": "range", "min": 0, "max": 5, "label": "Level Of Detail", "commands": ["i:r_lod:5"] },
-		"shadowQuality": { "type": "range", "min": 0, "max": 3, "label": "Shadow Quality", "commands": ["i:cl_globallight_shadow_mode"] },
+		"levelOfDetail": { "type": "range", "min": 0, "max": 5, "label": "Level Of Detail", "info": "This value specifies how good far-distant objects are rendered.", "commands": ["i:r_lod:5"] },
+		"shadowQuality": { "type": "range", "min": 0, "max": 3, "label": "Shadow Quality", "info": "Higher values mean sharper, more detailed shadows, but impact performance.", "commands": ["i:cl_globallight_shadow_mode"] },
 
-		"gpuLevel": { "type": "range", "min": 0, "max": 3, "label": "GPU Level", "commands": ["i:gpu_level"] },
-		"cpuLevel": { "type": "range", "min": 0, "max": 2, "label": "CPU Level", "commands": ["i:cpu_level"] },
-		"gpuMemoryLevel": { "type": "range", "min": 0, "max": 2, "label": "GPU Memory Level", "commands": ["i:gpu_mem_level"] },
-		"memoryLevel": { "type": "range", "min": 0, "max": 2, "label": "Memory Level", "commands": ["i:mem_level"] }
+		"gpuLevel": { "type": "range", "min": 0, "max": 3, "label": "GPU Level", "info": "Determines how much of your graphics card Dota 2 tries to use.", "commands": ["i:gpu_level"] },
+		"cpuLevel": { "type": "range", "min": 0, "max": 2, "label": "CPU Level", "info": "Determines how much of your processor Dota 2 tries to use.", "commands": ["i:cpu_level"] },
+		"gpuMemoryLevel": { "type": "range", "min": 0, "max": 2, "label": "GPU Memory Level", "info": "Determines how much of your graphic memory Dota 2 tries to use.", "commands": ["i:gpu_mem_level"] },
+		"memoryLevel": { "type": "range", "min": 0, "max": 2, "label": "Memory Level", "info": "Determines how much of your system memory Dota 2 tries to use.", "commands": ["i:mem_level"] }
 	},
 	"engine": {
 		"keyboardLayout": {
@@ -89,6 +89,6 @@
 			],
 			"label": "Keyboard Layout"
 		},
-		"inputButtonCodeIsScanCode": { "type": "boolean", "label": "Input Button Code Is Scan Code" }
+		"inputButtonCodeIsScanCode": { "type": "boolean", "label": "Input Button Code Is Scan Code", "info": "This setting should allow every keyboard-layout to work with the same key-positions as the default (English-US) keyboard." }
 	}
 }
