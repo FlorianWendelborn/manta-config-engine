@@ -31,6 +31,6 @@
 		"chatwheelText": "//---// Chatwheel {id}:"
 	},
 	"layouts": {
-		"initialText": "// generated using https://github.com/dodekeract/manta-preset-engine\n// graphical user-interface available at https://manta.dodekeract.report\n\n// # Layout {id}:\nunbindall\n\n"
+		"initialText": "// generated using https://github.com/dodekeract/manta-config-engine\n// graphical user-interface available at https://manta.dodekeract.report\n\n// # Layout {id}:\nunbindall\n\n"
 	}
 }
