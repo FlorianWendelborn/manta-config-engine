@@ -1,3 +1,4 @@
+var codements = require('codements');
 var manta = require('../');
 var constants = manta.data.constants;
 var prefix = constants.prefix;
@@ -10,6 +11,9 @@ function SettingParser (options) {
 	this.autoexec = constants.settings.initialText;
 	this.indicator = '';
 	this.appendList = [];
+	this.codement = new codements.SplitView({
+		newlineAtEnd: false
+	});
 }
 
 SettingParser.prototype.parse = function () {
@@ -56,7 +60,7 @@ SettingParser.prototype.parseCategory = function (current, last) {
 		}
 	}
 
-	this.doSmartAppend();
+	this.append(this.codement.render());
 };
 
 SettingParser.prototype.parseEngine = function () {
@@ -87,9 +91,9 @@ SettingParser.prototype.parseEngine = function () {
 SettingParser.prototype.parseBoolean = function (condition, command, comment, inverse) {
 	if (condition !== undefined) {
 		if (!inverse && condition || inverse && !condition) {
-			this.smartAppend(command + ' 1', comment);
+			this.codement.addLine(command + ' 1', comment);
 		} else {
-			this.smartAppend(command + ' 0', comment);
+			this.codement.addLine(command + ' 0', comment);
 		}
 	}
 };
@@ -102,33 +106,12 @@ SettingParser.prototype.parseNumber = function (value, command, comment, inverse
 		if (unit) {
 			value /= unit;
 		}
-		this.smartAppend(command + ' ' + value, comment);
+		this.codement.addLine(command + ' ' + value, comment);
 	}
 };
 
 SettingParser.prototype.append = function (text) {
 	this.autoexec += text + '\n';
-};
-
-SettingParser.prototype.smartAppend = function (command, comment) {
-	this.appendList.push([command, comment]);
-};
-
-SettingParser.prototype.doSmartAppend = function () {
-	// get longest entry
-	var max = 0;
-	for (var i = 0; i < this.appendList.length; i++) {
-		var item = this.appendList[i];
-		var length = item[0].length;
-		max = Math.max(this.appendList[i][0].length, max);
-	}
-
-	// just do it
-	for (var i = 0; i < this.appendList.length; i++) {
-		var alignment = max - this.appendList[i][0].length;
-		this.append(this.appendList[i][0] + new Array(alignment+1).join(' ') + ' // ' + this.appendList[i][1], this.appendList[i][2]);
-	}
-	this.appendList = [];
 };
 
 module.exports = SettingParser;
