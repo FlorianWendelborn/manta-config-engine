@@ -32,10 +32,11 @@ SettingParser.prototype.parse = function () {
 }
 
 SettingParser.prototype.parseCategory = function (current, last) {
+	this.codement.reset();
 	if (this[last]) {
 		this.append('');
 	}
-	this.append(manta.data.constants.settings[current + 'InitialText']);
+	this.codement.addLine(manta.data.constants.settings[current + 'InitialText']);
 	for (var i in this[current]) {
 		var d = manta.data.settings[current][i];
 		if (!d.commands || !d.commands.length) {
