@@ -24,7 +24,8 @@
 	},
 	"dependencies": {
 		"initialText": "// # Dependencies:\n",
-		"cycleText": "//---// Cycle {id}:"
+		"cycleText": "//---// Cycle {id}:",
+		"viewText": "//---// View {type}:"
 	},
 	"chatwheels": {
 		"initialText": "// # Chatwheels:\n",

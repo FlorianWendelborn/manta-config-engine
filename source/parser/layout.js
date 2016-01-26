@@ -70,15 +70,16 @@ Layout.prototype.bindKey = function (key, options) {
 			command = options[1];
 		break;
 		case "cycle":
+			var name = prefix + separator + 'cycle' + separator + options[1];
 			if (options[2] === 'reset') {
-				var name = prefix + separator + 'cycle' + separator + options[1];
 				command = 'alias ' + name + ' ' + name + separator + 0;
 			} else {
+				options[2] = [];
 				for (var i = 0; i < this.preset.cycles[options[1]].length; i++) {
 					command = this.bindKey(false, this.preset.cycles[options[1]][i]);
-					this.depend(['include', 'alias "' + prefix + separator + 'cycle' + separator + options[1] + separator + 'command' + separator + i + '" ' + command]);
+					options[2].push(command);
 				}
-				command = prefix + separator + 'cycle' + separator + options[1];
+				command = name;
 				this.depend(options);
 			}
 		break;

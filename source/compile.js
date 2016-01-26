@@ -26,6 +26,31 @@ module.exports = function (preset, callback) {
 		dependencies.push(options);
 	}
 
+	function sort (o) {
+		// I know this could be done recursively, however, I refuse
+		return o.sort(function (a, b) {
+			if (a[0] < b[0]) {
+				return -1;
+			} else if (a[0] > b[0]) {
+				return 1;
+			} else {
+				if (a[1] < b[1]) {
+					return -1;
+				} else if (a[1] > b[1]) {
+					return 1;
+				} else {
+					if (a[2] < b[2]) {
+						return -1;
+					} else if (a[2] > b[2]) {
+						return 1;
+					} else {
+						return 0;
+					}
+				}
+			}
+		});
+	}
+
 	// ### parsing
 	// settings
 	var settingParser = new manta.parser.Setting(preset.settings);
@@ -50,6 +75,8 @@ module.exports = function (preset, callback) {
 		result['layout-' + i + '.cfg'] = layoutResult;
 	}
 
+	dependencies = sort(dependencies);
+
 	// dependencies
 	var dependencyParser = new manta.parser.Dependency({
 		dependencies: dependencies,
@@ -68,6 +95,8 @@ module.exports = function (preset, callback) {
 	// load indicator
 	append(settings[1]);
 
+	// merge multiple empty lines to one
+	autoexec = autoexec.replace(/\n{3,}/g, '\n\n');
 	result['autoexec.cfg'] = autoexec;
 
 	setTimeout(function () {

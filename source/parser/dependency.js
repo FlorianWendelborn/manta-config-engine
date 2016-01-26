@@ -1,4 +1,5 @@
 var manta = require('../');
+var codements = require('codements');
 var constants = manta.data.constants;
 
 var prefix = constants.prefix;
@@ -9,142 +10,150 @@ function DependencyParser (options) {
 	this.dependencies = options.dependencies;
 	this.cycles = options.cycles;
 	this.autoexec = constants.dependencies.initialText;
+	this.codement = new codements.SplitView({
+		newLineAtEnd: false
+	});
 }
 
 DependencyParser.prototype.parse = function () {
+	this.codement.reset();
 	for (var i = 0; i < this.dependencies.length; i++) {
 		var dep = this.dependencies[i];
 		switch (dep[0]) {
 			case "ability":
 				switch (dep[1]) {
+					case "normal":
+						this.codement.addLine('alias "' + prefix + separator + 'ability' + separator + 'normalcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '"', 'Normal-Cast Ability ' + (dep[2] + 1));
+					break;
 					case "quick":
-						this.append('alias "' + prefix + separator + 'ability' + separator + 'quickcast' + separator + dep[2] + '" "dota_ability_quickcast ' + dep[2] + '"');
+						this.codement.addLine('alias "' + prefix + separator + 'ability' + separator + 'quickcast' + separator + dep[2] + '" "dota_ability_quickcast ' + dep[2] + '"', 'Quick-Cast Ability ' + (dep[2] + 1));
 					break;
 					case "self":
-						this.append('alias "' + prefix + separator + 'ability' + separator + 'selfcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '; dota_ability_execute ' + dep[2] + '"');
-					break;
-					case "normal":
-						this.append('alias "' + prefix + separator + 'ability' + separator + 'normalcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '"');
+						this.codement.addLine('alias "' + prefix + separator + 'ability' + separator + 'selfcast' + separator + dep[2] + '" "dota_ability_execute ' + dep[2] + '; dota_ability_execute ' + dep[2] + '"', 'Self-Cast Ability ' + (dep[2] + 1));
 					break;
 					case "smart":
 						var name = prefix + separator + 'ability' + separator + 'smartcast' + separator + dep[2];
-						this.append('alias "+' + name + '" "dota_ability_execute ' + dep[2] + '; alias -' + name + ' dota_ability_quickcast ' + dep[2] + '"');
-						this.append('alias "-' + name + '" "dota_ability_quickcast ' + dep[2] + '"');
+						this.codement.addLine('alias "+' + name + '" "dota_ability_execute ' + dep[2] + '; alias -' + name + ' dota_ability_quickcast ' + dep[2] + '"', 'Smart-Cast Ability ' + (dep[2] + 1));
+						this.codement.addLine('alias "-' + name + '" "dota_ability_quickcast ' + dep[2] + '"', 'Smart-Cast Ability ' + (dep[2] + 1));
 					break;
 				}
+			break;
+			case "cycle":
+				var name = prefix + separator + 'cycle' + separator + dep[1];
+				var cycle = this.cycles[dep[1]];
+				this.append(this.codement.render());
+				this.codement.reset();
+				this.codement.addLine(constants.dependencies.cycleText.replace('{id}', dep[1]));
+				this.codement.addLine('alias ' + name + ' ' + name + separator + 0, 'Prepare Cycle');
+				for (var j = 0; j < cycle.length; j++) {
+					if (j !== cycle.length-1) { // not the last item
+						this.codement.addLine('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + (j+1) + '; ' + name + separator + 'command' + separator + j + '"', 'Cycle Through');
+					} else { // the last item
+						this.codement.addLine('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + 0 + '; ' + name + separator + 'command' + separator + j + '"', 'Finish Cycle');
+					}
+				}
+				for (var j = 0; j < dep[2].length; j++) {
+					this.codement.addLine('alias "' + name + separator + 'command' + separator + j + '" ' + dep[2][j], 'Command ' + (j + 1));
+				}
+				this.append(this.codement.render());
+				this.codement.reset();
+			break;
+			case "include":
+				this.codement.addLine(dep[1]);
 			break;
 			case "item":
 				switch (dep[1]) {
+					case "normal":
+						this.codement.addLine('alias "' + prefix + separator + 'item' + separator + 'normalcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '"', 'Normal-Cast Item ' + (dep[2] + 1));
+					break;
 					case "quick":
-						this.append('alias "' + prefix + separator + 'item' + separator + 'quickcast' + separator + dep[2] + '" "dota_item_quick_cast ' + dep[2] + '"');
+						this.codement.addLine('alias "' + prefix + separator + 'item' + separator + 'quickcast' + separator + dep[2] + '" "dota_item_quick_cast ' + dep[2] + '"', 'Quick-Cast Item ' + (dep[2] + 1));
 					break;
 					case "self":
-						this.append('alias "' + prefix + separator + 'item' + separator + 'selfcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '; dota_item_execute ' + dep[2] + '"');
-					break;
-					case "normal":
-						this.append('alias "' + prefix + separator + 'item' + separator + 'normalcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '"');
+						this.codement.addLine('alias "' + prefix + separator + 'item' + separator + 'selfcast' + separator + dep[2] + '" "dota_item_execute ' + dep[2] + '; dota_item_execute ' + dep[2] + '"', 'Self-Cast Item ' + (dep[2] + 1));
 					break;
 					case "smart":
 						var name = prefix + separator + 'item' + separator + 'smartcast' + separator + dep[2];
-						this.append('alias "+' + name + '" "dota_item_execute ' + dep[2] + '; alias -' + name + ' dota_item_quick_cast ' + dep[2] + '"');
-						this.append('alias "-' + name + '" "dota_item_quick_cast ' + dep[2] + '"');
+						this.codement.addLine('alias "+' + name + '" "dota_item_execute ' + dep[2] + '; alias -' + name + ' dota_item_quick_cast ' + dep[2] + '"', 'Smart-Cast Item ' + (dep[2] + 1));
+						this.codement.addLine('alias "-' + name + '" "dota_item_quick_cast ' + dep[2] + '"', 'Smart-Cast Item ' + (dep[2] + 1));
 					break;
 				}
 			break;
-			case "extension":
-				this.append(constants.extensions.initialText.replace('{id}', dep[1] + '/' + dep[2]));
-				// #TODO
-			break;
-			// case "toggle":
-			// 	var name = prefix + separator + 'toggle' + separator + dep[1];
-			// 	this.append('alias "' + name + '" "' + name + separator + constants.toggle.enabledText + '"');
-			// 	switch (dep[1]) {
-			// 		case "auto-attack":
-			// 			this.append('alias "' + name + separator + constants.toggle.enabledText + '" "dota_player_units_auto_attack 1;dota_player_units_auto_attack_after_spell 1;alias ' + name + ' ' + name + separator + constants.toggle.disabledText + ';"');
-			// 			this.append('alias "' + name + separator + constants.toggle.disabledText + '" "dota_player_units_auto_attack 0;dota_player_units_auto_attack_after_spell 0;alias ' + name + ' ' + name + separator + constants.toggle.enabledText + ';"');
-			// 		break;
-			// 		/*
-			// 			alias aaToggle "aaOn"
-			// 			alias aaOn "dota_player_units_auto_attack 1;dota_player_units_auto_attack_after_spell 1;alias aaToggle aaOff;playuisound DOTA_Item.Hand_Of_Midas"
-			// 			alias aaOff "dota_player_units_auto_attack 0;dota_player_units_auto_attack_after_spell 0;alias aaToggle aaOn;playuisound DOTA_Item.MagicStick.Activate"
-			// 		*/
-			// 	}
-			// break;
-			case "cycle":
-				this.append(constants.dependencies.cycleText.replace('{id}', dep[1]));
-				var name = prefix + separator + 'cycle' + separator + dep[1];
-				var cycle = this.cycles[dep[1]];
-				for (var j = 0; j < cycle.length; j++) {
-					if (j !== cycle.length-1) { // not the last item
-						this.append('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + (j+1) + '; ' + name + separator + 'command' + separator + j + '"');
-					} else { // the last item
-						this.append('alias "' + name + separator + j + '" "alias ' + name + ' ' + name + separator + 0 + '; ' + name + separator + 'command' + separator + j + '"');
-					}
-				}
-				this.append('alias ' + name + ' ' + name + separator + 0);
+			case "layout":
+				this.codement.addLine('alias +' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-' + dep[1] + '.cfg"', 'Load Layout ' + (dep[1] + 1));
+				this.codement.addLine('alias -' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-0.cfg"', 'Unload Layout ' + (dep[1] + 1));
 			break;
 			case "view":
+				this.append(this.codement.render());
+				this.codement.reset();
 				switch (dep[1]) {
 					case "rune":
 						switch (dep[2]) {
 							case "toggle":
+								this.codement.addLine(constants.dependencies.viewText.replace('{type}', 'Rune (Toggle)'));
 								var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'toggle';
 								var topRune = rune + separator + 'top';
 								var bottomRune = rune + separator + 'bottom';
-								this.append('alias "+' + rune + '" "' + topRune + '"');
-								this.append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-								this.append('alias "' + topRune + '" "dota_camera_set_lookatpos ' + positions.rune.top.join(' ') + '; alias +' + rune + ' ' + bottomRune + '"');
-								this.append('alias "' + bottomRune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom.join(' ') + '; alias +' + rune + ' ' + topRune + '"');
+
+								this.codement.addLine('alias "+' + rune + '" "' + topRune + '"', 'Set Default Rune To Top');
+								this.codement.addLine('alias "' + topRune + '" "dota_camera_set_lookatpos ' + positions.rune.top.join(' ') + '; ' + rune + separator + 0 + '"', 'Look At Top Rune');
+								this.codement.addLine('alias "' + bottomRune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom.join(' ') + '; ' + rune + separator + 1 + '"', 'Look At Bottom Rune');
+								this.codement.addLine('alias "' + rune + separator + 0 + '" "alias +' + rune + ' ' + bottomRune + '"', 'Set Bottom As Next Rune');
+								this.codement.addLine('alias "' + rune + separator + 1 + '" "alias +' + rune + ' ' + topRune + '"', 'Set Top As Next Rune');
+								this.codement.addLine('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"', 'Jump Back');
 							break;
 							case "top":
+								this.codement.addLine(constants.dependencies.viewText.replace('{type}', 'Top Rune'));
 								var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'top';
-								this.append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.top.join(' ') + '"');
-								this.append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+								this.codement.addLine('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.top.join(' ') + '"');
+								this.codement.addLine('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
 							break;
 							case "bottom":
+								this.codement.addLine(constants.dependencies.viewText.replace('{type}', 'Bottom Rune'));
 								var rune = prefix + separator + 'view' + separator + 'rune' + separator + 'bottom';
-								this.append('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom.join(' ') + '"');
-								this.append('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+								this.codement.addLine('alias "+' + rune + '" "dota_camera_set_lookatpos ' + positions.rune.bottom.join(' ') + '"');
+								this.codement.addLine('alias "-' + rune + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
 							break;
 						}
 					break;
 					case "base":
 						switch (dep[2]) {
 							case "toggle":
+								this.codement.addLine(constants.dependencies.viewText.replace('{type}', 'Base (Toggle)'));
 								var base = prefix + separator + 'view' + separator + 'base' + separator + 'toggle';
 								var direBase = base + separator + 'dire';
 								var radiantBase = base + separator + 'radiant';
 
-								this.append('alias "+' + base + '" "' + radiantBase + '"');
-								this.append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
-								this.append('alias "' + direBase + '" "dota_camera_set_lookatpos ' + positions.base.dire.join(' ') + '; alias +' + base + ' ' + radiantBase + '"');
-								this.append('alias "' + radiantBase + '" "dota_camera_set_lookatpos ' + positions.base.radiant.join(' ') + '; alias +' + base + ' ' + direBase + '"');
+								this.codement.addLine('alias "+' + base + '" "' + radiantBase + '"', 'Set Default Base To Radiant');
+								this.codement.addLine('alias "' + direBase + '" "dota_camera_set_lookatpos ' + positions.base.dire.join(' ') + '; ' + base + separator + 0 + '"', 'Look At Dire Base');
+								this.codement.addLine('alias "' + radiantBase + '" "dota_camera_set_lookatpos ' + positions.base.radiant.join(' ') + '; ' + base + separator + 1 + '"', 'Look At Radiant Base');
+								this.codement.addLine('alias "' + base + separator + 0 + '" "alias +' + base + ' ' + radiantBase + '"', 'Set Radiant As Next Base');
+								this.codement.addLine('alias "' + base + separator + 1 + '" "alias +' + base + ' ' + direBase + '"', 'Set Dire As Next Base');
+								this.codement.addLine('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"', 'Jump Back');
 							break;
 							case "radiant":
+								this.codement.addLine(constants.dependencies.viewText.replace('{type}', 'Radiant Base'));
 								var base = prefix + separator + 'view' + separator + 'base' + separator + 'radiant';
-								this.append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.radiant.join(' ') + '"');
-								this.append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+								this.codement.addLine('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.radiant.join(' ') + '"', 'Look At Radiant Base');
+								this.codement.addLine('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"', 'Jump Back');
 							break;
 							case "dire":
+								this.codement.addLine(constants.dependencies.viewText.replace('{type}', 'Dire Base'));
 								var base = prefix + separator + 'view' + separator + 'base' + separator + 'dire';
-								this.append('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.dire.join(' ') + '"');
-								this.append('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"');
+								this.codement.addLine('alias "+' + base + '" "dota_camera_set_lookatpos ' + positions.base.dire.join(' ') + '"', 'Look At Dire Base');
+								this.codement.addLine('alias "-' + base + '" "dota_recent_event; dota_recent_event; +dota_camera_follow"', 'Jump Back');
 							break;
 						}
 					break;
 				}
-			break;
-			case "layout":
-				this.append('alias +' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-' + dep[1] + '.cfg"');
-				this.append('alias -' + prefix + separator + 'layout' + separator + dep[1] + ' "exec layout-0.cfg"');
-			break;
-			case "include":
-				this.append(dep[1]);
+				this.append(this.codement.render());
+				this.codement.reset();
 			break;
 			default:
 				console.error('unresolved dependency', dep);
 		}
 	}
+	this.append(this.codement.render());
 	return this.autoexec;
 };
 

@@ -10,7 +10,6 @@ function SettingParser (options) {
 	this.engine = options.engine;
 	this.autoexec = constants.settings.initialText;
 	this.indicator = '';
-	this.appendList = [];
 	this.codement = new codements.SplitView({
 		newlineAtEnd: false
 	});

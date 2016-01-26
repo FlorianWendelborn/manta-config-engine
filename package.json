@@ -1,6 +1,6 @@
 {
 	"name": "dota2-manta-config-engine",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Dota 2 configuration builder. Compiles JSON to autoexec.",
 	"main": "source/index.js",
 	"repository": {
@@ -27,7 +27,7 @@
 	},
 	"homepage": "https://github.com/dodekeract/manta-config-engine#readme",
 	"dependencies": {
-		"codements": "0.0.5",
+		"codements": "0.0.7",
 		"minimist": "^1.2.0"
 	}
 }
