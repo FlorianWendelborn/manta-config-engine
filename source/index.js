@@ -6,6 +6,7 @@ module.exports.data = {
 	constants: require('../data/constants.json')
 };
 module.exports.compile = require('./compile');
+module.exports.utils = require('./utils');
 module.exports.parser = {
 	Chatwheel: require('./parser/chatwheel'),
 	Dependency: require('./parser/dependency'),

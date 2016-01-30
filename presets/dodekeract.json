@@ -24,10 +24,11 @@
 				"'": ["open", "console"],
 
 				"O": ["cycle", 0],
-				"PGUP": ["cycle", 1],
 
+				"F1": ["open", "scoreboard"],
+				"F2": ["open", "shop"],
 				"F3": ["courier", "deliver"],
-				"F4": ["open", "scoreboard"],
+				"F4": ["ability", "auto", "toggle"],
 				"F5": ["buy", "quick"],
 				"F6": ["buy", "sticky"],
 				"F9": ["pause"],
@@ -52,11 +53,12 @@
 
 				"KP_0": ["chat", "team", "no"],
 				"KP_1": ["chat", "team", "yes"],
-				"KP_2": ["chat", "team", "no"],
-				"KP_3": ["chat", "student", "test"],
+				"KP_2": ["phrase", 59],
+				"KP_3": ["phrase", 81],
 				"KP_4": ["phrase", 9],
-				"KP_5": ["phrase", 10],
-				"KP_6": ["phrase", 11],
+				"KP_4": ["phrase", 75],
+				"KP_5": ["phrase", 76],
+				"KP_6": ["phrase", 82],
 				"KP_7": ["chat", "all", "> That just happened."],
 				"KP_8": ["phrase", 53],
 				"KP_9": ["phrase", 85]
@@ -81,20 +83,15 @@
 
 				"`": ["view", "base", "toggle"],
 
+				"1": ["phrase", 9],
+				"2": ["phrase", 10],
+				"3": ["phrase", 11],
+
 				"F3": ["courier", "burst"],
 
 				"SPACE": ["layout", 1],
 
 				"F11": ["reload"]
-			}
-		},{
-			"keybinds": {
-				"Q": ["ability", "normal", 0],
-				"W": ["ability", "normal", 1],
-				"E": ["ability", "normal", 2],
-				"D": ["ability", "normal", 3],
-				"F": ["ability", "normal", 4],
-				"R": ["ability", "normal", 5]
 			}
 		}
 	],
@@ -108,10 +105,6 @@
 			["health", 325],
 			["health", 450],
 			["health", 550]
-		],[
-			["ability", "quick", 3],
-			["item", "quick", 4],
-			["ability", "quick", 3]
 		]
 	],
 	"settings": {

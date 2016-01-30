@@ -1,10 +1,14 @@
 var manta = require('../');
-var constants = manta.data.constants;
-var prefix = constants.prefix;
-var separator = constants.separator;
+
+// utility shorthands, so the commands remain readable
+var utils = manta.utils;
+var name = utils.name;
+var single = utils.single;
+var alias = utils.alias;
+var bind = utils.bind;
 
 function Layout (options) {
-	this.autoexec = constants.layouts.initialText.replace('{id}', options.id);
+	this.autoexec = manta.data.constants.layouts.initialText.replace('{id}', options.id);
 	this.keybinds = options.keybinds;
 	this.preset = options.preset;
 	this.depend = options.depend;
@@ -26,9 +30,11 @@ Layout.prototype.bindKey = function (key, options) {
 	switch (options[0]) {
 		case "ability":
 			if (options[1] === 'smart') {
-				command = '+' + prefix + separator + 'ability' + separator + options[1] + 'cast' + separator + options[2];
+				command = '+' + name(options);
+				this.depend([options[0], 'quick', options[2]]);
+				this.depend([options[0], 'normal', options[2]]);
 			} else {
-				command = prefix + separator + 'ability' + separator + options[1] + 'cast' + separator + options[2];
+				command = name(options);
 			}
 			this.depend(options);
 		break;
@@ -41,45 +47,41 @@ Layout.prototype.bindKey = function (key, options) {
 					command = 'use_item_client current_hero taunt';
 				break;
 				case "smart":
-					command = '+' + prefix + separator + 'item' + separator + options[1] + 'cast' + separator + options[2];
+					command = '+' + name(options);
+					this.depend([options[0], 'quick', options[2]]);
+					this.depend([options[0], 'normal', options[2]]);
 					this.depend(options);
 				break;
 				default:
-					command = prefix + separator + 'item' + separator + options[1] + 'cast' + separator + options[2];
+					command = name(options);
 					this.depend(options);
 			}
-		break;
-		case "extension":
-			command = prefix + separator + 'extension' + separator + options[1] + separator + options[2];
-			this.depend(options);
 		break;
 		case "health":
 			command = 'dota_health_per_vertical_marker ' + options[1];
 		break;
 		case "layout":
-			command = '"+' + prefix + separator + 'layout' + separator + options[1] + '"';
+			command = '+' + name(options);
 			this.depend(options);
 		break;
 		case "chatwheel":
-			command = '+' + prefix + separator + 'chatwheel' + separator + options[1];
+			command = '+' + name(options);
 		break;
 		case "reload":
-			command = '"exec autoexec.cfg"';
+			command = single('exec', 'autoexec.cfg');
 		break;
 		case "command":
-			command = options[1];
+			command = single(options[1]);
 		break;
 		case "cycle":
-			var name = prefix + separator + 'cycle' + separator + options[1];
 			if (options[2] === 'reset') {
-				command = 'alias ' + name + ' ' + name + separator + 0;
+				command = alias(name(options), name(options, 0));
 			} else {
+				command = name(options);
 				options[2] = [];
 				for (var i = 0; i < this.preset.cycles[options[1]].length; i++) {
-					command = this.bindKey(false, this.preset.cycles[options[1]][i]);
-					options[2].push(command);
+					options[2].push(this.bindKey(false, this.preset.cycles[options[1]][i]));
 				}
-				command = name;
 				this.depend(options);
 			}
 		break;
@@ -124,7 +126,7 @@ Layout.prototype.bindKey = function (key, options) {
 					command = 'dota_select_courier';
 				break;
 				case "controlgroup":
-					command = '+dota_control_group ' + options[2];
+					command = single('+dota_control_group ', options[2]);
 				break;
 				case "next-unit":
 					command = 'dota_cycle_selected';
@@ -179,13 +181,13 @@ Layout.prototype.bindKey = function (key, options) {
 		case "chat":
 			switch (options[1]) {
 				case "all":
-					command = 'say "' + options[2] + '"';
+					command = single('say', options[2]);
 				break;
 				case "team":
-					command = 'say_team "' + options[2] + '"';
+					command = single('say_team', options[2]);
 				break;
 				case "student":
-					command = 'say_student "' + options[2] + '"';
+					command = single('say_student', options[2]);
 				break;
 			}
 		break;
@@ -206,16 +208,16 @@ Layout.prototype.bindKey = function (key, options) {
 			}
 		break;
 		case "phrase":
-			command = 'chatwheel_say ' + options[1];
+			command = single('chatwheel_say', options[1]);
 		break;
 		case "view":
-			command = '+' + prefix + separator + 'view' + separator + options[1] + separator + options[2];
+			command = '+' + name(options);
 			this.depend(options);
 		break;
 	}
 
 	if (key !== false) {
-		this.append('bind "' + key + '" ' + command);
+		this.append(bind(key, command));
 	}
 
 	return command;

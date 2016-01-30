@@ -1,8 +1,13 @@
 var manta = require('../');
 var codements = require('codements');
 var constants = manta.data.constants;
-var prefix = constants.prefix;
-var separator = constants.separator;
+
+// utility shorthands, so the commands remain readable
+var utils = manta.utils;
+var multi = utils.multi;
+var alias = utils.alias;
+var name = utils.name;
+var oneMore = utils.oneMore;
 
 function ChatwheelParser (options) {
 	this.chatwheels = options.chatwheels;
@@ -25,16 +30,14 @@ ChatwheelParser.prototype.parse = function () {
 ChatwheelParser.prototype.parseOne = function (id) {
 	var chatwheel = this.chatwheels[id];
 	var command = '';
-	var name = prefix + separator + 'chatwheel' + separator + id;
-	var phrasePrefix = name + separator;
+	var cname = name('chatwheel', id);
 	this.codement.addLine(constants.chatwheels.chatwheelText.replace('{id}', id));
-	this.codement.addLine('alias +' + name + ' "' + phrasePrefix + 0 + '"', 'Prepare Chatwheel');
+	this.codement.addLine(alias('+' + name('chatwheel', id), name('chatwheel', id, 0)), 'Prepare Chatwheel');
 	for (var i = 0; i < chatwheel.length; i++) {
-		var phraseName = phrasePrefix + i;
-		var nextCommand = (i === chatwheel.length - 1) ? '+chatwheel' : phrasePrefix + (i+1);
-		this.codement.addLine('alias ' + phraseName + ' "chat_wheel_phrase_' + i + ' ' + chatwheel[i] + '; ' + nextCommand + '"', '▶ ' + manta.data.phrases[chatwheel[i]]);
+		var nextCommand = (i === chatwheel.length - 1) ? '+chatwheel' : name('chatwheel', id, oneMore(i));
+		this.codement.addLine(alias(name('chatwheel', id, i), multi('chat_wheel_phrase_' + i + ' ' + chatwheel[i], nextCommand)), '▶ ' + manta.data.phrases[chatwheel[i]]);
 	}
-	this.codement.addLine('alias -' + name + ' "-chatwheel"', 'Close Chatwheel');
+	this.codement.addLine(alias('-' + name('chatwheel', id), '-chatwheel'), 'Close Chatwheel');
 }
 
 module.exports = ChatwheelParser;
