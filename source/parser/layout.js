@@ -12,6 +12,7 @@ function Layout (options) {
 	this.keybinds = options.keybinds;
 	this.preset = options.preset;
 	this.depend = options.depend;
+	this.custom = options.custom;
 }
 
 Layout.prototype.append = function (s) {
@@ -21,6 +22,11 @@ Layout.prototype.append = function (s) {
 Layout.prototype.parse = function () {
 	for (var j in this.keybinds) {
 		this.bindKey(j, this.keybinds[j]);
+	}
+	if (this.custom) {
+		this.append('');
+		this.append(manta.data.constants.layouts.customText);
+		this.append(this.custom);
 	}
 	return this.autoexec;
 };

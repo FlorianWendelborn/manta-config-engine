@@ -67,6 +67,7 @@ module.exports = function (preset, callback) {
 			keybinds: preset.layouts[i].keybinds,
 			preset: preset,
 			depend: depend,
+			custom: preset.layouts[i].custom,
 			id: i
 		});
 
@@ -91,6 +92,12 @@ module.exports = function (preset, callback) {
 
 	// primary layout
 	append(manta.data.constants.bindPrimaryLayout.initialText);
+
+	// custom code
+	if (preset.custom) {
+		append(manta.data.constants.custom.initialText);
+		append(preset.custom + '\n');
+	}
 
 	// load indicator
 	append(settings[1]);
