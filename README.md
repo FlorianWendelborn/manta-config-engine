@@ -88,8 +88,8 @@ internally used class to resolve dependencies
 - Create a pull request.
 
 ## Special Thanks
-- ["The Core"-Config by @loopuleasa](https://github.com/loopuleasa/dota2-thecore-config-engine)
-- ["D2HeroKeys" by @Sembrani](https://github.com/Sembrani/D2HeroKeys)
+- ["The Core"-Config](https://github.com/loopuleasa/dota2-thecore-config-engine) by @loopuleasa
+- [D2HeroKeys](https://github.com/Sembrani/D2HeroKeys) by @Sembrani
 
 ## License
 [MIT](https://github.com/dodekeract/manta-config-engine/tree/master/documentation/LICENSE.md)
