@@ -1,6 +1,6 @@
 {
 	"name": "dota2-manta-config-engine",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Dota 2 configuration builder. Compiles JSON to autoexec.",
 	"main": "source/index.js",
 	"repository": {
@@ -30,6 +30,9 @@
 		"codements": "0.0.7",
 		"minimist": "^1.2.0"
 	},
+	"scripts": {
+		"watch": "nodemon -e js,json source/cli.js preset/dodekeract.json"
+	},
 	"remarkConfig": {
 		"plugins": {
 			"lint": {
@@ -37,6 +40,7 @@
 				, "no-tabs": false
 				, "list-item-spacing": false
 				, "no-missing-blank-lines": false
+				, "maximum-line-length": 400
 			}
 		}
 	},

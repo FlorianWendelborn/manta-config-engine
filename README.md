@@ -1,13 +1,38 @@
 # Manta Config Engine
 
-[![Join the chat at https://gitter.im/dodekeract/manta-config-engine](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dodekeract/manta-config-engine)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-[![Code Climate](https://codeclimate.com/github/dodekeract/manta-config-engine/badges/gpa.svg)](https://codeclimate.com/github/dodekeract/manta-config-engine)
-[![NPM Downloads](https://img.shields.io/npm/dm/dota2-manta-config-engine.svg)](https://npmjs.com/package/dota2-manta-config-engine)
-[![NPM Dependencies](https://david-dm.org/dodekeract/manta-config-engine.png)](https://david-dm.org/dodekeract/manta-config-engine)
-[![Code Documentation](https://inch-ci.org/github/dodekeract/manta-config-engine.svg)](https://inch-ci.org/github/dodekeract/manta-config-engine)
+[![Join the chat at https://gitter.im/dodekeract/manta-config-engine](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dodekeract/manta-config-engine) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT) [![Code Climate](https://codeclimate.com/github/dodekeract/manta-config-engine/badges/gpa.svg)](https://codeclimate.com/github/dodekeract/manta-config-engine) [![NPM Downloads](https://img.shields.io/npm/dm/dota2-manta-config-engine.svg)](https://npmjs.com/package/dota2-manta-config-engine) [![NPM Dependencies](https://david-dm.org/dodekeract/manta-config-engine.png)](https://david-dm.org/dodekeract/manta-config-engine) [![Code Documentation](https://inch-ci.org/github/dodekeract/manta-config-engine.svg)](https://inch-ci.org/github/dodekeract/manta-config-engine)
 
 Dota 2 configuration builder. Compiles `JSON` to `autoexec`. There also is [a web-app](https://github.com/dodekeract/manta-config-engine-app) to easily create presets and build your own autoexec. The app [is hosted on my personal server](https://manta.dodekeract.report), so you don't have to set it up to use it.
+
+## Table Of Contents
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Table Of Contents](#table-of-contents)
+- [Documentation](#documentation)
+- [CLI Installation](#cli-installation)
+- [Library Installation](#library-installation)
+- [CLI options](#cli-options)
+- [Library usage](#library-usage)
+	- [manta.compile(preset, callback)](#mantacompilepreset-callback)
+	- [manta.data](#mantadata)
+		- [manta.data.positions](#mantadatapositions)
+		- [manta.data.phrases](#mantadataphrases)
+	- [manta.parser](#mantaparser)
+		- [manta.parser.Layout](#mantaparserlayout)
+		- [manta.parser.Setting](#mantaparsersetting)
+		- [manta.parser.Chatwheel](#mantaparserchatwheel)
+		- [manta.parser.Dependency](#mantaparserdependency)
+- [Contribute Your Presets](#contribute-your-presets)
+- [Contribute Engine Changes](#contribute-engine-changes)
+- [Special Thanks](#special-thanks)
+- [License](#license)
+- [Changelog](#changelog)
+
+<!-- /TOC -->
+
+## Documentation
+
+The documentation files for this project can be found [here](https://github.com/dodekeract/manta-config-engine-app/tree/master/documentation).
 
 ## CLI Installation
 - Install [node.js](https://nodejs.org)
@@ -65,3 +90,9 @@ internally used class to resolve dependencies
 ## Special Thanks
 - ["The Core"-Config by @loopuleasa](https://github.com/loopuleasa/dota2-thecore-config-engine)
 - ["D2HeroKeys" by @Sembrani](https://github.com/Sembrani/D2HeroKeys)
+
+## License
+[MIT](https://github.com/dodekeract/manta-config-engine/tree/master/documentation/LICENSE.md)
+
+## Changelog
+[Changelog](https://github.com/dodekeract/manta-config-engine/tree/master/documentation/CHANGELOG.md)
