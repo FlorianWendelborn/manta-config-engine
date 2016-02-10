@@ -1,0 +1,335 @@
+{
+	"abaddon": {
+		"attribute": "strength"
+	},
+	"alchemist": {
+		"attribute": "strength"
+	},
+	"ancient-apparition": {
+		"attribute": "intelligence"
+	},
+	"anti-mage" : {
+		"attribute": "agility"
+	},
+	"arc-warden" : {
+		"attribute": "agility"
+	},
+	"axe": {
+		"attribute": "strength"
+	},
+	"bane": {
+		"attribute": "intelligence"
+	},
+	"batrider": {
+		"attribute": "intelligence"
+	},
+	"beastmaster": {
+		"attribute": "strength"
+	},
+	"bloodseeker" : {
+		"attribute": "agility"
+	},
+	"bounty-hunter" : {
+		"attribute": "agility"
+	},
+	"brewmaster": {
+		"attribute": "strength"
+	},
+	"bristleback": {
+		"attribute": "strength"
+	},
+	"broodmother" : {
+		"attribute": "agility"
+	},
+	"centaur-warrunner": {
+		"attribute": "strength"
+	},
+	"chaos-knight": {
+		"attribute": "strength"
+	},
+	"chen": {
+		"attribute": "intelligence"
+	},
+	"clinkz" : {
+		"attribute": "agility"
+	},
+	"clockwerk": {
+		"attribute": "strength"
+	},
+	"crystal-maiden": {
+		"attribute": "intelligence"
+	},
+	"dark-seer": {
+		"attribute": "intelligence"
+	},
+	"dazzle": {
+		"attribute": "intelligence"
+	},
+	"death-prophet": {
+		"attribute": "intelligence"
+	},
+	"disruptor": {
+		"attribute": "intelligence"
+	},
+	"doom": {
+		"attribute": "strength"
+	},
+	"dragon-knight": {
+		"attribute": "strength"
+	},
+	"drow-ranger" : {
+		"attribute": "agility"
+	},
+	"earthshaker": {
+		"attribute": "strength"
+	},
+	"earth-spirit": {
+		"attribute": "strength"
+	},
+	"elder-titan": {
+		"attribute": "strength"
+	},
+	"ember-spirit" : {
+		"attribute": "agility"
+	},
+	"enchantress": {
+		"attribute": "intelligence"
+	},
+	"enigma": {
+		"attribute": "intelligence"
+	},
+	"faceless-void" : {
+		"attribute": "agility"
+	},
+	"gyrocopter" : {
+		"attribute": "agility"
+	},
+	"huskar": {
+		"attribute": "strength"
+	},
+	"invoker": {
+		"attribute": "intelligence"
+	},
+	"io": {
+		"attribute": "strength"
+	},
+	"jakiro": {
+		"attribute": "intelligence"
+	},
+	"juggernaut" : {
+		"attribute": "agility"
+	},
+	"keeper-of-the-light": {
+		"attribute": "intelligence"
+	},
+	"kunkka": {
+		"attribute": "strength"
+	},
+	"legion-commander": {
+		"attribute": "strength"
+	},
+	"leshrac": {
+		"attribute": "intelligence"
+	},
+	"lich": {
+		"attribute": "intelligence"
+	},
+	"lifestealer": {
+		"attribute": "strength"
+	},
+	"lina": {
+		"attribute": "intelligence"
+	},
+	"lion": {
+		"attribute": "intelligence"
+	},
+	"lone-druid" : {
+		"attribute": "agility"
+	},
+	"luna" : {
+		"attribute": "agility"
+	},
+	"lycan": {
+		"attribute": "strength"
+	},
+	"magnus": {
+		"attribute": "strength"
+	},
+	"medusa" : {
+		"attribute": "agility"
+	},
+	"meepo" : {
+		"attribute": "agility"
+	},
+	"mirana" : {
+		"attribute": "agility"
+	},
+	"morphling" : {
+		"attribute": "agility"
+	},
+	"naga-siren" : {
+		"attribute": "agility"
+	},
+	"natures-prophet": {
+		"attribute": "intelligence"
+	},
+	"necrophos": {
+		"attribute": "intelligence"
+	},
+	"night-stalker": {
+		"attribute": "strength"
+	},
+	"nyx-assassin" : {
+		"attribute": "agility"
+	},
+	"ogre-magi": {
+		"attribute": "intelligence"
+	},
+	"omniknight": {
+		"attribute": "strength"
+	},
+	"oracle": {
+		"attribute": "intelligence"
+	},
+	"outworld-devourer": {
+		"attribute": "intelligence"
+	},
+	"phantom-assassin" : {
+		"attribute": "agility"
+	},
+	"phantom-lancer" : {
+		"attribute": "agility"
+	},
+	"phoenix": {
+		"attribute": "strength"
+	},
+	"puck": {
+		"attribute": "intelligence"
+	},
+	"pudge": {
+		"attribute": "strength"
+	},
+	"pugna": {
+		"attribute": "intelligence"
+	},
+	"queen-of-pain": {
+		"attribute": "intelligence"
+	},
+	"razor" : {
+		"attribute": "agility"
+	},
+	"riki" : {
+		"attribute": "agility"
+	},
+	"rubick": {
+		"attribute": "intelligence"
+	},
+	"sand-king": {
+		"attribute": "strength"
+	},
+	"shadow-demon": {
+		"attribute": "intelligence"
+	},
+	"shadow-fiend" : {
+		"attribute": "agility"
+	},
+	"shadow-shaman": {
+		"attribute": "intelligence"
+	},
+	"silencer": {
+		"attribute": "intelligence"
+	},
+	"skywrath-mage": {
+		"attribute": "intelligence"
+	},
+	"slardar": {
+		"attribute": "strength"
+	},
+	"slark" : {
+		"attribute": "agility"
+	},
+	"sniper" : {
+		"attribute": "agility"
+	},
+	"spectre" : {
+		"attribute": "agility"
+	},
+	"spirit-breaker": {
+		"attribute": "strength"
+	},
+	"storm-spirit": {
+		"attribute": "intelligence"
+	},
+	"sven": {
+		"attribute": "strength"
+	},
+	"techies": {
+		"attribute": "intelligence"
+	},
+	"templar-assassin" : {
+		"attribute": "agility"
+	},
+	"terrorblade" : {
+		"attribute": "agility"
+	},
+	"tidehunter": {
+		"attribute": "strength"
+	},
+	"timbersaw": {
+		"attribute": "strength"
+	},
+	"tinker": {
+		"attribute": "intelligence"
+	},
+	"tiny": {
+		"attribute": "strength"
+	},
+	"trant-protector": {
+		"attribute": "strength"
+	},
+	"troll-warlord" : {
+		"attribute": "agility"
+	},
+	"tusk": {
+		"attribute": "strength"
+	},
+	"undying": {
+		"attribute": "strength"
+	},
+	"ursa" : {
+		"attribute": "agility"
+	},
+	"vengeful-spirit" : {
+		"attribute": "agility"
+	},
+	"venomancer" : {
+		"attribute": "agility"
+	},
+	"viper" : {
+		"attribute": "agility"
+	},
+	"visage": {
+		"attribute": "intelligence"
+	},
+	"warlock": {
+		"attribute": "intelligence"
+	},
+	"weaver" : {
+		"attribute": "agility"
+	},
+	"windranger": {
+		"attribute": "intelligence"
+	},
+	"winter-wyvern": {
+		"attribute": "intelligence"
+	},
+	"witch-doctor": {
+		"attribute": "intelligence"
+	},
+	"wraith-king": {
+		"attribute": "strength"
+	},
+	"zeus": {
+		"attribute": "intelligence"
+	}
+}

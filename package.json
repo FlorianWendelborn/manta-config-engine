@@ -29,5 +29,23 @@
 	"dependencies": {
 		"codements": "0.0.7",
 		"minimist": "^1.2.0"
+	},
+	"remarkConfig": {
+		"plugins": {
+			"lint": {
+				  "list-item-indent": "space"
+				, "no-tabs": false
+				, "list-item-spacing": false
+				, "no-missing-blank-lines": false
+			}
+		}
+	},
+	"jscsConfig": {
+		  "validateIndentation": "\t"
+		, "requirePaddingNewLinesAfterBlocks": false
+		, "requireTrailingComma": false
+		, "requireSpacesInsideObjectBrackets": false
+		, "validateQuoteMarks": false
+		, "disallowSpacesInFunctionDeclaration": false
 	}
 }

@@ -60,8 +60,8 @@ DependencyParser.prototype.parse = function () {
 				this.codement.addLine(dependencies.cycleText.replace('{id}', dep[1]));
 				this.codement.addLine(alias(name(dep[0], dep[1]), name(dep[0], dep[1], 0)), 'Prepare Cycle');
 				for (var j = 0; j < cycle.length; j++) {
-					if (j !== cycle.length-1) { // not the last item
-						this.codement.addLine(alias(name(dep[0], dep[1], j), multi(alias(name(dep[0], dep[1]), name(dep[0], dep[1], j+1)), name(dep[0], dep[1], 'command', j))), 'Cycle Through');
+					if (j !== cycle.length - 1) { // not the last item
+						this.codement.addLine(alias(name(dep[0], dep[1], j), multi(alias(name(dep[0], dep[1]), name(dep[0], dep[1], j + 1)), name(dep[0], dep[1], 'command', j))), 'Cycle Through');
 					} else { // the last item
 						this.codement.addLine(alias(name(dep[0], dep[1], j), multi(alias(name(dep[0], dep[1]), name(dep[0], dep[1], 0)), name(dep[0], dep[1], 'command', j))), 'Finish Cycle');
 					}

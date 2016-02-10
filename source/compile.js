@@ -4,7 +4,7 @@ module.exports = function (preset, callback) {
 	// initialize variables
 	var result = {};
 	var autoexec = manta.data.constants.initialText;
-		dependencies = [];
+	var dependencies = [];
 
 	// helper functions
 	function append (s) {
@@ -27,7 +27,7 @@ module.exports = function (preset, callback) {
 	}
 
 	function sort (o) {
-		// I know this could be done recursively, however, I refuse
+		// I know this could be done recursively, but I refuse to do that
 		return o.sort(function (a, b) {
 			if (a[0] < b[0]) {
 				return -1;
@@ -109,4 +109,4 @@ module.exports = function (preset, callback) {
 	setTimeout(function () {
 		callback(null, result);
 	}, 0);
-}
+};

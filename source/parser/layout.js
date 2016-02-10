@@ -17,7 +17,7 @@ function Layout (options) {
 
 Layout.prototype.append = function (s) {
 	this.autoexec += s + '\n';
-}
+};
 
 Layout.prototype.parse = function () {
 	for (var j in this.keybinds) {
@@ -227,6 +227,6 @@ Layout.prototype.bindKey = function (key, options) {
 	}
 
 	return command;
-}
+};
 
 module.exports = Layout;

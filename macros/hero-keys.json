@@ -1,0 +1,571 @@
+{
+	"main": {
+		"keybinds": {
+			"F1": ["layout", "general"],
+
+			"a": ["layout", "macro", "hero-keys", "a"],
+			"b": ["layout", "macro", "hero-keys", "b"],
+			"c": ["layout", "macro", "hero-keys", "c"],
+			"d": ["layout", "macro", "hero-keys", "d"],
+			"e": ["layout", "macro", "hero-keys", "e"],
+			"f": ["layout", "faceless-void"],
+			"g": ["layout", "gyrocopter"],
+			"h": ["layout", "huskar"],
+			"i": ["layout", "macro", "hero-keys", "i"],
+			"j": ["layout", "macro", "hero-keys", "j"],
+			"k": ["layout", "macro", "hero-keys", "k"],
+			"l": ["layout", "macro", "hero-keys", "l"],
+			"m": ["layout", "macro", "hero-keys", "m"],
+			"n": ["layout", "macro", "hero-keys", "n"],
+			"o": ["layout", "macro", "hero-keys", "o"],
+			"p": ["layout", "macro", "hero-keys", "p"],
+			"q": ["layout", "queen-of-pain"],
+			"r": ["layout", "macro", "hero-keys", "r"],
+			"s": ["layout", "macro", "hero-keys", "s"],
+			"t": ["layout", "macro", "hero-keys", "t"],
+			"u": ["layout", "macro", "hero-keys", "u"],
+			"v": ["layout", "macro", "hero-keys", "v"],
+			"w": ["layout", "macro", "hero-keys", "w"],
+			"z": ["layout", "zeus"]
+		},
+		"message": "Type to select hero. F1 to use defaults. F2 to start again."
+	},
+	"a": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "ancient-apparition"],
+			"b": ["layout", "abaddon"],
+			"l": ["layout", "alchemist"],
+			"m": ["layout", "antimage"],
+			"x": ["layout", "axe"],
+
+			"n": ["layout", "macro", "hero-keys", "an"]
+		}
+	},
+	"b": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"b": ["layout", "bristleback"],
+			"e": ["layout", "beastmaster"],
+			"h": ["layout", "bountyhunter"],
+			"l": ["layout", "bloodseeker"],
+			"o": ["layout", "bountyhunter"],
+			"s": ["layout", "bloodseeker"],
+
+			"a": ["layout", "macro", "hero-keys", "ba"],
+			"r": ["layout", "macro", "hero-keys", "br"]
+		}
+	},
+	"c": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "centaur-warrunner"],
+			"k": ["layout", "chaos-knight"],
+			"m": ["layout", "crystal-maiden"],
+			"r": ["layout", "crystal-maiden"],
+
+			"h": ["layout", "macro", "hero-keys", "ch"],
+			"l": ["layout", "macro", "hero-keys", "cl"]
+		}
+	},
+	"d": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "death-prophet"],
+			"i": ["layout", "disruptor"],
+			"k": ["layout", "dragon-knight"],
+			"o": ["layout", "doom"],
+			"p": ["layout", "death-prophet"],
+			"s": ["layout", "dark-seer"],
+
+			"a": ["layout", "macro", "hero-keys", "da"],
+			"r": ["layout", "macro", "hero-keys", "dr"]
+		}
+	},
+	"e": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"l": ["layout", "elder-titan"],
+			"m": ["layout", "ember-spirit"],
+			"t": ["layout", "elder-titan"],
+
+			"a": ["layout", "macro", "hero-keys", "es"],
+			"n": ["layout", "macro", "hero-keys", "en"],
+			"s": ["layout", "macro", "hero-keys", "es"]
+		}
+	},
+	"i": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"n": ["layout", "invoker"],
+			"o": ["layout", "io"]
+		}
+	},
+	"j": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "jakiro"],
+			"u": ["layout", "juggernaut"]
+		}
+	},
+	"k": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "keeper-of-the-light"],
+			"o": ["layout", "keeper-of-the-light"],
+			"u": ["layout", "kunkka"]
+		}
+	},
+	"l": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"c": ["layout", "legion-commander"],
+			"d": ["layout", "lone-druid"],
+			"o": ["layout", "lone-druid"],
+			"s": ["layout", "lifestealer"],
+			"u": ["layout", "luna"],
+			"y": ["layout", "lycan"],
+
+			"e": ["layout", "macro", "hero-keys", "le"],
+			"i": ["layout", "macro", "hero-keys", "li"]
+		}
+	},
+	"m": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "magnus"],
+			"i": ["layout", "mirana"],
+			"o": ["layout", "morphling"],
+
+			"e": ["layout", "macro", "hero-keys", "me"]
+		}
+	},
+	"n": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "necrophos"],
+			"i": ["layout", "night-stalker"],
+			"p": ["layout", "natures-prophet"],
+			"s": ["layout", "night-stalker"],
+			"y": ["layout", "nyx-assassin"],
+
+			"a": ["layout", "macro", "hero-keys", "na"]
+		}
+	},
+	"o": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"d": ["layout", "outworld-devourer"],
+			"g": ["layout", "ogre-magi"],
+			"m": ["layout", "omniknight"],
+			"r": ["layout", "oracle"],
+			"u": ["layout", "outworld-devourer"]
+		}
+	},
+	"p": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "phantom-assassin"],
+			"l": ["layout", "phantom-lancer"],
+
+			"h": ["layout", "macro", "hero-keys", "ph"],
+			"u": ["layout", "macro", "hero-keys", "pu"]
+		}
+	},
+	"r": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "razor"],
+			"i": ["layout", "riki"],
+			"u": ["layout", "rubick"]
+		}
+	},
+	"s": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "sand-king"],
+			"d": ["layout", "shadow-demon"],
+			"f": ["layout", "shadow-fiend"],
+			"i": ["layout", "silencer"],
+			"k": ["layout", "sand-king"],
+			"k": ["layout", "skywrath-mage"],
+			"m": ["layout", "skywrath-mage"],
+			"n": ["layout", "sniper"],
+			"t": ["layout", "storm-spirit"],
+			"v": ["layout", "sven"],
+
+			"h": ["layout", "macro", "hero-keys", "shadow"],
+			"l": ["layout", "macro", "hero-keys", "sl"],
+			"p": ["layout", "macro", "hero-keys", "sp"],
+			"s": ["layout", "macro", "hero-keys", "ss"]
+		}
+	},
+	"t": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "templar-assassin"],
+			"b": ["layout", "terrorblade"],
+			"u": ["layout", "tusk"],
+
+			"e": ["layout", "macro", "hero-keys", "te"],
+			"i": ["layout", "macro", "hero-keys", "ti"],
+			"r": ["layout", "macro", "hero-keys", "tr"]
+		}
+	},
+	"u": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"n": ["layout", "undying"],
+			"r": ["layout", "ursa"]
+		}
+	},
+	"v": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"s": ["layout", "vengeful-spirit"],
+			"o": ["layout", "faceless-void"],
+
+			"e": ["layout", "ve"],
+			"i": ["layout", "vi"]
+		}
+	},
+	"w": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "warlock"],
+			"e": ["layout", "weaver"],
+			"r": ["layout", "wraith-king"],
+			"k": ["layout", "wraith-king"],
+			"w": ["layout", "winter-wyvern"],
+			"d": ["layout", "witch-doctor"],
+
+			"i": ["layout", "wi"]
+		}
+	},
+
+
+
+
+
+	"an": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "a"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"c": ["layout", "ancient-apparition"],
+			"t": ["layout", "antimage"]
+		}
+	},
+	"ba": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "b"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"n": ["layout", "bane"],
+			"t": ["layout", "batrider"]
+		}
+	},
+	"br": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "b"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "brewmaster"],
+			"i": ["layout", "bristleback"],
+			"o": ["layout", "broodmother"]
+		}
+	},
+	"ch": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "c"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "chaos-knight"],
+			"e": ["layout", "chen"]
+		}
+	},
+	"cl": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "c"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"i": ["layout", "clinkz"],
+			"o": ["layout", "clockwerk"]
+		}
+	},
+	"da": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "d"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"r": ["layout", "dark-seer"],
+			"z": ["layout", "dazzle"]
+		}
+	},
+	"dr": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "d"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"a": ["layout", "dragon-knight"],
+			"o": ["layout", "drow-ranger"]
+		}
+	},
+	"en": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "e"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"c": ["layout", "enchantress"],
+			"i": ["layout", "enigma"]
+		}
+	},
+	"es": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "e"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"k": ["layout", "earthshaker"],
+			"p": ["layout", "earth-spirit"]
+		},
+		"message": "Earth Spirit (P) / Earthshaker (K)"
+	},
+	"le": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "l"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"g": ["layout", "legion-commander"],
+			"s": ["layout", "leshrac"]
+		}
+	},
+	"li": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "l"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"c": ["layout", "lich"],
+			"f": ["layout", "lifestealer"],
+			"n": ["layout", "lina"],
+			"o": ["layout", "lion"]
+		}
+	},
+	"me": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "m"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "meepo"],
+			"d": ["layout", "medusa"]
+		}
+	},
+	"na": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "n"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"g": ["layout", "naga-siren"],
+			"t": ["layout", "natures-prophet"]
+		}
+	},
+	"ph": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "p"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"o": ["layout", "phoenix"],
+			"e": ["layout", "phoenix"],
+			"s": ["layout", "phantom-assassin"],
+			"l": ["layout", "phantom-lancer"]
+		},
+		"message": "Phantom Assassin (S) / Phantom Lancer (L) / Phoenix (O)"
+	},
+	"shadow": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "s"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"d": ["layout", "shadow-demon"],
+			"f": ["layout", "shadow-fiend"],
+			"s": ["layout", "shadow-shaman"]
+		},
+		"message": "Shadow Demon (D) / Shadow Fiend (F) / Shadow Shaman (S)"
+	},
+	"sl": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "s"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"d": ["layout", "slardar"],
+			"k": ["layout", "slark"]
+		},
+		"message": "Slardar (D) / Slark (K)"
+	},
+	"sp": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "s"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "spectre"],
+			"i": ["layout", "spirit-breaker"]
+		}
+	},
+	"ss": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "s"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"p": ["layout", "storm-spirit"],
+			"h": ["layout", "shadow-shaman"]
+		}
+	},
+	"te": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "t"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"c": ["layout", "techies"],
+			"m": ["layout", "templar-assassin"],
+			"r": ["layout", "terrorblade"]
+		}
+	},
+	"ti": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "t"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"d": ["layout", "tidehunter"],
+			"m": ["layout", "timbersaw"],
+
+			"n": ["layout", "macro", "hero-keys", "tin"]
+		}
+	},
+	"tin": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "ti"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"y": ["layout", "tiny"],
+			"k": ["layout", "tinker"]
+		}
+	},
+	"tr": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "t"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"e": ["layout", "trant-protector"],
+			"o": ["layout", "troll-warlord"]
+		}
+	},
+	"ve": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "v"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"g": ["layout", "vengeful-spirit"],
+			"o": ["layout", "venomancer"]
+		}
+	},
+	"vi": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "v"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"p": ["layout", "viper"],
+			"s": ["layout", "visage"]
+		}
+	},
+	"wi": {
+		"keybinds": {
+			"BACKSPACE": ["layout", "macro", "hero-keys", "w"],
+			"F1": ["layout", "general"],
+			"F2": ["layout", "macro", "hero-keys"],
+
+			"windranger": ["layout", "windranger"],
+			"winter-wyvern": ["layout", "winter-wyvern"],
+			"witch-doctor": ["layout", "witch-doctor"]
+		}
+	}
+}
