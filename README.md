@@ -64,4 +64,4 @@ internally used class to resolve dependencies
 
 ## Special Thanks
 - ["The Core"-Config by @loopuleasa](https://github.com/loopuleasa/dota2-thecore-config-engine)
-- ["D2HeroKeys by @Sembrani"](https://github.com/Sembrani/D2HeroKeys)
+- ["D2HeroKeys" by @Sembrani](https://github.com/Sembrani/D2HeroKeys)
