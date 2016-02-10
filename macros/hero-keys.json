@@ -40,6 +40,8 @@
 			"b": ["layout", "abaddon"],
 			"l": ["layout", "alchemist"],
 			"m": ["layout", "antimage"],
+			"r": ["layout", "arc-warden"],
+			"w": ["layout", "arc-warden"],
 			"x": ["layout", "axe"],
 
 			"n": ["layout", "macro", "hero-keys", "an"]
