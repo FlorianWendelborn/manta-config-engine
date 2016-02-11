@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.3
+- fixed a critical bug regarding git auto-tagging
+
 ## 1.2.2
 - enabled automatic git tagging of npm versions
 
