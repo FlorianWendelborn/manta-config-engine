@@ -1,6 +1,6 @@
 {
 	"name": "dota2-manta-config-engine",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "Dota 2 configuration builder. Compiles JSON to autoexec.",
 	"main": "source/index.js",
 	"repository": {
@@ -31,7 +31,8 @@
 		"minimist": "^1.2.0"
 	},
 	"scripts": {
-		"watch": "nodemon -e js,json source/cli.js preset/dodekeract.json"
+		  "prepublish" : "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags"
+		, "watch": "nodemon -e js,json source/cli.js preset/dodekeract.json"
 	},
 	"remarkConfig": {
 		"plugins": {
