@@ -1,0 +1,121 @@
+{
+	"main": {
+		"keybinds": {
+			"a": ["layout", "macro", "d2vgs", "aggressive"],
+			"l": ["layout", "macro", "d2vgs", "lane"],
+			"e": ["layout", "macro", "d2vgs", "enemy"],
+			"n": ["layout", "macro", "d2vgs", "neutrals"],
+			"f": ["layout", "macro", "d2vgs", "fluff"],
+			"q": ["layout", "macro", "d2vgs", "quick"],
+			"s": ["layout", "macro", "d2vgs", "self"],
+			"g": ["layout", "macro", "d2vgs", "global-strategy"],
+			"t": ["layout", "macro", "d2vgs", "team"],
+			"d": ["layout", "macro", "d2vgs", "items-aka-devices"],
+			"w": ["layout", "macro", "d2vgs", "where-did-they-go"]
+		}
+	},
+	"aggressive": {
+		"keybinds": {
+			"a": ["phrase", 18],
+			"d": ["phrase", 20],
+			"f": ["phrase", 14],
+			"g": ["phrase", 12],
+			"s": ["phrase", 4]
+		}
+	},
+	"lane": {
+		"keybinds": {
+			"d": ["phrase", 38],
+			"r": ["phrase", 36],
+			"t": ["phrase", 37]
+		}
+	},
+	"enemy": {
+		"keybinds": {
+			"r": ["phrase", 33],
+			"h": ["phrase", 32],
+			"c": ["phrase", 31],
+			"d": ["phrase", 42]
+		}
+	},
+	"neutrals": {
+		"keybinds": {
+			"j": ["phrase", 52],
+			"p": ["phrase", 49],
+			"r": ["phrase", 53],
+			"a": ["phrase", 48],
+			"s": ["phrase", 51]
+		}
+	},
+	"fluff": {
+		"keybinds": {
+			"u": ["phrase", 64],
+			"g": ["phrase", 66],
+			"l": ["phrase", 60],
+			"b": ["phrase", 68],
+			"m": ["phrase", 67],
+			"n": ["phrase", 61],
+			"o": ["phrase", 0],
+			"e": ["phrase", 69],
+			"r": ["phrase", 70],
+			"s": ["phrase", 63],
+			"t": ["phrase", 62],
+			"h": ["phrase", 65],
+			"w": ["phrase", 7]
+		}
+	},
+	"quick": {
+		"keybinds": {
+			"a": ["phrase", 54],
+			"c": ["phrase", 1],
+			"q": ["phrase", 57],
+			"b": ["phrase", 2],
+			"h": ["phrase", 5],
+			"p": ["phrase", 56],
+			"s": ["phrase", 16],
+			"w": ["phrase", 55]
+		}
+	},
+	"self": {
+		"keybinds": {
+			"b": ["phrase", 19],
+			"c": ["phrase", 27],
+			"h": ["phrase", 24],
+			"m": ["phrase", 25],
+			"w": ["phrase", 21],
+			"q": ["phrase", 26],
+			"p": ["phrase", 50],
+			"u": ["phrase", 28]
+		}
+	},
+	"team": {
+		"keybinds": {
+			"b": ["phrase", 23],
+			"r": ["phrase", 58],
+			"d": ["phrase", 45],
+			"g": ["phrase", 22],
+			"c": ["phrase", 44]
+		}
+	},
+	"items-aka-devices": {
+		"keybinds": {
+			"m": ["phrase", 46],
+			"p": ["phrase", 47],
+			"c": ["phrase", 39],
+			"t": ["phrase", 43],
+			"w": ["phrase", 3],
+			"u": ["phrase", 40],
+			"d": ["phrase", 41]
+		}
+	},
+	"where-did-they-go": {
+		"keybinds": {
+			"a": ["phrase", 30],
+			"w": ["phrase", 8],
+			"b": ["phrase", 11],
+			"g": ["phrase", 10],
+			"t": ["phrase", 9],
+			"r": ["phrase", 29]
+		}
+	}
+}

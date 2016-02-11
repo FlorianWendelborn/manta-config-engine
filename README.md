@@ -90,6 +90,7 @@ internally used class to resolve dependencies
 ## Special Thanks
 - ["The Core"-Config](https://github.com/loopuleasa/dota2-thecore-config-engine) by [@loopuleasa](https://github.com/loopuleasa)
 - [D2HeroKeys](https://github.com/Sembrani/D2HeroKeys) by [@Sembrani](https://github.com/Sembrani)
+- [Dota 2 VGS](https://github.com/obreitwi/dota2vgs) by [@obreitwi](https://github.com/obreitwi)
 
 ## License
 [MIT](https://github.com/dodekeract/manta-config-engine/tree/master/documentation/LICENSE.md)
