@@ -77,7 +77,7 @@ Layout.prototype.bindKey = function (key, options) {
 			command = single('exec', 'autoexec.cfg');
 		break;
 		case "command":
-			command = single(options[1]);
+			command = '\"' + options[1] + '\"';
 		break;
 		case "cycle":
 			if (options[2] === 'reset') {

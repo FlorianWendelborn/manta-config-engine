@@ -42,7 +42,7 @@ function multi (options) {
 }
 
 function single (command, value) {
-	return '"' + command + ' ' + value + '"'
+	return '"' + command + ' ' + value + '"';
 }
 
 function alias (name, command) {
@@ -61,8 +61,8 @@ function macro (name, min, max) {
 	return multi(result);
 }
 
-module.exports =
-	{ alias: alias
+module.exports = {
+	  alias: alias
 	, bind: bind
 	, name: name
 	, macro: macro

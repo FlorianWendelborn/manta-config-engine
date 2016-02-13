@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.1
+- fixed commands adding undefined
+
 ## 1.3.0
 - added ability learn mode & level up ability
 
