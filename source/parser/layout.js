@@ -177,11 +177,16 @@ Layout.prototype.bindKey = function (key, options) {
 		case "glyph":
 			command = 'dota_glyph';
 		break;
-		case "learn":
+		case 'learn':
 			switch (options[1]) {
-				case "stats":
+				case 'ability':
+					command = 'dota_ability_learn_mode';
+				break;
+				case 'stats':
 					command = 'dota_learn_stats';
 				break;
+				default:
+					command = 'dota_ability_learn_mode; dota_ability_execute ' + options[1] + '; dota_ability_learn_mode';
 			}
 		break;
 		case "chat":

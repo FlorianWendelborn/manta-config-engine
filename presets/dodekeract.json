@@ -148,7 +148,7 @@
 			"specularBloom": true,
 			"specularHighlight": true,
 			"altTabIdle": true,
-			"shadowQuality": 2,
+			"shadowQuality": 3,
 			"serverForcePreload": true,
 			"clientForcePreload": true,
 			"doubleShadowUpdates": true,
