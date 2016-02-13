@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.2
+- added `blank.json` preset
+
 ## 1.3.1
 - fixed commands adding undefined
 

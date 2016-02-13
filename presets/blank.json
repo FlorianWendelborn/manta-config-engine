@@ -1,0 +1,19 @@
+{
+	"layouts": [
+		{
+			"keybinds": {}
+		}
+	],
+	"chatwheels": [],
+	"cycles": [],
+	"settings": {
+		"gameplay": {},
+		"performance": {},
+		"engine": {
+			"loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
+			"altKey": "ALT",
+			"keyboardLayout": "en-US",
+			"inputButtonCodeIsScanCode": true
+		}
+	}
+}
