@@ -39,6 +39,9 @@ Layout.prototype.bindKey = function (key, options) {
 				command = '+' + name(options);
 				this.depend([options[0], 'quick', options[2]]);
 				this.depend([options[0], 'normal', options[2]]);
+			} else if (options[1] === 'self') {
+				this.depend(['enable-selfcast']);
+				command = name(options);
 			} else {
 				command = name(options);
 			}

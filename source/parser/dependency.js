@@ -72,6 +72,9 @@ DependencyParser.prototype.parse = function () {
 				this.append(this.codement.render());
 				this.codement.reset();
 			break;
+			case "enable-selfcast":
+				this.codement.addLine('dota_ability_quick_cast 1', 'Enable Self-Cast');
+			break;
 			case "include":
 				this.codement.addLine(dep[1]);
 			break;

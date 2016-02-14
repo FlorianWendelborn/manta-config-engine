@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.4
+- self-cast now depends on `dota_ability_quick_cast 1`
+
 ## 1.3.3
 - fixed `["open", "shop"]` having visual glitches
 
