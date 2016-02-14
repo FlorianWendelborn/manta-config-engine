@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.2
+- fixed smart-cast behaving really weird
+
 ## 1.4.1
 - fixed minimap background setting not being inverted
 
