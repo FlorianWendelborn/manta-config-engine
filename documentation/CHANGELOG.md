@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.0
+- support emoticons in chat
+
 ## 1.3.4
 - self-cast now depends on `dota_ability_quick_cast 1`
 

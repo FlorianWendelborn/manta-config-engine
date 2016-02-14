@@ -58,10 +58,16 @@ Beware that the CLI will assume that your Dota 2 is installed in the default Ste
 ### manta.data
 
 #### manta.data.positions
-Returns an object with all camera positions manta currently uses
+An object with all camera positions manta currently uses
 
 #### manta.data.phrases
-Returns an object containing all current chatwheel phrases
+An object containing all current chatwheel phrases
+
+#### manta.data.emoticons
+An object containing most emoticons
+
+#### manta.data.heroes
+An object containing all current heroes
 
 ### manta.parser
 

@@ -135,7 +135,7 @@ Layout.prototype.bindKey = function (key, options) {
 					command = 'dota_select_courier';
 				break;
 				case "controlgroup":
-					command = single('+dota_control_group ', options[2]);
+					command = single('+dota_control_group', options[2]);
 				break;
 				case "next-unit":
 					command = 'dota_cycle_selected';
@@ -193,15 +193,25 @@ Layout.prototype.bindKey = function (key, options) {
 			}
 		break;
 		case "chat":
+			var message = options[2];
+
+			// apply emoticons
+			for (var i in manta.data.emoticons) {
+				message = message.replace(
+					new RegExp(':' + i + ':', 'g'),
+					manta.data.emoticons[i].code
+				);
+			}
+
 			switch (options[1]) {
 				case "all":
-					command = single('say', options[2]);
+					command = single('say', message);
 				break;
 				case "team":
-					command = single('say_team', options[2]);
+					command = single('say_team', message);
 				break;
 				case "student":
-					command = single('say_student', options[2]);
+					command = single('say_student', message);
 				break;
 			}
 		break;

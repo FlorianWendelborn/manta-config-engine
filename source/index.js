@@ -3,7 +3,8 @@ module.exports.data = {
 	phrases: require('../data/phrases.json'),
 	positions: require('../data/positions.json'),
 	settings: require('../data/settings.json'),
-	constants: require('../data/constants.json')
+	constants: require('../data/constants.json'),
+	emoticons: require('../data/emoticons.json')
 };
 module.exports.compile = require('./compile');
 module.exports.utils = require('./utils');
