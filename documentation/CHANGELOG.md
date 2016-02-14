@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.1
+- fixed minimap background setting not being inverted
+
 ## 1.4.0
 - support emoticons in chat
 

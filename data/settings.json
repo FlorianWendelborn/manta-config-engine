@@ -28,7 +28,7 @@
 
 		"minimapShowHeroIcons": { "type": "boolean", "label": "Show Hero Icons", "commands": ["b:dota_minimap_show_hero_icon"] },
 		"minimapAlwaysShowHeroIcons": { "type": "boolean", "label": "Always Show Hero Icons", "commands": ["b:dota_minimap_always_draw_hero_icons"] },
-		"minimapBackground": { "type": "boolean", "label": "Background", "commands": ["b:dota_minimap_hide_background"] },
+		"minimapBackground": { "type": "boolean", "label": "Background", "commands": ["b:!dota_minimap_hide_background"] },
 		"minimapSimpleColors": { "type": "boolean", "label": "Simple Colors", "commands": ["b:dota_minimap_simple_colors"] },
 
 		"minimapMisclickTime": { "type": "range", "min": 0, "max": 10000, "label": "Misclick Time (ms)", "commands": ["i:dota_minimap_misclick_time::1000"] },
