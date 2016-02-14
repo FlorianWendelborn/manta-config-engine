@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.3
+- fixed `["open", "shop"]` having visual glitches
+
 ## 1.3.2
 - added `blank.json` preset
 

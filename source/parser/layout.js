@@ -100,7 +100,7 @@ Layout.prototype.bindKey = function (key, options) {
 					command = 'say';
 				break;
 				case "shop":
-					command = 'show_sf_shop';
+					command = 'toggleshoppanel';
 				break;
 				case "shared-units":
 					command = 'show_shared_units';
