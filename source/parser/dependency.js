@@ -58,17 +58,26 @@ DependencyParser.prototype.parse = function () {
 				this.append(this.codement.render());
 				this.codement.reset();
 				this.codement.addLine(dependencies.cycleText.replace('{id}', dep[1]));
-				this.codement.addLine(alias(name(dep[0], dep[1]), name(dep[0], dep[1], 0)), 'Prepare Cycle');
+				this.codement.addLine(alias('+' + name(dep[0], dep[1]), name(dep[0], dep[1], 0)), 'Prepare Cycle');
+
+				// TODO make this hack less dirty
 				for (var j = 0; j < cycle.length; j++) {
 					if (j !== cycle.length - 1) { // not the last item
-						this.codement.addLine(alias(name(dep[0], dep[1], j), multi(alias(name(dep[0], dep[1]), name(dep[0], dep[1], j + 1)), name(dep[0], dep[1], 'command', j))), 'Cycle Through');
+						this.codement.addLine(alias(name(dep[0], dep[1], j), multi(alias('+' + name(dep[0], dep[1]), name(dep[0], dep[1], j + 1)), name(dep[0], dep[1], 'command', j))), 'Cycle Through');
 					} else { // the last item
-						this.codement.addLine(alias(name(dep[0], dep[1], j), multi(alias(name(dep[0], dep[1]), name(dep[0], dep[1], 0)), name(dep[0], dep[1], 'command', j))), 'Finish Cycle');
+						this.codement.addLine(alias(name(dep[0], dep[1], j), multi(alias('+' + name(dep[0], dep[1]), name(dep[0], dep[1], 0)), name(dep[0], dep[1], 'command', j))), 'Finish Cycle');
 					}
 				}
 				for (var j = 0; j < dep[2].length; j++) {
+					// if chatwheel found, make it work
+					if (dep[2][j].indexOf('chatwheel') !== '-1' && dep[2][j][0] === '+') {
+						dep[2][j] = dep[2][j].substring(1);
+						dep[2][j] += manta.data.constants.separator + '0';
+					}
 					this.codement.addLine(alias(name(dep[0], dep[1], 'command', j), multi(dep[2][j])), 'Command ' + oneMore(j));
 				}
+
+				this.codement.addLine(alias('-' + name(dep[0], dep[1]), '-chatwheel'), 'Chatwheel Fix');
 				this.append(this.codement.render());
 				this.codement.reset();
 			break;

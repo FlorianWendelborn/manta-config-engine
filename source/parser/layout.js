@@ -86,7 +86,7 @@ Layout.prototype.bindKey = function (key, options) {
 			if (options[2] === 'reset') {
 				command = alias(name(options), name(options, 0));
 			} else {
-				command = name(options);
+				command = '+' + name(options[0], options[1]);
 				options[2] = [];
 				for (var i = 0; i < this.preset.cycles[options[1]].length; i++) {
 					options[2].push(this.bindKey(false, this.preset.cycles[options[1]][i]));

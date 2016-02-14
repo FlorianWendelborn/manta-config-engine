@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.3
+- fixed cycles (hopefully)
+
 ## 1.4.2
 - fixed smart-cast behaving really weird
 
