@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.2
+- update `verjson` to `0.0.4`
+
 ## 1.5.1
 - update `verjson` to `0.0.3`
 
