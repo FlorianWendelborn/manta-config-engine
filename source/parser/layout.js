@@ -193,7 +193,7 @@ Layout.prototype.bindKey = function (key, options) {
 			}
 		break;
 		case "chat":
-			var message = options[2];
+			var message = options[2] || '';
 
 			// apply emoticons
 			for (var i in manta.data.emoticons) {

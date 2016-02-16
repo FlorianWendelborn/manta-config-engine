@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.0
+- added `update` to patch old `preset.json`s via `verjson`
+
 ## 1.4.3
 - fixed cycles (hopefully)
 

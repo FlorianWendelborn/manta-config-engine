@@ -164,5 +164,6 @@
 			"keyboardLayout": "en-US",
 			"inputButtonCodeIsScanCode": true
 		}
-	}
+	},
+	"version": "1.5.0"
 }

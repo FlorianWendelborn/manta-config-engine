@@ -1,3 +1,4 @@
+var packageJSON = require('../package.json');
 module.exports = {};
 module.exports.data = {
 	phrases: require('../data/phrases.json'),
@@ -14,3 +15,5 @@ module.exports.parser = {
 	Layout: require('./parser/layout'),
 	Setting: require('./parser/setting')
 };
+module.exports.update = require('./update');
+module.exports.version = packageJSON.version;
