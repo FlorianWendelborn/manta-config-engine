@@ -34,7 +34,7 @@ Layout.prototype.parse = function () {
 Layout.prototype.bindKey = function (key, options) {
 	var command = '';
 	switch (options[0]) {
-		case "ability":
+		case 'ability':
 			if (options[1] === 'smart') {
 				command = '+' + name(options);
 				this.depend([options[0], 'quick', options[2]]);
@@ -47,42 +47,82 @@ Layout.prototype.bindKey = function (key, options) {
 			}
 			this.depend(options);
 		break;
-		case "item":
+
+		case 'buy':
 			switch (options[1]) {
-				case "action":
-					command = 'use_item_client actions action_item';
+				case 'quick':
+					command = 'dota_purchase_quickbuy';
 				break;
-				case "taunt":
-					command = 'use_item_client current_hero taunt';
+				case 'sticky':
+					command = 'dota_purchase_stickybuy';
 				break;
-				case "smart":
-					command = '+' + name(options);
-					this.depend([options[0], 'quick', options[2]]);
-					this.depend([options[0], 'normal', options[2]]);
-					this.depend(options);
-				break;
-				default:
-					command = name(options);
-					this.depend(options);
 			}
 		break;
-		case "health":
-			command = 'dota_health_per_vertical_marker ' + options[1];
+
+		case 'camera':
+			switch (options[1]) {
+				case 'up':
+					command = '+forward';
+				break;
+				case 'left':
+					command = '+moveleft';
+				break;
+				case 'down':
+					command = '+back';
+				break;
+				case 'right':
+					command = '+moveright';
+				break;
+				case 'inspect':
+					command = 'inspectheroinworld';
+				break;
+			}
 		break;
-		case "layout":
+
+		case 'chat':
+			var message = options[2] || '';
+
+			// apply emoticons
+			for (var i in manta.data.emoticons) {
+				message = message.replace(
+					new RegExp(':' + i + ':', 'g'),
+					manta.data.emoticons[i].code
+				);
+			}
+
+			switch (options[1]) {
+				case 'all':
+					command = single('say', message);
+				break;
+				case 'team':
+					command = single('say_team', message);
+				break;
+				case 'student':
+					command = single('say_student', message);
+				break;
+			}
+		break;
+
+		case 'chatwheel':
 			command = '+' + name(options);
-			this.depend(options);
 		break;
-		case "chatwheel":
-			command = '+' + name(options);
-		break;
-		case "reload":
-			command = single('exec', 'autoexec.cfg');
-		break;
-		case "command":
+
+		case 'command':
 			command = '\"' + options[1] + '\"';
 		break;
-		case "cycle":
+
+		case 'courier':
+			switch (options[1]) {
+				case 'deliver':
+					command = 'dota_courier_deliver';
+				break;
+				case 'burst':
+					command = 'dota_courier_burst';
+				break;
+			}
+		break;
+
+		case 'cycle':
 			if (options[2] === 'reset') {
 				command = alias(name(options), name(options, 0));
 			} else {
@@ -94,92 +134,39 @@ Layout.prototype.bindKey = function (key, options) {
 				this.depend(options);
 			}
 		break;
-		case "open":
+
+		case 'health':
+			command = 'dota_health_per_vertical_marker ' + options[1];
+		break;
+
+		case 'item':
 			switch (options[1]) {
-				case "console":
-					command = 'toggleconsole';
+				case 'action':
+					command = 'use_item_client actions action_item';
 				break;
-				case "chat":
-					command = 'say';
+
+				case 'smart':
+					command = '+' + name(options);
+					this.depend([options[0], 'quick', options[2]]);
+					this.depend([options[0], 'normal', options[2]]);
+					this.depend(options);
 				break;
-				case "shop":
-					command = 'toggleshoppanel';
+
+				case 'taunt':
+					command = 'use_item_client current_hero taunt';
 				break;
-				case "shared-units":
-					command = 'show_shared_units';
-				break;
-				case "scoreboard":
-					command = '+showscores';
-				break;
+
+				default:
+					command = name(options);
+					this.depend(options);
 			}
 		break;
-		case "voice":
-			switch (options[1]) {
-				case "team":
-					command = '+voicerecord';
-				break;
-			}
+
+		case 'layout':
+			command = '+' + name(options);
+			this.depend(options);
 		break;
-		case "select":
-			switch (options[1]) {
-				case "hero":
-					command = '+dota_camera_follow';
-				break;
-				case "all-units":
-					command = 'dota_select_all';
-				break;
-				case "other-units":
-					command = 'dota_select_all_others';
-				break;
-				case "courier":
-					command = 'dota_select_courier';
-				break;
-				case "controlgroup":
-					command = single('+dota_control_group', options[2]);
-				break;
-				case "next-unit":
-					command = 'dota_cycle_selected';
-				break;
-			}
-		break;
-		case "courier":
-			switch (options[1]) {
-				case "deliver":
-					command = 'dota_courier_deliver';
-				break;
-				case "burst":
-					command = 'dota_courier_burst';
-				break;
-			}
-		break;
-		case "buy":
-			switch (options[1]) {
-				case "quick":
-					command = 'dota_purchase_quickbuy';
-				break;
-				case "sticky":
-					command = 'dota_purchase_stickybuy';
-				break;
-			}
-		break;
-		case "pause":
-			command = 'dota_pause';
-		break;
-		case "stop":
-			command = 'dota_stop';
-		break;
-		case "attack":
-			command = 'mc_attack';
-		break;
-		case "hold":
-			command = 'dota_hold';
-		break;
-		case "move":
-			command = 'mc_move';
-		break;
-		case "glyph":
-			command = 'dota_glyph';
-		break;
+
 		case 'learn':
 			switch (options[1]) {
 				case 'ability':
@@ -192,51 +179,117 @@ Layout.prototype.bindKey = function (key, options) {
 					command = 'dota_ability_learn_mode; dota_ability_execute ' + options[1] + '; dota_ability_learn_mode';
 			}
 		break;
-		case "chat":
-			var message = options[2] || '';
 
-			// apply emoticons
-			for (var i in manta.data.emoticons) {
-				message = message.replace(
-					new RegExp(':' + i + ':', 'g'),
-					manta.data.emoticons[i].code
-				);
-			}
-
+		case 'open':
 			switch (options[1]) {
-				case "all":
-					command = single('say', message);
+				case 'console':
+					command = 'toggleconsole';
 				break;
-				case "team":
-					command = single('say_team', message);
+				case 'chat':
+					command = 'say';
 				break;
-				case "student":
-					command = single('say_student', message);
+				case 'shop':
+					command = 'toggleshoppanel';
+				break;
+				case 'shared-units':
+					command = 'show_shared_units';
+				break;
+				case 'scoreboard':
+					command = '+showscores';
 				break;
 			}
 		break;
-		case "camera":
-			switch (options[1]) {
-				case "up":
-					command = '+forward';
-				break;
-				case "left":
-					command = '+moveleft';
-				break;
-				case "down":
-					command = '+back';
-				break;
-				case "right":
-					command = '+moveright';
-				break;
-			}
-		break;
-		case "phrase":
+
+		case 'phrase':
 			command = single('chatwheel_say', options[1]);
 		break;
-		case "view":
-			command = '+' + name(options);
-			this.depend(options);
+
+		case 'select':
+			switch (options[1]) {
+				case 'hero':
+					command = '+dota_camera_follow';
+				break;
+				case 'all-units':
+					command = 'dota_select_all';
+				break;
+				case 'other-units':
+					command = 'dota_select_all_others';
+				break;
+				case 'courier':
+					command = 'dota_select_courier';
+				break;
+				case 'controlgroup':
+					command = single('+dota_control_group', options[2]);
+				break;
+				case 'next-unit':
+					command = 'dota_cycle_selected';
+				break;
+			}
+		break;
+
+		case 'view':
+			switch (options[2]) {
+				case 'recent-event':
+					command = 'dota_recent_event';
+				break;
+				default:
+					command = '+' + name(options);
+					this.depend(options);
+			}
+		break;
+
+		case 'voice':
+			switch (options[1]) {
+				case 'team':
+					command = '+voicerecord';
+				break;
+			}
+		break;
+
+		// basic
+
+		case 'attack':
+			command = 'mc_attack';
+		break;
+
+		case 'buyback':
+			command = 'dota_test_buyback';
+		break;
+
+		case 'glyph':
+			command = 'dota_glyph';
+		break;
+
+		case 'grab-stash':
+			command = 'stash_grab_all';
+		break;
+
+		case 'hold':
+			command = 'dota_hold';
+		break;
+
+		case 'move':
+			command = 'mc_move';
+		break;
+
+		case 'patrol':
+			command = 'mc_patrol';
+		break;
+
+		case 'pause':
+			command = 'dota_pause';
+		break;
+
+		case 'reload':
+			command = single('exec', 'autoexec.cfg');
+		break;
+
+		case 'screenshot':
+			command = 'jpeg';
+		break;
+
+		case 'stop':
+			command = 'dota_stop';
 		break;
 	}
 

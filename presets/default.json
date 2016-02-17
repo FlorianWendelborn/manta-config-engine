@@ -71,6 +71,7 @@
 				"V": ["item", "self", 3],
 				"B": ["item", "self", 4],
 				"N": ["item", "self", 5],
+				"A": ["patrol"],
 				"Y": ["glyph"],
 				"1": ["phrase", 9],
 				"2": ["phrase", 10],
