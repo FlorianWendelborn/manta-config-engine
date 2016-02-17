@@ -1,5 +1,5 @@
 { "name": "dota2-manta-config-engine"
-, "version": "1.5.3"
+, "version": "1.5.4"
 , "description": "Dota 2 configuration builder. Compiles JSON to autoexec."
 , "main": "source/index.js"
 , "repository":
@@ -24,7 +24,7 @@
 , "dependencies":
 	{ "codements": "0.0.7"
 	, "minimist" : "^1.2.0"
-	, "verjson"  : "0.0.4"
+	, "verjson"  : "0.0.5"
 },"scripts":
 	{ "postpublish": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags"
 	, "debug"      : "node source/cli.js presets/debug.json"

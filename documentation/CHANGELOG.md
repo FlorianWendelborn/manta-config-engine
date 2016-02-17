@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.4
+- update `verjson` to `0.0.5`
+- added `hold` to default preset
+
 ## 1.5.3
 - added `buyback`, `camera, inspect`, `grab-stash`, `patrol`, `screenshot` and `view, recent-event`
 - sorted switch in layout-parser

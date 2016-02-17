@@ -72,6 +72,7 @@
 				"B": ["item", "self", 4],
 				"N": ["item", "self", 5],
 				"A": ["patrol"],
+				"S": ["hold"],
 				"Y": ["glyph"],
 				"1": ["phrase", 9],
 				"2": ["phrase", 10],

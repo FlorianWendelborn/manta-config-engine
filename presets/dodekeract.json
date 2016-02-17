@@ -79,6 +79,9 @@
 				"B": ["item", "self", 4],
 				"N": ["item", "self", 5],
 
+				"A": ["patrol"],
+				"S": ["hold"],
+
 				"Z": ["chatwheel", 1],
 
 				"`": ["view", "base", "toggle"],
