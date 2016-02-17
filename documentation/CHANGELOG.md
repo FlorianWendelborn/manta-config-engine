@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.6 (2016.02.18-00.50)
+- fixed `view,recent-event`
+- fixed `inputButtonCodeIsScanCode` not being applied
+- modernized `setting.js`
+- expanded `settings.json`
+
 ## 1.5.5 (2016.02.17-12.58)
 - now includes Manta version & generation time in the compiled `autoexec.cfg` and `layout-*.cfg`s
 

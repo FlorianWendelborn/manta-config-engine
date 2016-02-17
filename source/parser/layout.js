@@ -8,7 +8,7 @@ var alias = utils.alias;
 var bind = utils.bind;
 
 function Layout (options) {
-	this.autoexec = manta.data.constants.layouts.initialText
+	this.autoexec = manta.data.constants.layouts.initialText;
 	this.autoexec = this.autoexec.replace('{version}', manta.version);
 	this.autoexec = this.autoexec.replace('{date}', new Date());
 	this.autoexec = this.autoexec.replace('{id}', options.id);
@@ -231,7 +231,7 @@ Layout.prototype.bindKey = function (key, options) {
 		break;
 
 		case 'view':
-			switch (options[2]) {
+			switch (options[1]) {
 				case 'recent-event':
 					command = 'dota_recent_event';
 				break;

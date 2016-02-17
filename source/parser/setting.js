@@ -4,6 +4,10 @@ var constants = manta.data.constants;
 var prefix = constants.prefix;
 var separator = constants.separator;
 
+var name = manta.utils.name;
+var alias = manta.utils.alias;
+var single = manta.utils.single;
+
 function SettingParser (options) {
 	this.gameplay = options.gameplay;
 	this.performance = options.performance;
@@ -20,27 +24,33 @@ SettingParser.prototype.parse = function () {
 		this.parseCategory('gameplay');
 	}
 
+	this.append(this.codement.render());
+	this.codement.reset();
+	this.append('');
+
 	if (this.performance) {
-		this.parseCategory('performance', 'gameplay');
+		this.parseCategory('performance');
 	}
+
+	this.append(this.codement.render());
+	this.codement.reset();
+	this.append('');
 
 	if (this.engine) {
-		this.parseEngine()
+		this.parseEngine();
 	}
+
+	this.append(this.codement.render());
 
 	return [this.autoexec, this.indicator];
-}
+};
 
-SettingParser.prototype.parseCategory = function (current, last) {
-	this.codement.reset();
-	if (this[last]) {
-		this.append('');
-	}
+SettingParser.prototype.parseCategory = function (current) {
 	this.codement.addLine(manta.data.constants.settings[current + 'InitialText']);
 	for (var i in this[current]) {
 		var d = manta.data.settings[current][i];
 		if (!d.commands || !d.commands.length) {
-			console.log('#TODO', i);
+			console.error('unknown command', i);
 		}
 
 		for (var j = 0; j < d.commands.length; j++) {
@@ -48,43 +58,51 @@ SettingParser.prototype.parseCategory = function (current, last) {
 			var s = c.split(':');
 			switch (c[0]) {
 				case "b": // boolean (! means inverted)
-					this.parseBoolean(this[current][i], s[1].replace('!',''), d.label, s[1][0] === '!');
+					this.parseBoolean(this[current][i], s[1].replace('!', ''), d.label, s[1][0] === '!');
 				break;
 				case "i": // integer (command:subtract:divide)
 					this.parseNumber(this[current][i], s[1], d.label, s[2], s[3]);
 				break;
 				case "c": // two-cases
-					this.parseNumber(this[current][i] ? s[1] : s[2], s[3], d.label)
+					this.parseNumber(this[current][i] ? s[1] : s[2], s[3], d.label);
 				break;
 			}
 		}
 	}
-
-	this.append(this.codement.render());
 };
 
 SettingParser.prototype.parseEngine = function () {
-	if (this.gameplay || this.performance) {
-		this.append('');
-	}
 	this.append(constants.settings.engineInitialText);
 
-	this.parseBoolean(this.engine.inputButtonCodeIsScanCode, 'input_button_code_is_scan_code');
+	// input button code is scan code
+	this.parseBoolean(
+		this.engine.inputButtonCodeIsScanCode,
+		manta.data.settings.engine.inputButtonCodeIsScanCode.commands[0],
+		manta.data.settings.engine.inputButtonCodeIsScanCode.label
+	);
 
 	// alt-key
 	if (this.engine.altKey.toUpperCase() !== 'ALT') {
-		this.append('dota_remap_alt_key "' + this.engine.altKey + '"');
+		this.codement.addLine(
+			single('dota_remap_alt_key', this.engine.altKey),
+			'Remap Alt Key'
+		);
 	}
 
 	// load indicator
 	if (this.engine.loadIndicator) {
-		var name = prefix + separator + 'load' + separator + 'indicator';
 		if (this.engine.loadIndicator[0] === 'sound') {
-			this.append('alias ' + name + ' "playsound sounds/' + this.engine.loadIndicator[1] + '"');
+			this.codement.addLine(
+				alias(name('load', 'indicator'), single('playsound', 'sounds/' + this.engine.loadIndicator[1])),
+				'Load Indicator (Sound)'
+			);
 		} else if (this.engine.loadIndicator[0] === 'text') {
-			this.append('alias ' + name + ' "exec ' + this.engine.loadIndicator[1] + '"');
+			this.codement.addLine(
+				alias(name('load', 'indicator'), single('exec', this.engine.loadIndicator[1])),
+				'Load Indicator (Text)'
+			);
 		}
-		this.indicator = constants.settings.loadIndicator.initialText + name;
+		this.indicator = constants.settings.loadIndicator.initialText + name('load', 'indicator');
 	}
 };
 
@@ -99,7 +117,7 @@ SettingParser.prototype.parseBoolean = function (condition, command, comment, in
 };
 
 SettingParser.prototype.parseNumber = function (value, command, comment, inverse, unit) {
-	if (value !== undefined && value !== null) {
+	if (value != null) {
 		if (inverse) {
 			value = inverse - value;
 		}
