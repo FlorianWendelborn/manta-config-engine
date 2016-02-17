@@ -8,7 +8,10 @@ var alias = utils.alias;
 var bind = utils.bind;
 
 function Layout (options) {
-	this.autoexec = manta.data.constants.layouts.initialText.replace('{id}', options.id);
+	this.autoexec = manta.data.constants.layouts.initialText
+	this.autoexec = this.autoexec.replace('{version}', manta.version);
+	this.autoexec = this.autoexec.replace('{date}', new Date());
+	this.autoexec = this.autoexec.replace('{id}', options.id);
 	this.keybinds = options.keybinds;
 	this.preset = options.preset;
 	this.depend = options.depend;

@@ -4,6 +4,8 @@ module.exports = function (preset, callback) {
 	// initialize variables
 	var result = {};
 	var autoexec = manta.data.constants.initialText;
+	autoexec = autoexec.replace('{date}', new Date());
+	autoexec = autoexec.replace('{version}', manta.version);
 	var dependencies = [];
 
 	// helper functions

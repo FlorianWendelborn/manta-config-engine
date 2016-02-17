@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.5 (2016.02.17-12.58)
+- now includes Manta version & generation time in the compiled `autoexec.cfg` and `layout-*.cfg`s
+
 ## 1.5.4
 - update `verjson` to `0.0.5`
 - added `hold` to default preset
