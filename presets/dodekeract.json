@@ -163,7 +163,7 @@
 		},
 		"engine": {
 			"loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
-			"altKey": "K",
+			"altKey": "ALT",
 			"keyboardLayout": "en-US",
 			"inputButtonCodeIsScanCode": true
 		}
