@@ -35,8 +35,8 @@
 
 				"1": ["select", "hero"],
 				"2": ["select", "other-units"],
-				"3": ["select", "controlgroup", "3"],
-				"4": ["select", "controlgroup", "4"],
+				"3": ["select", "controlgroup", 3],
+				"4": ["select", "controlgroup", 4],
 				"5": ["select", "courier"],
 
 				"UPARROW": ["camera", "up"],
@@ -44,7 +44,7 @@
 				"DOWNARROW": ["camera", "down"],
 				"RIGHTARROW": ["camera", "right"],
 
-				"TAB": ["command", "dota_cycle_selected"],
+				"TAB": ["select", "next-unit"],
 
 				"`": ["view", "rune", "toggle"],
 
@@ -163,7 +163,7 @@
 		},
 		"engine": {
 			"loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
-			"altKey": "ALT",
+			"altKey": "K",
 			"keyboardLayout": "en-US",
 			"inputButtonCodeIsScanCode": true
 		}

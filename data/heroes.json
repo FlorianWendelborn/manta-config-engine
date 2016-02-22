@@ -1,335 +1,446 @@
 {
 	"abaddon": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_abaddon"
 	},
 	"alchemist": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_alchemist"
 	},
 	"ancient-apparition": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_ancient_apparition"
 	},
 	"anti-mage" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_antimage"
 	},
 	"arc-warden" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_arc_warden"
 	},
 	"axe": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_axe"
 	},
 	"bane": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_bane"
 	},
 	"batrider": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_batrider"
 	},
 	"beastmaster": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_beastmaster"
 	},
 	"bloodseeker" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_bloodseeker"
 	},
 	"bounty-hunter" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_bounty_hunter"
 	},
 	"brewmaster": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_brewmaster"
 	},
 	"bristleback": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_bristleback"
 	},
 	"broodmother" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_broodmother"
 	},
 	"centaur-warrunner": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_centaur_warrunner"
 	},
 	"chaos-knight": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_chaos_knight"
 	},
 	"chen": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_chen"
 	},
 	"clinkz" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_clinkz"
 	},
 	"clockwerk": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_rattletrap"
 	},
 	"crystal-maiden": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_crystal_maiden"
 	},
 	"dark-seer": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_dark_seer"
 	},
 	"dazzle": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_dazzle"
 	},
 	"death-prophet": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_death_prophet"
 	},
 	"disruptor": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_disruptor"
 	},
 	"doom": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_doom_bringer"
 	},
 	"dragon-knight": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_dragon_knight"
 	},
 	"drow-ranger" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_drow_ranger"
 	},
 	"earthshaker": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_earthshaker"
 	},
 	"earth-spirit": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_earth_spirit"
 	},
 	"elder-titan": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_elder_titan"
 	},
 	"ember-spirit" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_ember_spirit"
 	},
 	"enchantress": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_enchantress"
 	},
 	"enigma": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_enigma"
 	},
 	"faceless-void" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_faceless_void"
 	},
 	"gyrocopter" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_gyrocopter"
 	},
 	"huskar": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_huskar"
 	},
 	"invoker": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_invoker"
 	},
 	"io": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_wisp"
 	},
 	"jakiro": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_jakiro"
 	},
 	"juggernaut" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_juggernaut"
 	},
 	"keeper-of-the-light": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_keeper_of_the_light"
 	},
 	"kunkka": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_kunkka"
 	},
 	"legion-commander": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_legion_commander"
 	},
 	"leshrac": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_leshrac"
 	},
 	"lich": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_lich"
 	},
 	"lifestealer": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_life_stealer"
 	},
 	"lina": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_lina"
 	},
 	"lion": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_lion"
 	},
 	"lone-druid" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_lone_druid"
 	},
 	"luna" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_luna"
 	},
 	"lycan": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_lycan"
 	},
 	"magnus": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_magnataur"
 	},
 	"medusa" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_medusa"
 	},
 	"meepo" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_meepo"
 	},
 	"mirana" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_mirana"
 	},
 	"morphling" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_morphling"
 	},
 	"naga-siren" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_naga_siren"
 	},
 	"natures-prophet": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_furion"
 	},
 	"necrophos": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_necrophos"
 	},
 	"night-stalker": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_night_stalker"
 	},
 	"nyx-assassin" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_nyx_assassin"
 	},
 	"ogre-magi": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_ogre_magi"
 	},
 	"omniknight": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_omniknight"
 	},
 	"oracle": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_oracle"
 	},
 	"outworld-devourer": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_obsidian_destroyer"
 	},
 	"phantom-assassin" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_phantom_assassin"
 	},
 	"phantom-lancer" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_phantom_lancer"
 	},
 	"phoenix": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_phoenix"
 	},
 	"puck": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_puck"
 	},
 	"pudge": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_pudge"
 	},
 	"pugna": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_pugna"
 	},
 	"queen-of-pain": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_queenofpain"
 	},
 	"razor" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_razor"
 	},
 	"riki" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_riki"
 	},
 	"rubick": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_rubick"
 	},
 	"sand-king": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_sand_king"
 	},
 	"shadow-demon": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_shadow_demon"
 	},
 	"shadow-fiend" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_nevermore"
 	},
 	"shadow-shaman": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_shadow_shaman"
 	},
 	"silencer": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_silencer"
 	},
 	"skywrath-mage": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_skywrath_mage"
 	},
 	"slardar": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_slardar"
 	},
 	"slark" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_slark"
 	},
 	"sniper" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_sniper"
 	},
 	"spectre" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_spectre"
 	},
 	"spirit-breaker": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_spirit_breaker"
 	},
 	"storm-spirit": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_storm_spirit"
 	},
 	"sven": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_sven"
 	},
 	"techies": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_techies"
 	},
 	"templar-assassin" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_templar_assassin"
 	},
 	"terrorblade" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_terrorblade"
 	},
 	"tidehunter": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_tidehunter"
 	},
 	"timbersaw": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_shredder"
 	},
 	"tinker": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_tinker"
 	},
 	"tiny": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_tiny"
 	},
-	"trant-protector": {
-		"attribute": "strength"
+	"treant-protector": {
+		"attribute": "strength",
+		"code": "npc_dota_hero_treant"
 	},
 	"troll-warlord" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_troll_warlord"
 	},
 	"tusk": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_tusk"
 	},
 	"undying": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_undying"
 	},
 	"ursa" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_ursa"
 	},
 	"vengeful-spirit" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_vengefulspirit"
 	},
 	"venomancer" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_venomancer"
 	},
 	"viper" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_viper"
 	},
 	"visage": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_visage"
 	},
 	"warlock": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_warlock"
 	},
 	"weaver" : {
-		"attribute": "agility"
+		"attribute": "agility",
+		"code": "npc_dota_hero_weaver"
 	},
 	"windranger": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_windrunner"
 	},
 	"winter-wyvern": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_winter_wyvern"
 	},
 	"witch-doctor": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_witch_doctor"
 	},
 	"wraith-king": {
-		"attribute": "strength"
+		"attribute": "strength",
+		"code": "npc_dota_hero_skeleton_king"
 	},
 	"zeus": {
-		"attribute": "intelligence"
+		"attribute": "intelligence",
+		"code": "npc_dota_hero_zuus"
 	}
 }

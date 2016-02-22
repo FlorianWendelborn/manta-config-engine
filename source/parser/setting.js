@@ -84,7 +84,7 @@ SettingParser.prototype.parseEngine = function () {
 	// alt-key
 	if (this.engine.altKey.toUpperCase() !== 'ALT') {
 		this.codement.addLine(
-			single('dota_remap_alt_key', this.engine.altKey),
+			'dota_remap_alt_key ' + this.engine.altKey,
 			'Remap Alt Key'
 		);
 	}

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.7 (2016.02.22-18.40)
+- fixed `dota_remap_alt_key key` having quotes around the whole command
+- added internal hero names to `heroes.json`
+- fixed presets using having quotes around controlgroup numbers
+
 ## 1.5.6 (2016.02.18-00.50)
 - fixed `view,recent-event`
 - fixed `inputButtonCodeIsScanCode` not being applied
