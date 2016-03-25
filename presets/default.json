@@ -80,7 +80,7 @@
 				"Z": ["chatwheel", 1],
 				"`": ["view", "base", "toggle"],
 				"F3": ["courier", "burst"],
-				"SPACE": ["layout", 1],
+				"SPACE": ["layout", 0],
 				"G": ["item", "taunt"]
 			}
 		}
@@ -131,5 +131,5 @@
 			"inputButtonCodeIsScanCode": true
 		}
 	},
-	"version": "1.5.0"
+	"version": "1.6.0"
 }

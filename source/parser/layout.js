@@ -6,6 +6,7 @@ var name = utils.name;
 var single = utils.single;
 var alias = utils.alias;
 var bind = utils.bind;
+var multi = utils.multi;
 
 function Layout (options) {
 	this.autoexec = manta.data.constants.layouts.initialText;
@@ -16,6 +17,8 @@ function Layout (options) {
 	this.preset = options.preset;
 	this.depend = options.depend;
 	this.custom = options.custom;
+	this.id = options.id;
+	this.needsUnloader = false;
 }
 
 Layout.prototype.append = function (s) {
@@ -31,8 +34,46 @@ Layout.prototype.parse = function () {
 		this.append(manta.data.constants.layouts.customText);
 		this.append(this.custom);
 	}
+
+	// unloader
+	if (this.needsUnloader) {
+		this.createUnloader();
+	}
+
 	return this.autoexec;
 };
+
+Layout.prototype.createUnloader = function () {
+	this.append('');
+	this.append(manta.data.constants.layouts.unloaderText);
+
+	var unloader = [];
+	var length = 0;
+	var splitAt = 5;
+	for (var i in this.keybinds) {
+		var index = Math.floor(length/splitAt);
+		if (length % splitAt === 0) {
+			unloader[index] = [];
+		}
+		unloader[index].push('unbind ' + i);
+		length++;
+	}
+	this.append(
+		alias(
+			name('unload'),
+			multi(
+				unloader.map(
+					function (item, index) {
+						return name('unload', index);
+					}
+				).join('; ')
+			)
+		)
+	);
+	for (i = 0; i < unloader.length; i++) {
+		this.append(alias(name('unload', i), multi(unloader[i].join('; '))));
+	}
+}
 
 Layout.prototype.bindKey = function (key, options) {
 	var command = '';
@@ -166,6 +207,7 @@ Layout.prototype.bindKey = function (key, options) {
 		break;
 
 		case 'layout':
+			this.needsUnloader = true;
 			command = '+' + name(options);
 			this.depend(options);
 		break;

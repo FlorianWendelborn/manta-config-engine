@@ -105,8 +105,8 @@ DependencyParser.prototype.parse = function () {
 				}
 			break;
 			case "layout":
-				this.codement.addLine(alias('+' + name(dep), single('exec', 'layout-' + dep[1] + '.cfg')), 'Load Layout ' + oneMore(dep[1]));
-				this.codement.addLine(alias('-' + name(dep), single('exec', 'layout-0.cfg')), 'Unload Layout ' + oneMore(dep[1]));
+				this.codement.addLine(alias('+' + name(dep), multi(name('unload'), 'exec layout-' + dep[1] + '.cfg')), 'Load Layout ' + oneMore(dep[1]));
+				this.codement.addLine(alias('-' + name(dep), multi(name('unload'), 'exec layout-' + dep[1] + '.cfg')), 'Unload Layout ' + oneMore(dep[1]));
 			break;
 			case "view":
 				this.append(this.codement.render());

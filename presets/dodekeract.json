@@ -61,7 +61,8 @@
 				"KP_6": ["phrase", 82],
 				"KP_7": ["chat", "all", "> That just happened."],
 				"KP_8": ["phrase", 53],
-				"KP_9": ["phrase", 85]
+				"KP_9": ["phrase", 85],
+				"F11": ["reload"]
 			}
 		},{
 			"keybinds": {
@@ -92,9 +93,7 @@
 
 				"F3": ["courier", "burst"],
 
-				"SPACE": ["layout", 1],
-
-				"F11": ["reload"]
+				"SPACE": ["layout", 0]
 			}
 		}
 	],
@@ -168,5 +167,5 @@
 			"inputButtonCodeIsScanCode": true
 		}
 	},
-	"version": "1.5.0"
+	"version": "1.6.0"
 }
