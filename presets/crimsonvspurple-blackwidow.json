@@ -630,15 +630,13 @@
             "minimapProximityScaleDistance": 20,
             "minimapProximityScaleMinimum": "300",
             "autoSelectSummonedUnits": false,
-            "autoAttackAfterSpell": true,
-            "autoAttack": false,
             "minimapBackground": true
         },
         "performance": {
             "altTabIdle": true,
             "serverForcePreload": true,
             "clientForcePreload": true,
-            "multiCore": true,
+            "multiCore": false,
             "screenShake": false
         },
         "engine": {
