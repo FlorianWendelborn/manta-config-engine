@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.1 (2016.03.28-20.20)
+- fixed [app#41](https://github.com/dodekeract/manta-config-engine-app/issues/41)
+	- won't overwrite preset cycles when compiling
+
+## 1.6.0 (2016.03.25)
+- implemented partial unbinding
+
 ## 1.5.7 (2016.02.22-18.40)
 - fixed `dota_remap_alt_key key` having quotes around the whole command
 - added internal hero names to `heroes.json`

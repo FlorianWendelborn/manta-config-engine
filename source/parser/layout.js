@@ -75,7 +75,8 @@ Layout.prototype.createUnloader = function () {
 	}
 }
 
-Layout.prototype.bindKey = function (key, options) {
+Layout.prototype.bindKey = function (key, originalOptions) {
+	var options = originalOptions.slice(0);
 	var command = '';
 	switch (options[0]) {
 		case 'ability':
