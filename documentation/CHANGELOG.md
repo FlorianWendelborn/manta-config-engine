@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.7 (2016.03.28-22.44)
+- fixed load indicator sounds
+
 ## 1.6.6 (2016.03.28-21.47)
 - added command info for `loadIndicator` to implement [app#49](https://github.com/dodekeract/manta-config-engine-app/issues/49)
 

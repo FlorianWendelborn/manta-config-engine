@@ -93,7 +93,7 @@ SettingParser.prototype.parseEngine = function () {
 	if (this.engine.loadIndicator) {
 		if (this.engine.loadIndicatorType === 'sound') {
 			this.codement.addLine(
-				alias(name('load', 'indicator'), single('playsound', 'sounds/' + this.engine.loadIndicator)),
+				alias(name('load', 'indicator'), single('playsound', this.engine.loadIndicator)),
 				'Load Indicator (Sound)'
 			);
 		} else if (this.engine.loadIndicatorType === 'text') {
