@@ -366,6 +366,17 @@
 			"label": "Input Button Code Is Scan Code",
 			"info": "This setting should allow every keyboard-layout to work with the same key-positions as the default (English-US) keyboard.",
 			"commands": ["input_button_code_is_scan_code"]
+		},
+		"loadIndicator": {
+			"type": "choice",
+			"options": [
+				{
+					"label": "load",
+					"id": "sounds"
+				}
+			],
+			"label": "Sound",
+			"info": "Set which sound you hear when successfully loading Manta"
 		}
 	}
 }

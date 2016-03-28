@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.6 (2016.03.28-21.47)
+- added command info for `loadIndicator` to implement [app#49](https://github.com/dodekeract/manta-config-engine-app/issues/49)
+
 ## 1.6.5 (2016.03.28-21.30)
 - changed preset format to make supporting different load-indicators easier
 - added update test script
