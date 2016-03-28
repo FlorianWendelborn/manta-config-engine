@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.2 (2016.03.28-20.29)
+- fixed [app#45](https://github.com/dodekeract/manta-config-engine-app/issues/45)
+	- now includes a `-chatwheel` in each layout
+
 ## 1.6.1 (2016.03.28-20.20)
 - fixed [app#41](https://github.com/dodekeract/manta-config-engine-app/issues/41)
 	- won't overwrite preset cycles when compiling
