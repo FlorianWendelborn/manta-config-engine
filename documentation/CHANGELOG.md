@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.4 (2016.03.28-20.44)
+- fixed a typo preventing Manta from working
+
 ## 1.6.3 (2016.03.28-20.37)
 - added `sounds.json` to implement [app#49](https://github.com/dodekeract/manta-config-engine-app/issues/49)
 
