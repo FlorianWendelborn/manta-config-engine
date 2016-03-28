@@ -1,0 +1,653 @@
+{
+    "layouts": [
+        {
+            "keybinds": {
+                "1": [
+                    "select",
+                    "hero"
+                ],
+                "2": [
+                    "select",
+                    "other-units"
+                ],
+                "3": [
+                    "select",
+                    "controlgroup",
+                    3
+                ],
+                "4": [
+                    "select",
+                    "controlgroup",
+                    4
+                ],
+                "5": [
+                    "select",
+                    "controlgroup",
+                    "5"
+                ],
+                "6": [
+                    "select",
+                    "controlgroup",
+                    6
+                ],
+                "7": [
+                    "select",
+                    "controlgroup",
+                    7
+                ],
+                "8": [
+                    "select",
+                    "controlgroup",
+                    8
+                ],
+                "9": [
+                    "select",
+                    "controlgroup",
+                    9
+                ],
+                "Q": [
+                    "ability",
+                    "quick",
+                    0
+                ],
+                "W": [
+                    "ability",
+                    "quick",
+                    1
+                ],
+                "E": [
+                    "ability",
+                    "quick",
+                    2
+                ],
+                "D": [
+                    "ability",
+                    "quick",
+                    3
+                ],
+                "F": [
+                    "ability",
+                    "quick",
+                    4
+                ],
+                "R": [
+                    "ability",
+                    "quick",
+                    5
+                ],
+                "X": [
+                    "item",
+                    "quick",
+                    1
+                ],
+                "C": [
+                    "item",
+                    "quick",
+                    2
+                ],
+                "V": [
+                    "item",
+                    "quick",
+                    5
+                ],
+                "Y": [
+                    "ability",
+                    "auto",
+                    "toggle"
+                ],
+                "A": [
+                    "attack"
+                ],
+                "S": [
+                    "stop"
+                ],
+                "ENTER": [
+                    "open",
+                    "chat"
+                ],
+                "U": [
+                    "learn",
+                    "stats"
+                ],
+                "F1": [
+                    "open",
+                    "scoreboard"
+                ],
+                "F2": [
+                    "select",
+                    "courier"
+                ],
+                "F3": [
+                    "courier",
+                    "deliver"
+                ],
+                "F4": [
+                    "buy",
+                    "quick"
+                ],
+                "F9": [
+                    "pause"
+                ],
+                "F11": [
+                    "reload"
+                ],
+                "UPARROW": [
+                    "camera",
+                    "up"
+                ],
+                "LEFTARROW": [
+                    "camera",
+                    "left"
+                ],
+                "DOWNARROW": [
+                    "camera",
+                    "down"
+                ],
+                "RIGHTARROW": [
+                    "camera",
+                    "right"
+                ],
+                "TAB": [
+                    "select",
+                    "next-unit"
+                ],
+                "`": [
+                    "view",
+                    "rune",
+                    "toggle"
+                ],
+                "SPACE": [
+                    "layout",
+                    1
+                ],
+                "KP_0": [
+                    "chat",
+                    "team",
+                    "no"
+                ],
+                "KP_1": [
+                    "chat",
+                    "team",
+                    "yes"
+                ],
+                "KP_2": [
+                    "phrase",
+                    59
+                ],
+                "KP_3": [
+                    "phrase",
+                    81
+                ],
+                "KP_4": [
+                    "phrase",
+                    75
+                ],
+                "KP_5": [
+                    "phrase",
+                    76
+                ],
+                "KP_6": [
+                    "phrase",
+                    82
+                ],
+                "KP_7": [
+                    "phrase",
+                    65
+                ],
+                "KP_8": [
+                    "phrase",
+                    53
+                ],
+                "KP_9": [
+                    "phrase",
+                    85
+                ],
+                "G": [
+                    "item",
+                    "quick",
+                    4
+                ],
+                "[": [
+                    "open",
+                    "shop"
+                ],
+                "F14": [
+                    "item",
+                    "taunt"
+                ],
+                "SCROLLLOCK": [
+                    "chatwheel",
+                    0
+                ],
+                "\\": [
+                    "open",
+                    "console"
+                ],
+                "F17": [
+                    "voice",
+                    "team"
+                ],
+                "Z": [
+                    "item",
+                    "quick",
+                    0
+                ],
+                "F16": [
+                    "layout",
+                    2
+                ],
+                "F12": [
+                    "screenshot"
+                ],
+                "B": [
+                    "buy",
+                    "sticky"
+                ],
+                "KP_MINUS": [
+                    "phrase",
+                    7
+                ],
+                "KP_MULTIPLY": [
+                    "phrase",
+                    6
+                ],
+                "KP_PLUS": [
+                    "phrase",
+                    5
+                ],
+                "KP_DIVIDE": [
+                    "phrase",
+                    16
+                ],
+                "KP_ENTER": [
+                    "open",
+                    "chat"
+                ],
+                "KP_DEL": [
+                    "phrase",
+                    39
+                ],
+                "J": [
+                    "cycle",
+                    0,
+                    [
+                        "dota_health_per_vertical_marker 200; say_student HP marker: 200; playsound sounds/ui/buttonrollover.vsnd;",
+                        "dota_health_per_vertical_marker 300; say_student HP marker: 300; playsound sounds/ui/buttonrollover.vsnd;",
+                        "dota_health_per_vertical_marker 400; say_student HP marker: 400; playsound sounds/ui/buttonrollover.vsnd;"
+                    ]
+                ],
+                "F5": [
+                    "cycle",
+                    2,
+                    [
+                        "dota_player_add_summoned_to_selection 1; say_student Auto Select Summoned Units: TRUE; playsound sounds/ui/buttonrollover.vsnd;",
+                        "dota_player_add_summoned_to_selection 0; say_student Auto Select Summoned Units: FALSE; playsound sounds/ui/buttonrollover.vsnd;"
+                    ]
+                ],
+                "MOUSE4": [
+                    "item",
+                    "quick",
+                    3
+                ],
+                "F15": [
+                    "item",
+                    "action"
+                ],
+                "]": [
+                    "item",
+                    "taunt"
+                ],
+                "SEMICOLON": [
+                    "item",
+                    "action"
+                ],
+                "'": [
+                    "layout",
+                    2
+                ],
+                ",": [
+                    "voice",
+                    "team"
+                ],
+                "F13": [
+                    "open",
+                    "shop"
+                ],
+                "F6": [
+                    "cycle",
+                    3,
+                    [
+                        "dota_player_auto_repeat_right_mouse 1; say_student Auto-repeat Right Mouse: TRUE; playsound sounds/ui/buttonrollover.vsnd;",
+                        "dota_player_auto_repeat_right_mouse 0; say_student Auto-repeat Right Mouse: FALSE; playsound sounds/ui/buttonrollover.vsnd;"
+                    ]
+                ]
+            }
+        },
+        {
+            "keybinds": {
+                "1": [
+                    "select",
+                    "hero"
+                ],
+                "2": [
+                    "select",
+                    "all-units"
+                ],
+                "Q": [
+                    "ability",
+                    "self",
+                    0
+                ],
+                "W": [
+                    "ability",
+                    "self",
+                    1
+                ],
+                "E": [
+                    "ability",
+                    "self",
+                    2
+                ],
+                "D": [
+                    "ability",
+                    "self",
+                    3
+                ],
+                "F": [
+                    "ability",
+                    "self",
+                    4
+                ],
+                "R": [
+                    "ability",
+                    "self",
+                    5
+                ],
+                "X": [
+                    "item",
+                    "self",
+                    1
+                ],
+                "C": [
+                    "item",
+                    "self",
+                    2
+                ],
+                "V": [
+                    "item",
+                    "self",
+                    5
+                ],
+                "A": [
+                    "patrol"
+                ],
+                "S": [
+                    "hold"
+                ],
+                "Z": [
+                    "item",
+                    "self",
+                    0
+                ],
+                "`": [
+                    "view",
+                    "base",
+                    "toggle"
+                ],
+                "F3": [
+                    "courier",
+                    "burst"
+                ],
+                "SPACE": [
+                    "layout",
+                    0
+                ],
+                "G": [
+                    "item",
+                    "self",
+                    4
+                ],
+                "SCROLLLOCK": [
+                    "chatwheel",
+                    1
+                ],
+                "TAB": [
+                    "select",
+                    "next-unit"
+                ],
+                "F17": [
+                    "cycle",
+                    1,
+                    [
+                        "voice_vox 1; say_student Mic: Open (Party); playsound sounds/ui/buttonrollover.vsnd;",
+                        "voice_vox 2; say_student Mic: Open (Team); playsound sounds/ui/buttonrollover.vsnd;",
+                        "voice_vox 0; say_student Mic: Close; playsound sounds/ui/buttonrollover.vsnd;"
+                    ]
+                ],
+                "F2": [
+                    "command",
+                    "dota_shop_force_hotkeys 1; toggleshoppanel; shop_nav_to_tab 0; shop_select_itemrow 10; toggleshoppanel"
+                ],
+                "MOUSE4": [
+                    "item",
+                    "self",
+                    3
+                ],
+                ",": [
+                    "cycle",
+                    1,
+                    [
+                        "voice_vox 1; say_student Mic: Open (Party); playsound sounds/ui/buttonrollover.vsnd;",
+                        "voice_vox 2; say_student Mic: Open (Team); playsound sounds/ui/buttonrollover.vsnd;",
+                        "voice_vox 0; say_student Mic: Close; playsound sounds/ui/buttonrollover.vsnd;"
+                    ]
+                ]
+            }
+        },
+        {
+            "keybinds": {
+                "1": [
+                    "select",
+                    "hero"
+                ],
+                "Z": [
+                    "item",
+                    "smart",
+                    0
+                ],
+                "X": [
+                    "item",
+                    "smart",
+                    1
+                ],
+                "C": [
+                    "item",
+                    "smart",
+                    2
+                ],
+                "V": [
+                    "item",
+                    "smart",
+                    5
+                ],
+                "G": [
+                    "item",
+                    "smart",
+                    4
+                ],
+                "Q": [
+                    "ability",
+                    "smart",
+                    0
+                ],
+                "W": [
+                    "ability",
+                    "smart",
+                    1
+                ],
+                "E": [
+                    "ability",
+                    "smart",
+                    2
+                ],
+                "R": [
+                    "ability",
+                    "smart",
+                    5
+                ],
+                "D": [
+                    "ability",
+                    "smart",
+                    3
+                ],
+                "F": [
+                    "ability",
+                    "smart",
+                    4
+                ],
+                "F16": [
+                    "layout",
+                    0
+                ],
+                "TAB": [
+                    "select",
+                    "next-unit"
+                ],
+                "SCROLLLOCK": [
+                    "chatwheel",
+                    2
+                ],
+                "MOUSE4": [
+                    "item",
+                    "smart",
+                    3
+                ],
+                "'": [
+                    "layout",
+                    0
+                ]
+            }
+        }
+    ],
+    "chatwheels": [
+        [
+            8,
+            20,
+            2,
+            6,
+            16,
+            13,
+            32,
+            22
+        ],
+        [
+            59,
+            44,
+            58,
+            24,
+            26,
+            25,
+            48,
+            3
+        ],
+        [
+            69,
+            68,
+            80,
+            79,
+            70,
+            64,
+            67,
+            65
+        ]
+    ],
+    "cycles": [
+        [
+            [
+                "command",
+                "dota_health_per_vertical_marker 200; say_student HP marker: 200; playsound sounds/ui/buttonrollover.vsnd;"
+            ],
+            [
+                "command",
+                "dota_health_per_vertical_marker 300; say_student HP marker: 300; playsound sounds/ui/buttonrollover.vsnd;"
+            ],
+            [
+                "command",
+                "dota_health_per_vertical_marker 400; say_student HP marker: 400; playsound sounds/ui/buttonrollover.vsnd;"
+            ]
+        ],
+        [
+            [
+                "command",
+                "voice_vox 1; say_student Mic: Open (Party); playsound sounds/ui/buttonrollover.vsnd;"
+            ],
+            [
+                "command",
+                "voice_vox 2; say_student Mic: Open (Team); playsound sounds/ui/buttonrollover.vsnd;"
+            ],
+            [
+                "command",
+                "voice_vox 0; say_student Mic: Close; playsound sounds/ui/buttonrollover.vsnd;"
+            ]
+        ],
+        [
+            [
+                "command",
+                "dota_player_add_summoned_to_selection 1; say_student Auto Select Summoned Units: TRUE; playsound sounds/ui/buttonrollover.vsnd;"
+            ],
+            [
+                "command",
+                "dota_player_add_summoned_to_selection 0; say_student Auto Select Summoned Units: FALSE; playsound sounds/ui/buttonrollover.vsnd;"
+            ]
+        ],
+        [
+            [
+                "command",
+                "dota_player_auto_repeat_right_mouse 1; say_student Auto-repeat Right Mouse: TRUE; playsound sounds/ui/buttonrollover.vsnd;"
+            ],
+            [
+                "command",
+                "dota_player_auto_repeat_right_mouse 0; say_student Auto-repeat Right Mouse: FALSE; playsound sounds/ui/buttonrollover.vsnd;"
+            ]
+        ]
+    ],
+    "settings": {
+        "gameplay": {
+            "netgraph": true,
+            "autoRepeatRightMouse": false,
+            "forceMovementDirection": true,
+            "forceRightClickAttack": false,
+            "unifiedUnitOrders": true,
+            "gridView": true,
+            "playerNames": true,
+            "heroFinder": true,
+            "rangeFinder": true,
+            "cameraZoom": true,
+            "cameraMoveOnRespawn": false,
+            "minimapProximityScale": true,
+            "minimapShowHeroIcons": true,
+            "minimapAlwaysShowHeroIcons": true,
+            "minimapProximityScaleDistance": 20,
+            "minimapProximityScaleMinimum": "300",
+            "autoSelectSummonedUnits": false,
+            "minimapBackground": true
+        },
+        "performance": {
+            "altTabIdle": true,
+            "serverForcePreload": true,
+            "clientForcePreload": true,
+            "multiCore": false,
+            "screenShake": false
+        },
+        "engine": {
+            "loadIndicator": [
+                "sound",
+                "ui/ui_barn_door_open_01.vsnd_c"
+            ],
+            "altKey": "ALT",
+            "keyboardLayout": "en-rz",
+            "inputButtonCodeIsScanCode": false
+        }
+    },
+    "version": "1.6.0"
+}
