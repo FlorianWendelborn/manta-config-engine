@@ -289,7 +289,7 @@
 			"type": "boolean",
 			"label": "Force Client-Data Preload",
 			"info": "Is said to improve performance for some people.",
-			"commands": ["b:cl_forcepreload"]
+			"commands": ["b:dota_map_preload"]
 		},
 		"serverForcePreload": {
 			"type": "boolean",
