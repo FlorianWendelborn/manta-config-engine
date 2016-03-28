@@ -35,7 +35,9 @@ function multi (options) {
 		args = options;
 	}
 	if (args.length > 1 || args[0].indexOf(' ') !== -1) {
-		return '"' + args.join('; ') + '"';
+		// don't place double quotes
+		var quote = args[0][0] === '"' ? '' : '"';
+		return quote + args.join('; ') + quote;
 	} else {
 		return args[0] || '';
 	}
