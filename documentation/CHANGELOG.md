@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.5 (2016.03.28-21.30)
+- changed preset format to make supporting different load-indicators easier
+- added update test script
+- update to verjson 0.0.6
+
 ## 1.6.4 (2016.03.28-20.44)
 - fixed a typo preventing Manta from working
 

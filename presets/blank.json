@@ -10,11 +10,12 @@
 		"gameplay": {},
 		"performance": {},
 		"engine": {
-			"loadIndicator": ["sound", "ui/coins_big.vsnd_c"],
+			"loadIndicator": "sounds/ui/coins_big.vsnd_c",
+			"loadIndicatorType": "sound",
 			"altKey": "ALT",
 			"keyboardLayout": "en-US",
 			"inputButtonCodeIsScanCode": true
 		}
 	},
-	"version": "1.6.0"
+	"version": "1.6.5"
 }

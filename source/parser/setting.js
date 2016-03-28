@@ -91,14 +91,14 @@ SettingParser.prototype.parseEngine = function () {
 
 	// load indicator
 	if (this.engine.loadIndicator) {
-		if (this.engine.loadIndicator[0] === 'sound') {
+		if (this.engine.loadIndicatorType === 'sound') {
 			this.codement.addLine(
-				alias(name('load', 'indicator'), single('playsound', 'sounds/' + this.engine.loadIndicator[1])),
+				alias(name('load', 'indicator'), single('playsound', 'sounds/' + this.engine.loadIndicator)),
 				'Load Indicator (Sound)'
 			);
-		} else if (this.engine.loadIndicator[0] === 'text') {
+		} else if (this.engine.loadIndicatorType === 'text') {
 			this.codement.addLine(
-				alias(name('load', 'indicator'), single('exec', this.engine.loadIndicator[1])),
+				alias(name('load', 'indicator'), single('exec', this.engine.loadIndicator)),
 				'Load Indicator (Text)'
 			);
 		}

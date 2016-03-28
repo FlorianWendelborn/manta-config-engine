@@ -36,6 +36,21 @@ var patcher = new verjson.Patcher({
 				}
 				return preset;
 			}
+		}],
+		'1.6.5': [{
+			type: 'move',
+			from: 'settings.engine.loadIndicator.0',
+			to: 'settings.engine.loadIndicatorType'
+		}, {
+			type: 'move',
+			from: 'settings.engine.loadIndicator.1',
+			to: 'settings.engine.loadIndicator'
+		}, {
+			type: 'custom',
+			run: function (preset) {
+				preset.settings.engine.loadIndicator = 'sounds/' + preset.settings.engine.loadIndicator;
+				return preset;
+			}
 		}]
 	}
 });
