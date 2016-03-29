@@ -17,5 +17,7 @@
 			"inputButtonCodeIsScanCode": true
 		}
 	},
-	"version": "1.6.5"
+	"title": "Blank Preset",
+	"description": "Completely Blank Layout, useful to start your own config.",
+	"version": "1.7.1"
 }

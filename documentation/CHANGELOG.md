@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.1 (2016.03.29-17.10)
+- added `title` and `description` to the presets
+- new preset version to include `title` and `description` fields
+
 ## 1.7.0 (2016.03.29-15.00)
 - added ability to `buy` items
 - added new settings
