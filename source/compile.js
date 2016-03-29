@@ -10,7 +10,7 @@ module.exports = function (preset, callback) {
 
 	// helper functions
 	function append (s) {
-		autoexec += s + '\n';
+		autoexec += s + '\r\n';
 	}
 
 	function depend (options) {
@@ -98,14 +98,14 @@ module.exports = function (preset, callback) {
 	// custom code
 	if (preset.custom) {
 		append(manta.data.constants.custom.initialText);
-		append(preset.custom + '\n');
+		append(preset.custom + '\r\n');
 	}
 
 	// load indicator
 	append(settings[1]);
 
 	// merge multiple empty lines to one
-	autoexec = autoexec.replace(/\n{3,}/g, '\n\n');
+	autoexec = autoexec.replace(/(\r\n){3,}/g, '\r\n\r\n');
 	result['autoexec.cfg'] = autoexec;
 
 	setTimeout(function () {
