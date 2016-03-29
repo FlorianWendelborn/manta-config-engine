@@ -26,7 +26,7 @@
 		},
 		"smartMultiUnitCast": {
 			"type": "boolean",
-			"label": "Smart Multiunit Cast",
+			"label": "Smart Multi-Unit Cast",
 			"info": "In a selection group of similar units, spell will be cast by another unit if the primary unit's spell is in cooldown.",
 			"commands": ["b:dota_player_smart_multiunit_cast"]
 		},
