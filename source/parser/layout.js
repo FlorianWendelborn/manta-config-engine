@@ -234,6 +234,7 @@ Layout.prototype.bindKey = function (key, originalOptions) {
 			switch (options[1]) {
 				case 'console':
 					command = 'toggleconsole';
+					this.depend(['console']);
 				break;
 				case 'chat':
 					command = 'say';

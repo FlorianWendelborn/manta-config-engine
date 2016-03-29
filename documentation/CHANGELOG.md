@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.7.3 (2016.03.29-20.20)
+- fixed console not showing up [#8](https://github.com/dodekeract/manta-config-engine/issues/8)
+
 ## 1.7.2 (2016.03.29-19.42)
 - added option to force `CRLF` [#9](https://github.com/dodekeract/manta-config-engine/issues/9)
 
