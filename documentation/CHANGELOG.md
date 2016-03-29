@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.6.7 (2016.03.28-22.44)
+- fixed load indicator sounds
+
+## 1.6.6 (2016.03.28-21.47)
+- added command info for `loadIndicator` to implement [app#49](https://github.com/dodekeract/manta-config-engine-app/issues/49)
+
+## 1.6.5 (2016.03.28-21.30)
+- changed preset format to make supporting different load-indicators easier
+- added update test script
+- update to verjson 0.0.6
+
+## 1.6.4 (2016.03.28-20.44)
+- fixed a typo preventing Manta from working
+
+## 1.6.3 (2016.03.28-20.37)
+- added `sounds.json` to implement [app#49](https://github.com/dodekeract/manta-config-engine-app/issues/49)
+
+## 1.6.2 (2016.03.28-20.29)
+- fixed [app#45](https://github.com/dodekeract/manta-config-engine-app/issues/45)
+	- now includes a `-chatwheel` in each layout
+
+## 1.6.1 (2016.03.28-20.20)
+- fixed [app#41](https://github.com/dodekeract/manta-config-engine-app/issues/41)
+	- won't overwrite preset cycles when compiling
+
+## 1.6.0 (2016.03.25)
+- implemented partial unbinding
+
 ## 1.5.7 (2016.02.22-18.40)
 - fixed `dota_remap_alt_key key` having quotes around the whole command
 - added internal hero names to `heroes.json`

@@ -1,5 +1,5 @@
 { "name": "dota2-manta-config-engine"
-, "version": "1.6.0"
+, "version": "1.6.7"
 , "description": "Dota 2 configuration builder. Compiles JSON to autoexec."
 , "main": "source/index.js"
 , "repository":
@@ -24,13 +24,14 @@
 , "dependencies":
 	{ "codements": "0.0.7"
 	, "minimist" : "^1.2.0"
-	, "verjson"  : "0.0.5"
+	, "verjson"  : "0.0.6"
 },"scripts":
 	{ "postpublish": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags"
 	, "debug"      : "node source/cli.js presets/debug.json"
 	, "dodekeract" : "node source/cli.js presets/dodekeract.json"
 	, "watch"      : "nodemon -e js,json source/cli.js presets/dodekeract.json"
 	, "watch-debug": "nodemon -e js,json source/cli.js presets/debug.json"
+	, "test-update": "node -e \"var manta = require('./source');var preset = require('./presets/default.json');manta.update(preset);console.log(preset);\""
 },"remarkConfig":
 	{ "plugins":
 		{ "lint":
