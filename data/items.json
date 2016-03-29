@@ -1,0 +1,767 @@
+{
+	"item_aegis": {
+		"tab": false,
+		"row": false,
+		"name": "Aegis of the Immortal"
+	},
+	"item_courier": {
+		"tab": 0,
+		"row": 9,
+		"name": "Animal Courier"
+	},
+	"item_boots_of_elves": {
+		"tab": 1,
+		"row": 7,
+		"name": "Band of Elvenskin"
+	},
+	"item_belt_of_strength": {
+		"tab": 1,
+		"row": 6,
+		"name": "Belt of Strength"
+	},
+	"item_blade_of_alacrity": {
+		"tab": 1,
+		"row": 10,
+		"name": "Blade of Alacrity"
+	},
+	"item_blades_of_attack": {
+		"tab": 2,
+		"row": 5,
+		"name": "Blades of Attack"
+	},
+	"item_blink": {
+		"tab": 3,
+		"row": 13,
+		"name": "Blink Dagger"
+	},
+	"item_boots": {
+		"tab": 3,
+		"row": 4,
+		"name": "Boots of Speed"
+	},
+	"item_bottle": {
+		"tab": 0,
+		"row": 13,
+		"name": "Bottle"
+	},
+	"item_broadsword": {
+		"tab": 2,
+		"row": 9,
+		"name": "Broadsword"
+	},
+	"item_chainmail": {
+		"tab": 2,
+		"row": 6,
+		"name": "Chainmail"
+	},
+	"item_cheese": {
+		"tab": false,
+		"row": false,
+		"name": "Cheese"
+	},
+	"item_circlet": {
+		"tab": 1,
+		"row": 5,
+		"name": "Circlet"
+	},
+	"item_clarity": {
+		"tab": 0,
+		"row": 1,
+		"name": "Clarity"
+	},
+	"item_claymore": {
+		"tab": 2,
+		"row": 10,
+		"name": "Claymore"
+	},
+	"item_cloak": {
+		"tab": 3,
+		"row": 6,
+		"name": "Cloak"
+	},
+	"item_demon_edge": {
+		"tab": false,
+		"row": false,
+		"name": "Demon Edge"
+	},
+	"item_dust": {
+		"tab": 0,
+		"row": 8,
+		"name": "Dust of Appearance"
+	},
+	"item_eagle": {
+		"tab": false,
+		"row": false,
+		"name": "Eaglesong"
+	},
+	"item_enchanted_mango": {
+		"tab": 0,
+		"row": 3,
+		"name": "Enchanted Mango"
+	},
+	"item_energy_booster": {
+		"tab": false,
+		"row": false,
+		"name": "Energy Booster"
+	},
+	"item_faerie_fire": {
+		"tab": 0,
+		"row": 2,
+		"name": "Faerie Fire"
+	},
+	"item_flying_courier": {
+		"tab": 0,
+		"row": 10,
+		"name": "Flying Courier"
+	},
+	"item_gauntlets": {
+		"tab": 1,
+		"row": 2,
+		"name": "Gauntlets of Strength"
+	},
+	"item_gem": {
+		"tab": 3,
+		"row": 9,
+		"name": "Gem of True Sight"
+	},
+	"item_ghost": {
+		"tab": 3,
+		"row": 12,
+		"name": "Ghost Scepter"
+	},
+	"item_gloves": {
+		"tab": 3,
+		"row": 5,
+		"name": "Gloves of Haste"
+	},
+	"item_flask": {
+		"tab": 0,
+		"row": 5,
+		"name": "Healing Salve"
+	},
+	"item_helm_of_iron_will": {
+		"tab": 2,
+		"row": 8,
+		"name": "Helm of Iron Will"
+	},
+	"item_hyperstone": {
+		"tab": false,
+		"row": false,
+		"name": "Hyperstone"
+	},
+	"item_branches": {
+		"tab": 1,
+		"row": 1,
+		"name": "Iron Branch"
+	},
+	"item_javelin": {
+		"tab": 2,
+		"row": 11,
+		"name": "Javelin"
+	},
+	"item_magic_stick": {
+		"tab": 3,
+		"row": 1,
+		"name": "Magic Stick"
+	},
+	"item_mantle": {
+		"tab": 1,
+		"row": 4,
+		"name": "Mantle of Intelligence"
+	},
+	"item_mithril_hammer": {
+		"tab": 2,
+		"row": 12,
+		"name": "Mithril Hammer"
+	},
+	"item_lifesteal": {
+		"tab": 3,
+		"row": 10,
+		"name": "Morbid Mask"
+	},
+	"item_mystic_staff": {
+		"tab": false,
+		"row": false,
+		"name": "Mystic Staff"
+	},
+	"item_ward_observer": {
+		"tab": 0,
+		"row": 11,
+		"name": "Observer Ward"
+	},
+	"item_ogre_axe": {
+		"tab": 1,
+		"row": 9,
+		"name": "Ogre Club"
+	},
+	"item_orb_of_venom": {
+		"tab": 2,
+		"row": 4,
+		"name": "Orb of Venom"
+	},
+	"item_platemail": {
+		"tab": false,
+		"row": false,
+		"name": "Platemail"
+	},
+	"item_point_booster": {
+		"tab": false,
+		"row": false,
+		"name": "Point Booster"
+	},
+	"item_quarterstaff": {
+		"tab": 2,
+		"row": 7,
+		"name": "Quarterstaff"
+	},
+	"item_quelling_blade": {
+		"tab": 2,
+		"row": 3,
+		"name": "Quelling Blade"
+	},
+	"item_reaver": {
+		"tab": false,
+		"row": false,
+		"name": "Reaver"
+	},
+	"item_ring_of_health": {
+		"tab": 3,
+		"row": 7,
+		"name": "Ring of Health"
+	},
+	"item_ring_of_protection": {
+		"tab": 2,
+		"row": 1,
+		"name": "Ring of Protection"
+	},
+	"item_ring_of_regen": {
+		"tab": 3,
+		"row": 3,
+		"name": "Ring of Regen"
+	},
+	"item_robe": {
+		"tab": 1,
+		"row": 8,
+		"name": "Robe of the Magi"
+	},
+	"item_relic": {
+		"tab": false,
+		"row": false,
+		"name": "Sacred Relic"
+	},
+	"item_sobi_mask": {
+		"tab": 3,
+		"row": 2,
+		"name": "Sage's Mask"
+	},
+	"item_ward_sentry": {
+		"tab": 0,
+		"row": 12,
+		"name": "Sentry Ward"
+	},
+	"item_shadow_amulet": {
+		"tab": 3,
+		"row": 11,
+		"name": "Shadow Amulet"
+	},
+	"item_slippers": {
+		"tab": 1,
+		"row": 3,
+		"name": "Slippers of Agility"
+	},
+	"item_smoke_of_deceit": {
+		"tab": 0,
+		"row": 6,
+		"name": "Smoke of Deceit"
+	},
+	"item_staff_of_wizardry": {
+		"tab": 1,
+		"row": 11,
+		"name": "Staff of Wizardry"
+	},
+	"item_stout_shield": {
+		"tab": 2,
+		"row": 2,
+		"name": "Stout Shield"
+	},
+	"item_talisman_of_evasion": {
+		"tab": false,
+		"row": false,
+		"name": "Talisman of Evasion"
+	},
+	"item_tango": {
+		"tab": 0,
+		"row": 4,
+		"name": "Tango"
+	},
+	"item_tango_single": {
+		"tab": false,
+		"row": false,
+		"name": "Tango (Shared)"
+	},
+	"item_tpscroll": {
+		"tab": 0,
+		"row": 7,
+		"name": "Town Portal Scroll"
+	},
+	"item_ultimate_orb": {
+		"tab": false,
+		"row": false,
+		"name": "Ultimate Orb"
+	},
+	"item_vitality_booster": {
+		"tab": false,
+		"row": false,
+		"name": "Vitality Booster"
+	},
+	"item_void_stone": {
+		"tab": 3,
+		"row": 8,
+		"name": "Void Stone"
+	},
+	"item_abyssal_blade": {
+		"tab": 7,
+		"row": 13,
+		"name": "Abyssal Blade"
+	},
+	"item_aether_lens": {
+		"tab": 6,
+		"row": 4,
+		"name": "Aether Lens"
+	},
+	"item_ultimate_scepter": {
+		"tab": 6,
+		"row": 11,
+		"name": "Aghanim's Scepter"
+	},
+	"item_arcane_boots": {
+		"tab": 5,
+		"row": 9,
+		"name": "Arcane Boots"
+	},
+	"item_armlet": {
+		"tab": 7,
+		"row": 2,
+		"name": "Armlet of Mordiggian"
+	},
+	"item_assault": {
+		"tab": 8,
+		"row": 12,
+		"name": "Assault Cuirass"
+	},
+	"item_bfury": {
+		"tab": 7,
+		"row": 5,
+		"name": "Battle Fury"
+	},
+	"item_black_king_bar": {
+		"tab": 8,
+		"row": 6,
+		"name": "Black King Bar"
+	},
+	"item_blade_mail": {
+		"tab": 8,
+		"row": 3,
+		"name": "Blade Mail"
+	},
+	"item_bloodstone": {
+		"tab": 8,
+		"row": 10,
+		"name": "Bloodstone"
+	},
+	"item_travel_boots_1": {
+		"tab": 4,
+		"row": 12,
+		"name": "Boots of Travel 1"
+	},
+	"item_travel_boots_2": {
+		"tab": false,
+		"row": false,
+		"name": "Boots of Travel 2"
+	},
+	"item_bracer": {
+		"tab": 4,
+		"row": 5,
+		"name": "Bracer"
+	},
+	"item_buckler": {
+		"tab": 5,
+		"row": 4,
+		"name": "Buckler"
+	},
+	"item_butterfly": {
+		"tab": 7,
+		"row": 11,
+		"name": "Butterfly"
+	},
+	"item_crimson_guard": {
+		"tab": 8,
+		"row": 5,
+		"name": "Crimson Guard"
+	},
+	"item_lesser_crit": {
+		"tab": 7,
+		"row": 1,
+		"name": "Crystalys"
+	},
+	"item_greater_crit": {
+		"tab": 7,
+		"row": 10,
+		"name": "Daedalus"
+	},
+	"item_dagon_1": {
+		"tab": 6,
+		"row": 6,
+		"name": "Dagon 1"
+	},
+	"item_dagon_2": {
+		"tab": false,
+		"row": false,
+		"name": "Dagon 2"
+	},
+	"item_dagon_3": {
+		"tab": false,
+		"row": false,
+		"name": "Dagon 3"
+	},
+	"item_dagon_4": {
+		"tab": false,
+		"row": false,
+		"name": "Dagon 4"
+	},
+	"item_dagon_5": {
+		"tab": false,
+		"row": false,
+		"name": "Dagon 5"
+	},
+	"item_desolator": {
+		"tab": 9,
+		"row": 8,
+		"name": "Desolator"
+	},
+	"item_diffusal_blade_1": {
+		"tab": 9,
+		"row": 7,
+		"name": "Diffusal Blade 1"
+	},
+	"item_diffusal_blade_2": {
+		"tab": false,
+		"row": false,
+		"name": "Diffusal Blade 2"
+	},
+	"item_dragon_lance": {
+		"tab": 9,
+		"row": 3,
+		"name": "Dragon Lance"
+	},
+	"item_ancient_janggo": {
+		"tab": 5,
+		"row": 10,
+		"name": "Drum of Endurance"
+	},
+	"item_ethereal_blade": {
+		"tab": 7,
+		"row": 6,
+		"name": "Ethereal Blade"
+	},
+	"item_cyclone": {
+		"tab": 6,
+		"row": 7,
+		"name": "Eul's Scepter of Divinity"
+	},
+	"item_skadi": {
+		"tab": 9,
+		"row": 11,
+		"name": "Eye of Skadi"
+	},
+	"item_force_staff": {
+		"tab": 6,
+		"row": 2,
+		"name": "Force Staff"
+	},
+	"item_glimmer_cape": {
+		"tab": 6,
+		"row": 1,
+		"name": "Glimmer Cape"
+	},
+	"item_guardian_greaves": {
+		"tab": 5,
+		"row": 14,
+		"name": "Guardian Greaves"
+	},
+	"item_hand_of_midas": {
+		"tab": 4,
+		"row": 11,
+		"name": "Hand of Midas"
+	},
+	"item_headdress": {
+		"tab": 5,
+		"row": 3,
+		"name": "Headdress"
+	},
+	"item_heart": {
+		"tab": 8,
+		"row": 13,
+		"name": "Heart of Tarrasque"
+	},
+	"item_heavens_halberd": {
+		"tab": 9,
+		"row": 9,
+		"name": "Heaven's Halberd"
+	},
+	"item_helm_of_the_dominator": {
+		"tab": 9,
+		"row": 2,
+		"name": "Helm of the Dominator"
+	},
+	"item_hood_of_defiance": {
+		"tab": 8,
+		"row": 1,
+		"name": "Hood of Defiance"
+	},
+	"item_iron_talon": {
+		"tab": 5,
+		"row": 2,
+		"name": "Iron Talon"
+	},
+	"item_sphere": {
+		"tab": 8,
+		"row": 11,
+		"name": "Linken's Sphere"
+	},
+	"item_lotus_orb": {
+		"tab": 8,
+		"row": 7,
+		"name": "Lotus Orb"
+	},
+	"item_maelstrom": {
+		"tab": 9,
+		"row": 6,
+		"name": "Maelstrom"
+	},
+	"item_magic_wand": {
+		"tab": 4,
+		"row": 1,
+		"name": "Magic Wand"
+	},
+	"item_manta": {
+		"tab": 8,
+		"row": 11,
+		"name": "Manta Style"
+	},
+	"item_mask_of_madness": {
+		"tab": 9,
+		"row": 1,
+		"name": "Mask of Madness"
+	},
+	"item_medallion_of_courage": {
+		"tab": 5,
+		"row": 8,
+		"name": "Medallion of Courage"
+	},
+	"item_mekansm": {
+		"tab": 5,
+		"row": 11,
+		"name": "Mekansm"
+	},
+	"item_mjollnir": {
+		"tab": 9,
+		"row": 12,
+		"name": "Mjollnir"
+	},
+	"item_monkey_king_bar": {
+		"tab": 7,
+		"row": 9,
+		"name": "Monkey King Bar"
+	},
+	"item_moon_shard": {
+		"tab": 4,
+		"row": 13,
+		"name": "Moon Shard"
+	},
+	"item_necronomicon_1": {
+		"tab": 6,
+		"row": 5,
+		"name": "Necronomicon 1"
+	},
+	"item_necronomicon_2": {
+		"tab": false,
+		"row": false,
+		"name": "Necronomicon 2"
+	},
+	"item_necronomicon_3": {
+		"tab": false,
+		"row": false,
+		"name": "Necronomicon 3"
+	},
+	"item_null_talisman": {
+		"tab": 4,
+		"row": 2,
+		"name": "Null Talisman"
+	},
+	"item_oblivion_staff": {
+		"tab": 4,
+		"row": 9,
+		"name": "Oblivion Staff"
+	},
+	"item_ward_dispenser": {
+		"tab": false,
+		"row": false,
+		"name": "Observer and Sentry Wards"
+	},
+	"item_octarine_core": {
+		"tab": 6,
+		"row": 14,
+		"name": "Octarine Core"
+	},
+	"item_orchid": {
+		"tab": 6,
+		"row": 10,
+		"name": "Orchid Malevolence"
+	},
+	"item_pers": {
+		"tab": 4,
+		"row": 10,
+		"name": "Perseverance"
+	},
+	"item_phase_boots": {
+		"tab": 4,
+		"row": 7,
+		"name": "Phase Boots"
+	},
+	"item_pipe": {
+		"tab": 5,
+		"row": 13,
+		"name": "Pipe of Insight"
+	},
+	"item_poor_mans_shield": {
+		"tab": 4,
+		"row": 4,
+		"name": "Poor Man's Shield"
+	},
+	"item_power_treads": {
+		"tab": 4,
+		"row": 8,
+		"name": "Power Treads"
+	},
+	"item_radiance": {
+		"tab": 7,
+		"row": 8,
+		"name": "Radiance"
+	},
+	"item_rapier": {
+		"tab": 7,
+		"row": 12,
+		"name": "Divine Rapier"
+	},
+	"item_refresher": {
+		"tab": 6,
+		"row": 12,
+		"name": "Refresher Orb"
+	},
+	"item_ring_of_aquila": {
+		"tab": 5,
+		"row": 7,
+		"name": "Ring of Aquila"
+	},
+	"item_ring_of_basilius": {
+		"tab": 5,
+		"row": 1,
+		"name": "Ring of Basilius"
+	},
+	"item_rod_of_atos": {
+		"tab": 6,
+		"row": 9,
+		"name": "Rod of Atos"
+	},
+	"item_sange": {
+		"tab": 9,
+		"row": 4,
+		"name": "Sange"
+	},
+	"item_sange_and_yasha": {
+		"tab": 9,
+		"row": 10,
+		"name": "Sange and Yasha"
+	},
+	"item_satanic": {
+		"tab": 9,
+		"row": 13,
+		"name": "Satanic"
+	},
+	"item_sheepstick": {
+		"tab": 6,
+		"row": 13,
+		"name": "Scythe of Vyse"
+	},
+	"item_invis_sword": {
+		"tab": 7,
+		"row": 3,
+		"name": "Shadow Blade"
+	},
+	"item_shivas_guard": {
+		"tab": 8,
+		"row": 9,
+		"name": "Shiva's Guard"
+	},
+	"item_silver_edge": {
+		"tab": 7,
+		"row": 7,
+		"name": "Silver Edge"
+	},
+	"item_basher": {
+		"tab": 7,
+		"row": 4,
+		"name": "Skull Basher"
+	},
+	"item_solar_crest": {
+		"tab": 6,
+		"row": 8,
+		"name": "Solar Crest"
+	},
+	"item_soul_booster": {
+		"tab": 8,
+		"row": 4,
+		"name": "Soul Booster"
+	},
+	"item_soul_ring": {
+		"tab": 4,
+		"row": 6,
+		"name": "Soul Ring"
+	},
+	"item_tranquil_boots": {
+		"tab": 5,
+		"row": 6,
+		"name": "Tranquil Boots"
+	},
+	"item_urn_of_shadows": {
+		"tab": 5,
+		"row": 5,
+		"name": "Urn of Shadows"
+	},
+	"item_vanguard": {
+		"tab": 8,
+		"row": 2,
+		"name": "Vanguard"
+	},
+	"item_veil_of_discord": {
+		"tab": 6,
+		"row": 3,
+		"name": "Veil of Discord"
+	},
+	"item_vladmir": {
+		"tab": 5,
+		"row": 12,
+		"name": "Vladmir's Offering"
+	},
+	"item_wraith_band": {
+		"tab": 4,
+		"row": 3,
+		"name": "Wraith Band"
+	},
+	"item_yasha": {
+		"tab": 9,
+		"row": 5,
+		"name": "Yasha"
+	}
+}

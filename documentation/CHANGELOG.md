@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.7.0 (2016.03.29-15.00)
+- added ability to `buy` items
+- added new settings
+	- `smartMultiUnitCast`
+	- `smartDoubleTap`
+- added sound
+	- `barn_door_open`
+- update `crimsonvspurple-blackwidow.json` preset
+
 ## 1.6.7 (2016.03.28-22.44)
 - fixed load indicator sounds
 
