@@ -625,5 +625,7 @@
 			"inputButtonCodeIsScanCode": false
 		}
 	},
-	"version": "1.6.5"
+	"version": "1.7.1",
+	"title": "BlackWidow Ultimate by crimsonvspurple",
+	"description": "This preset is specially designed for __BlackWidow Ultimate__ keyboards. However, any keyboards with (or without) extra keys on the right should work just fine.\n\n### This preset uses 3 layouts.\n1. `Normal` for Quick Casts\n2. `Space` for Smart Casts\n3. `M4` / Single Quote [ `'` ] for Normal Casts\n\n#### Self Cast?\nFor self cast, use `ALT` + `Ability`/`Item` (aka Smart Double Tap)\n\n### Notable Binds\n* `M1` / `[` - Shop\n* `M2` / `]` - Taunt\n* `M3` / `;` - Action Item\n* `M4` / Single Quote [ `'` ] - Layout 3\n* `M5` / Comma [ `,` ] - Mic\n* `Space + M5` - Toggle Mic (Party > Team > Off)\n\n\n### All 3 layouts have different Chat-Wheels.\n* `ScrollLock` - Chat-Wheel 1 (Positioning)\n* `Space + ScrollLock` - Chat-Wheel 2 (Support)\n* `M4 + ScrollLock` - Chat-Wheel 3 (Fluff)\n\n\n### All cycles/toggles have sound/texts for notifications.\n* `F5` - Auto Summon Selection Toggle\n* `F6` - Right Click Repeat Toggle\n* `J` - HP Market Cycle\n\n\n### Why some binds are duplicated?\nM1-M5 functionalities are duplicated. This is because original __Blackwidow Keyboards (2012)__ can not map M1-M5 to F13-F17.\n\n#### To use this layout with those keyboards, go to Synapse and configure:\n\n* `M1` > `[`\n* `M2` > `]`\n* `M3` > `;`\n* `M4` > `'`\n* `M5` > `,`\n\n__Additionally, you can configure `M1` to a macro which presses `[ -> v`__\n\nThis will open the `shop` and highlight `Search Box` so you can directly type.\n\nHope you enjoy this preset.\n\n-- crimsonvspurple"
 }
