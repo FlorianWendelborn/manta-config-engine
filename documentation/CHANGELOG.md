@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.1 (2016.03.30-01.52)
+- added `author` field to preset
+
 ## 1.8.0 (2016.03.30-01.30)
 - added extensions (chatwheels, cycles, layouts)
 - update `crimsonvspurple-blackwidow.json` preset

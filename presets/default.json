@@ -132,7 +132,11 @@
 			"inputButtonCodeIsScanCode": true
 		}
 	},
+	"author": {
+		"name": "dodekeract",
+		"link": "https://github.com/dodekeract"
+	},
 	"title": "Default Preset",
 	"description": "Reset Manta to its initial layout.",
-	"version": "1.7.1"
+	"version": "1.8.1"
 }

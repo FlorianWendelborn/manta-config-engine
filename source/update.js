@@ -58,6 +58,15 @@ var patcher = new verjson.Patcher({
 				'title': 'No Title Entered',
 				'description': 'No Description Entered'
 			}
+		}],
+		'1.8.1': [{
+			type: 'create',
+			keys: {
+				'author': {
+					'name': 'unknown',
+					'link': ''
+				}
+			}
 		}]
 	}
 });
