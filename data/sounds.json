@@ -3,8 +3,7 @@
 		"name": "barn_door_open",
 		"path": "sounds/ui/ui_barn_door_open_01.vsnd",
 		"show": true
-	},
-	{
+	}, {
 		"name": "buttonrollover",
 		"path": "sounds/ui/buttonrollover.vsnd",
 		"show": true

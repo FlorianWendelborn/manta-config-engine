@@ -608,8 +608,8 @@
 			"minimapProximityScaleMinimum": "300",
 			"autoSelectSummonedUnits": false,
 			"minimapBackground": true,
-            "smartMultiunitCast": true,
-            "smartDoubleTap": true
+			"smartMultiunitCast": true,
+			"smartDoubleTap": true
 		},
 		"performance": {
 			"altTabIdle": true,
