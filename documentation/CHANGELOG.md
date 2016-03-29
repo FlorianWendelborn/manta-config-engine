@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.7.3 (2016.03.29-20.20)
+- fixed console not showing up [#8](https://github.com/dodekeract/manta-config-engine/issues/8)
+
+## 1.7.2 (2016.03.29-19.42)
+- added option to force `CRLF` [#9](https://github.com/dodekeract/manta-config-engine/issues/9)
+
+## 1.7.1 (2016.03.29-17.10)
+- added `title` and `description` to the presets
+- new preset version to include `title` and `description` fields
+
+## 1.7.0 (2016.03.29-15.00)
+- added ability to `buy` items
+- added new settings
+	- `smartMultiUnitCast`
+	- `smartDoubleTap`
+- added sound
+	- `barn_door_open`
+- update `crimsonvspurple-blackwidow.json` preset
+
 ## 1.6.7 (2016.03.28-22.44)
 - fixed load indicator sounds
 

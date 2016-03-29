@@ -53,6 +53,9 @@ DependencyParser.prototype.parse = function () {
 					break;
 				}
 			break;
+			case "console":
+				this.codement.addLine('con_enable 1', 'Allow Console To Be Opened');
+			break;
 			case "cycle":
 				var cycle = this.cycles[dep[1]];
 				this.append(this.codement.render());

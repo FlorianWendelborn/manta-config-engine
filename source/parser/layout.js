@@ -101,6 +101,10 @@ Layout.prototype.bindKey = function (key, originalOptions) {
 				case 'sticky':
 					command = 'dota_purchase_stickybuy';
 				break;
+				default:
+					var tab = manta.data.items[options[1]].tab;
+					var row = manta.data.items[options[1]].row;
+					command = multi('dota_shop_force_hotkeys 1', 'toggleshoppanel', 'shop_nav_to_tab ' + tab, 'shop_select_itemrow ' + row, 'toggleshoppanel', 'dota_shop_force_hotkeys 0');
 			}
 		break;
 
@@ -230,6 +234,7 @@ Layout.prototype.bindKey = function (key, originalOptions) {
 			switch (options[1]) {
 				case 'console':
 					command = 'toggleconsole';
+					this.depend(['console']);
 				break;
 				case 'chat':
 					command = 'say';

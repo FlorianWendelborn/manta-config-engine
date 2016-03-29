@@ -132,5 +132,7 @@
 			"inputButtonCodeIsScanCode": true
 		}
 	},
-	"version": "1.6.5"
+	"title": "Default Preset",
+	"description": "Reset Manta to its initial layout.",
+	"version": "1.7.1"
 }

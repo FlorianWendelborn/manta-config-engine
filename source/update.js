@@ -51,6 +51,13 @@ var patcher = new verjson.Patcher({
 				preset.settings.engine.loadIndicator = 'sounds/' + preset.settings.engine.loadIndicator;
 				return preset;
 			}
+		}],
+		'1.7.1': [{
+			type: 'create',
+			keys: {
+				'title': 'No Title Entered',
+				'description': 'No Description Entered'
+			}
 		}]
 	}
 });

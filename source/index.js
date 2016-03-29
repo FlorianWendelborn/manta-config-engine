@@ -6,7 +6,8 @@ module.exports.data = {
 	settings: require('../data/settings.json'),
 	constants: require('../data/constants.json'),
 	emoticons: require('../data/emoticons.json'),
-	sounds: require('../data/sounds.json')
+	sounds: require('../data/sounds.json'),
+	items: require('../data/items.json')
 };
 module.exports.compile = require('./compile');
 module.exports.utils = require('./utils');
