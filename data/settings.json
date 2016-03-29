@@ -24,6 +24,18 @@
 			"info": "Holding CTRL will allow you to issue orders to all controlled units.",
 			"commands": ["b:dota_player_multipler_orders"]
 		},
+		"smartMultiUnitCast": {
+			"type": "boolean",
+			"label": "Smart Multi-Unit Cast",
+			"info": "In a selection group of similar units, spell will be cast by another unit if the primary unit's spell is in cooldown.",
+			"commands": ["b:dota_player_smart_multiunit_cast"]
+		},
+		"smartDoubleTap": {
+			"type": "boolean",
+			"label": "Smart Double Tap",
+			"info": "ALT+ability/item will self-cast when applicable.",
+			"commands": ["b:dota_smart_doubletap"]
+		},
 		"autoRepeatRightMouse": {
 			"type": "boolean",
 			"label": "Auto-Repeat Right Mouse",

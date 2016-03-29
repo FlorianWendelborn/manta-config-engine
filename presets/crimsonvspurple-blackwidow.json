@@ -322,47 +322,47 @@
 				],
 				"Q": [
 					"ability",
-					"self",
+					"smart",
 					0
 				],
 				"W": [
 					"ability",
-					"self",
+					"smart",
 					1
 				],
 				"E": [
 					"ability",
-					"self",
+					"smart",
 					2
 				],
 				"D": [
 					"ability",
-					"self",
+					"smart",
 					3
 				],
 				"F": [
 					"ability",
-					"self",
+					"smart",
 					4
 				],
 				"R": [
 					"ability",
-					"self",
+					"smart",
 					5
 				],
 				"X": [
 					"item",
-					"self",
+					"smart",
 					1
 				],
 				"C": [
 					"item",
-					"self",
+					"smart",
 					2
 				],
 				"V": [
 					"item",
-					"self",
+					"smart",
 					5
 				],
 				"A": [
@@ -373,7 +373,7 @@
 				],
 				"Z": [
 					"item",
-					"self",
+					"smart",
 					0
 				],
 				"`": [
@@ -391,7 +391,7 @@
 				],
 				"G": [
 					"item",
-					"self",
+					"smart",
 					4
 				],
 				"SCROLLLOCK": [
@@ -412,7 +412,7 @@
 				],
 				"MOUSE4": [
 					"item",
-					"self",
+					"smart",
 					3
 				],
 				",": [
@@ -429,57 +429,57 @@
 				],
 				"Z": [
 					"item",
-					"smart",
+					"normal",
 					0
 				],
 				"X": [
 					"item",
-					"smart",
+					"normal",
 					1
 				],
 				"C": [
 					"item",
-					"smart",
+					"normal",
 					2
 				],
 				"V": [
 					"item",
-					"smart",
+					"normal",
 					5
 				],
 				"G": [
 					"item",
-					"smart",
+					"normal",
 					4
 				],
 				"Q": [
 					"ability",
-					"smart",
+					"normal",
 					0
 				],
 				"W": [
 					"ability",
-					"smart",
+					"normal",
 					1
 				],
 				"E": [
 					"ability",
-					"smart",
+					"normal",
 					2
 				],
 				"R": [
 					"ability",
-					"smart",
+					"normal",
 					5
 				],
 				"D": [
 					"ability",
-					"smart",
+					"normal",
 					3
 				],
 				"F": [
 					"ability",
-					"smart",
+					"normal",
 					4
 				],
 				"F16": [
@@ -496,7 +496,7 @@
 				],
 				"MOUSE4": [
 					"item",
-					"smart",
+					"normal",
 					3
 				],
 				"'": [
@@ -607,13 +607,14 @@
 			"minimapProximityScaleDistance": 20,
 			"minimapProximityScaleMinimum": "300",
 			"autoSelectSummonedUnits": false,
-			"minimapBackground": true
+			"minimapBackground": true,
+			"smartMultiUnitCast": true,
+			"smartDoubleTap": true
 		},
 		"performance": {
 			"altTabIdle": true,
 			"serverForcePreload": true,
 			"clientForcePreload": true,
-			"multiCore": false,
 			"screenShake": false
 		},
 		"engine": {
