@@ -1,6 +1,16 @@
 var manta = require('./');
 
-module.exports = function (preset, callback) {
+module.exports = function () {
+	var preset, callback, compileOptions;
+	if (arguments.length === 2) {
+		preset = arguments[0];
+		callback = arguments[1];
+	} else {
+		preset = arguments[0];
+		compileOptions = arguments[1];
+		callback = arguments[2];
+	}
+
 	// initialize variables
 	var result = {};
 	var autoexec = manta.data.constants.initialText;
@@ -107,6 +117,13 @@ module.exports = function (preset, callback) {
 	// merge multiple empty lines to one
 	autoexec = autoexec.replace(/\n{3,}/g, '\n\n');
 	result['autoexec.cfg'] = autoexec;
+
+	// apply CRLF
+	if (compileOptions && compileOptions.CRLF) {
+		for (var i in result) {
+			result[i] = result[i].replace(/\n/g, '\r\n');
+		}
+	}
 
 	setTimeout(function () {
 		callback(null, result);

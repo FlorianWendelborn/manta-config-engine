@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.7.2 (2016.03.29-19.42)
+- added option to force `CRLF` [#9](https://github.com/dodekeract/manta-config-engine/issues/9)
+
 ## 1.7.1 (2016.03.29-17.10)
 - added `title` and `description` to the presets
 - new preset version to include `title` and `description` fields
