@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.8.2 (2016.03.30-03.19)
+- changed preset format to use a lower-case-only `keyboardLayout` setting
+
+## 1.8.1 (2016.03.30-01.52)
+- added `author` field to preset
+
+## 1.8.0 (2016.03.30-01.30)
+- added extensions (chatwheels, cycles, layouts)
+- update `crimsonvspurple-blackwidow.json` preset
+
 ## 1.7.3 (2016.03.29-20.20)
 - fixed console not showing up [#8](https://github.com/dodekeract/manta-config-engine/issues/8)
 

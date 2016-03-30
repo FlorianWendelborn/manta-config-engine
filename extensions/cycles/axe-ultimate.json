@@ -1,6 +1,6 @@
 {
 	"title": "Axe Ultimate HP Cycle",
-	"description": "Toggles the HP bar separators to fit the damage threshold of *Culling Blade*\nThis allows you to **easily dunk enemies**.",
+	"description": "Toggles the HP bar separators to fit the damage threshold of *Culling Blade*.\nThis allows you to **easily dunk enemies**.",
 	"actions": [
 		["health", 250],
 		["health", 325],

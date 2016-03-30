@@ -164,11 +164,15 @@
 			"loadIndicator": "sounds/ui/coins_big.vsnd_c",
 			"loadIndicatorType": "sound",
 			"altKey": "ALT",
-			"keyboardLayout": "en-US",
+			"keyboardLayout": "en-us",
 			"inputButtonCodeIsScanCode": true
 		}
 	},
+	"author": {
+		"name": "dodekeract",
+		"link": "https://github.com/dodekeract"
+	},
 	"title": "Dodekeract's Config",
 	"description": "Dodekeract's personal config.",
-	"version": "1.7.1"
+	"version": "1.8.2"
 }

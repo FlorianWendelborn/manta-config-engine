@@ -13,11 +13,15 @@
 			"loadIndicator": "sounds/ui/coins_big.vsnd_c",
 			"loadIndicatorType": "sound",
 			"altKey": "ALT",
-			"keyboardLayout": "en-US",
+			"keyboardLayout": "en-us",
 			"inputButtonCodeIsScanCode": true
 		}
 	},
+	"author": {
+		"name": "dodekeract",
+		"link": "https://github.com/dodekeract"
+	},
 	"title": "Blank Preset",
 	"description": "Completely Blank Layout, useful to start your own config.",
-	"version": "1.7.1"
+	"version": "1.8.2"
 }

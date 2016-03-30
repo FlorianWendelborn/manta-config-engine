@@ -128,11 +128,15 @@
 			"loadIndicator": "sounds/ui/coins_big.vsnd_c",
 			"loadIndicatorType": "sound",
 			"altKey": "ALT",
-			"keyboardLayout": "en-US",
+			"keyboardLayout": "en-us",
 			"inputButtonCodeIsScanCode": true
 		}
 	},
+	"author": {
+		"name": "dodekeract",
+		"link": "https://github.com/dodekeract"
+	},
 	"title": "Default Preset",
 	"description": "Reset Manta to its initial layout.",
-	"version": "1.7.1"
+	"version": "1.8.2"
 }
