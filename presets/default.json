@@ -128,7 +128,7 @@
 			"loadIndicator": "sounds/ui/coins_big.vsnd_c",
 			"loadIndicatorType": "sound",
 			"altKey": "ALT",
-			"keyboardLayout": "en-US",
+			"keyboardLayout": "en-us",
 			"inputButtonCodeIsScanCode": true
 		}
 	},
@@ -138,5 +138,5 @@
 	},
 	"title": "Default Preset",
 	"description": "Reset Manta to its initial layout.",
-	"version": "1.8.1"
+	"version": "1.8.2"
 }

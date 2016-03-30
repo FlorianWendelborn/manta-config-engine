@@ -13,7 +13,7 @@
 			"loadIndicator": "sounds/ui/coins_big.vsnd_c",
 			"loadIndicatorType": "sound",
 			"altKey": "ALT",
-			"keyboardLayout": "en-US",
+			"keyboardLayout": "en-us",
 			"inputButtonCodeIsScanCode": true
 		}
 	},
@@ -23,5 +23,5 @@
 	},
 	"title": "Blank Preset",
 	"description": "Completely Blank Layout, useful to start your own config.",
-	"version": "1.8.1"
+	"version": "1.8.2"
 }

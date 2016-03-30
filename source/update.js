@@ -67,6 +67,13 @@ var patcher = new verjson.Patcher({
 					'link': ''
 				}
 			}
+		}],
+		'1.8.2': [{
+			type: 'custom',
+			run: function (preset) {
+				preset.settings.engine.keyboardLayout = preset.settings.engine.keyboardLayout.toLowerCase();
+				return preset;
+			}
 		}]
 	}
 });
