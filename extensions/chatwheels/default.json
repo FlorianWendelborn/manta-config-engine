@@ -1,0 +1,6 @@
+{
+	"title": "Default Dota 2 Chatwheel",
+	"description": "Just the default Dota 2 Chatwheel.",
+	"phrases": [8, 1, 2, 3, 4, 5, 6, 7],
+	"version": "1.8.0"
+}

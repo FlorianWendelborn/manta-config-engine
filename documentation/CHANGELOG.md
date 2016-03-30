@@ -1,5 +1,12 @@
 # Changelog
 
+All dates are in Central European Standard Time (GMT+1).
+
+## 1.8.3 (2016.03.31-00.32)
+- renamed chatwheel extensions
+- added Dota 2's default chatwheel extension
+- update `crimsonvspurple-blackwidow.json` preset
+
 ## 1.8.2 (2016.03.30-03.19)
 - changed preset format to use a lower-case-only `keyboardLayout` setting
 
