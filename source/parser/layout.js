@@ -201,6 +201,12 @@ Layout.prototype.bindKey = function (key, originalOptions) {
 					this.depend(options);
 				break;
 
+				case 'self':
+					this.depend(['enable-selfcast']);
+					command = name(options);
+					this.depend(options);
+				break;
+
 				case 'taunt':
 					command = 'use_item_client current_hero taunt';
 				break;

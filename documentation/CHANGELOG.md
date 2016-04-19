@@ -2,6 +2,9 @@
 
 All dates are in Central European Standard Time (GMT+1).
 
+## 1.8.5 (2016.04.19-19.48)
+- fixed item SelfCast not depending on `enable-selfcast`
+
 ## 1.8.4 (2016.04.19-18.48)
 - fixed item SmartCast
 
