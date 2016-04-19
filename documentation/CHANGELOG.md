@@ -2,6 +2,9 @@
 
 All dates are in Central European Standard Time (GMT+1).
 
+## 1.8.4 (2016.04.19-18.48)
+- fixed item SmartCast
+
 ## 1.8.3 (2016.03.31-00.32)
 - renamed chatwheel extensions
 - added Dota 2's default chatwheel extension

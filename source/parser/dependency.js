@@ -102,7 +102,7 @@ DependencyParser.prototype.parse = function () {
 						this.codement.addLine(alias(name(dep), multi('dota_item_execute ' + dep[2], 'dota_item_execute ' + dep[2])), 'Self-Cast Item ' + oneMore(dep[2]));
 					break;
 					case "smart":
-						this.codement.addLine(alias('+' + name(dep), multi(name(dep[0], 'normal', dep[2]), alias('-' + name(dep), name(dep[0], 'normal', dep[2])))), 'Smart-Cast Item ' + oneMore(dep[2]));
+						this.codement.addLine(alias('+' + name(dep), name(dep[0], 'normal', dep[2])), 'Smart-Cast Item ' + oneMore(dep[2]));
 						this.codement.addLine(alias('-' + name(dep), name(dep[0], 'quick', dep[2])), 'Smart-Cast Item ' + oneMore(dep[2]));
 					break;
 				}

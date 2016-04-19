@@ -12,7 +12,8 @@ var patcher = new verjson.Patcher({
 					'settings.performance': {},
 					'settings.engine': {},
 					'settings.engine.altKey': 'ALT',
-					'settings.engine.keyboardLayout': 'en-US'
+					'settings.engine.keyboardLayout': 'en-US',
+					'settings.engine.loadIndicator': ['sound', 'ui/coins_big.vsnd_c']
 				}
 			}, {
 				type: 'add-to-array',
