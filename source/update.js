@@ -75,6 +75,22 @@ var patcher = new verjson.Patcher({
 				preset.settings.engine.keyboardLayout = preset.settings.engine.keyboardLayout.toLowerCase();
 				return preset;
 			}
+		}],
+		'1.9.0': [{
+			type: 'custom',
+			run: function (preset) {
+				for (var i = 0; i < preset.layouts.length; i++) {
+					for (var j in preset.layouts[i].keybinds) {
+						if (preset.layouts[i].keybinds[j][1] === 'controlgroup') {
+							preset.layouts[i].keybinds[j][1] = 'control-group';
+						}
+						if (preset.layouts[i].keybinds[j][0] === 'select') {
+							preset.layouts[i].keybinds[j].splice(1, 0, 'normal');
+						}
+					}
+				}
+				return preset;
+			}
 		}]
 	}
 });

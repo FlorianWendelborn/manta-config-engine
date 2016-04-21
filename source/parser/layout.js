@@ -263,23 +263,47 @@ Layout.prototype.bindKey = function (key, originalOptions) {
 
 		case 'select':
 			switch (options[1]) {
-				case 'hero':
-					command = '+dota_camera_follow';
+				case 'normal':
+					switch (options[2]) {
+						case 'hero':
+							command = '+dota_camera_follow';
+						break;
+						case 'all-units':
+							command = 'dota_select_all';
+						break;
+						case 'other-units':
+							command = 'dota_select_all_others';
+						break;
+						case 'courier':
+							command = 'dota_select_courier';
+						break;
+						case 'control-group':
+							command = single('+dota_control_group', options[3]);
+						break;
+						case 'next-unit':
+							command = 'dota_cycle_selected';
+						break;
+					}
 				break;
-				case 'all-units':
-					command = 'dota_select_all';
+				case 'quick':
+					command = '+' + name(options);
+					this.depend(options);
 				break;
-				case 'other-units':
-					command = 'dota_select_all_others';
+				case 'view':
+					command = name(options);
+					this.depend(options);
 				break;
-				case 'courier':
-					command = 'dota_select_courier';
+				case 'quick-view-hero':
+					command = '+' + name(options);
+					this.depend(options);
 				break;
-				case 'controlgroup':
-					command = single('+dota_control_group', options[2]);
+				case 'quick-view-unit':
+					command = '+' + name(options);
+					this.depend(options);
 				break;
-				case 'next-unit':
-					command = 'dota_cycle_selected';
+				case 'quick-view-both':
+					command = '+' + name(options);
+					this.depend(options);
 				break;
 			}
 		break;

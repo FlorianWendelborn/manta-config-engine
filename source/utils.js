@@ -18,11 +18,15 @@ function name (options) {
 	}
 
 	// ignore nested names, allows nested naming
+	var result;
 	if (args[0].substring(0, prefix.length) === prefix) {
-		return args.join(separator);
+		result = args.join(separator);
 	} else {
-		return prefix + separator + args.join(separator);
+		result = prefix + separator + args.join(separator);
 	}
+
+	// replace - with separator
+	return result.replace(/-/g, separator);
 }
 
 function multi (options) {

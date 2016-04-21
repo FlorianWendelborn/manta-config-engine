@@ -2,6 +2,20 @@
 
 All dates are in Central European Standard Time (GMT+1).
 
+## 1.9.0 (2016.04.21-18.27)
+- added new select methods
+	- normal is the default Dota 2 method
+	- quick selects the desired unit onKeyDown and selects the hero onKeyUp
+	- view selects the unit and centers the camera on it
+	- quick-view-unit selects the unit and shows it onKeyDown and selects the hero onKeyUp
+	- quick-view-hero selects the unit onKeyDown and selects and shows the hero onKeyUp
+	- quick-view-both selects and shows the unit onKeyDown and selects and shows the hero onKeyUp
+- preset changes:
+	- `select, controlgroup` changed to `select, control-group`
+	- `select, *` is now `select, normal, *`
+- improved `utils.name` to replace `-` characters
+- improved `npm run test-update`
+
 ## 1.8.5 (2016.04.19-19.48)
 - fixed item SelfCast not depending on `enable-selfcast`
 

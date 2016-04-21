@@ -53,9 +53,11 @@ DependencyParser.prototype.parse = function () {
 					break;
 				}
 			break;
+
 			case "console":
 				this.codement.addLine('con_enable 1', 'Allow Console To Be Opened');
 			break;
+
 			case "cycle":
 				var cycle = this.cycles[dep[1]];
 				this.append(this.codement.render());
@@ -84,12 +86,15 @@ DependencyParser.prototype.parse = function () {
 				this.append(this.codement.render());
 				this.codement.reset();
 			break;
+
 			case "enable-selfcast":
 				this.codement.addLine('dota_ability_quick_cast 1', 'Enable Self-Cast');
 			break;
+
 			case "include":
 				this.codement.addLine(dep[1]);
 			break;
+
 			case "item":
 				switch (dep[1]) {
 					case "normal":
@@ -107,10 +112,91 @@ DependencyParser.prototype.parse = function () {
 					break;
 				}
 			break;
+
 			case "layout":
 				this.codement.addLine(alias('+' + name(dep), multi(name('unload'), 'exec layout-' + dep[1] + '.cfg')), 'Load Layout ' + oneMore(dep[1]));
 				this.codement.addLine(alias('-' + name(dep), multi(name('unload'), 'exec layout-' + dep[1] + '.cfg')), 'Unload Layout ' + oneMore(dep[1]));
 			break;
+
+			case "select":
+				switch (dep[1]) {
+					case "quick":
+					case "quick-view":
+						switch (dep[2]) {
+							case "all-units":
+								this.codement.addLine(alias('+' + name(dep), 'dota_select_all'), 'select');
+							break;
+							case "control-group":
+								this.codement.addLine(alias('+' + name(dep), single('+dota_control_group', dep[3])), 'select');
+							break;
+							case "courier":
+								this.codement.addLine(alias('+' + name(dep), 'dota_select_courier'), 'select');
+							break;
+							case "other-units":
+								this.codement.addLine(alias('+' + name(dep), 'dota_select_all_others'), 'select');
+							break;
+						}
+						switch (dep[1]) {
+							case "quick":
+								this.codement.addLine(alias('-' + name(dep), '+dota_camera_follow'), 'Deselect');
+							break;
+							case "quick-view-hero":
+								this.codement.addLine(alias('-' + name(dep), multi('+dota_camera_follow', 'dota_camera_center')), 'Deselect and center on hero');
+							break;
+						}
+					break;
+
+					case "quick-view-unit":
+					case "quick-view-both":
+						switch (dep[2]) {
+							case "all-units":
+								this.codement.addLine(alias('+' + name(dep), multi('dota_select_all', 'dota_camera_center')), 'select');
+							break;
+							case "control-group":
+								this.codement.addLine(alias('+' + name(dep), multi('+dota_control_group ' + dep[3], 'dota_camera_center')), 'select');
+							break;
+							case "courier":
+								this.codement.addLine(alias('+' + name(dep), multi('dota_select_courier', 'dota_camera_center')), 'select');
+							break;
+							case "other-units":
+								this.codement.addLine(alias('+' + name(dep), multi('dota_select_all_others', 'dota_camera_center')), 'select');
+							break;
+						}
+						switch (dep[1]) {
+							case "quick-view-unit":
+								this.codement.addLine(alias('-' + name(dep), '+dota_camera_follow'), 'Deselect');
+							break;
+							case "quick-view-both":
+								this.codement.addLine(alias('-' + name(dep), multi('+dota_camera_follow', 'dota_camera_center')), 'Deselect and center on hero');
+							break;
+						}
+					break;
+
+					case "view":
+						switch (dep[2]) {
+							case "all-units":
+								this.codement.addLine(alias(name(dep), multi('dota_select_all', 'dota_camera_center')));
+							break;
+							case "control-group":
+								this.codement.addLine(alias(name(dep), multi('+dota_control_group ' + dep[3], 'dota_camera_center')));
+							break;
+							case "courier":
+								this.codement.addLine(alias(name(dep), multi('dota_select_courier', 'dota_camera_center')));
+							break;
+							case "hero":
+								this.codement.addLine(alias(name(dep), multi('+dota_camera_follow', 'dota_camera_center')));
+							break;
+							case "next-unit":
+								this.codement.addLine(alias(name(dep), multi('dota_cycle_selected', 'dota_camera_center')));
+							break;
+							case "other-units":
+								this.codement.addLine(alias(name(dep), multi('dota_select_all_others', 'dota_camera_center')));
+							break;
+						}
+					break;
+				}
+			break;
+
 			case "view":
 				this.append(this.codement.render());
 				this.codement.reset();

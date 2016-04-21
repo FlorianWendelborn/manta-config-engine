@@ -2,15 +2,15 @@
 	"layouts": [
 		{
 			"keybinds": {
-				"1": ["select", "hero"],
-				"2": ["select", "other-units"],
-				"3": ["select", "controlgroup", 3],
-				"4": ["select", "controlgroup", 4],
-				"5": ["select", "courier"],
-				"6": ["select", "controlgroup", 6],
-				"7": ["select", "controlgroup", 7],
-				"8": ["select", "controlgroup", 8],
-				"9": ["select", "controlgroup", 9],
+				"1": ["select", "normal", "hero"],
+				"2": ["select", "normal", "other-units"],
+				"3": ["select", "normal", "control-group", 3],
+				"4": ["select", "normal", "control-group", 4],
+				"5": ["select", "normal", "courier"],
+				"6": ["select", "normal", "control-group", 6],
+				"7": ["select", "normal", "control-group", 7],
+				"8": ["select", "normal", "control-group", 8],
+				"9": ["select", "normal", "control-group", 9],
 				"Q": ["ability", "quick", 0],
 				"W": ["ability", "quick", 1],
 				"E": ["ability", "quick", 2],
@@ -41,7 +41,7 @@
 				"LEFTARROW": ["camera", "left"],
 				"DOWNARROW": ["camera", "down"],
 				"RIGHTARROW": ["camera", "right"],
-				"TAB": ["select", "next-unit"],
+				"TAB": ["select", "normal", "next-unit"],
 				"`": ["view", "rune", "toggle"],
 				"SPACE": ["layout", 1],
 				"Z": ["chatwheel", 0],
@@ -138,5 +138,5 @@
 	},
 	"title": "Default Preset",
 	"description": "Reset Manta to its initial layout.",
-	"version": "1.8.2"
+	"version": "1.9.0"
 }

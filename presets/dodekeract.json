@@ -33,18 +33,18 @@
 				"F6": ["buy", "sticky"],
 				"F9": ["pause"],
 
-				"1": ["select", "hero"],
-				"2": ["select", "other-units"],
-				"3": ["select", "controlgroup", 3],
-				"4": ["select", "controlgroup", 4],
-				"5": ["select", "courier"],
+				"1": ["select", "normal", "hero"],
+				"2": ["select", "quick", "other-units"],
+				"3": ["select", "quick", "control-group", 3],
+				"4": ["select", "quick", "control-group", 4],
+				"5": ["select", "normal", "courier"],
 
 				"UPARROW": ["camera", "up"],
 				"LEFTARROW": ["camera", "left"],
 				"DOWNARROW": ["camera", "down"],
 				"RIGHTARROW": ["camera", "right"],
 
-				"TAB": ["select", "next-unit"],
+				"TAB": ["layout", 2],
 
 				"`": ["view", "rune", "toggle"],
 
@@ -64,7 +64,7 @@
 				"KP_9": ["phrase", 85],
 				"F11": ["reload"]
 			}
-		},{
+		}, {
 			"keybinds": {
 				"Q": ["ability", "self", 0],
 				"W": ["ability", "self", 1],
@@ -80,20 +80,44 @@
 				"B": ["item", "self", 4],
 				"N": ["item", "self", 5],
 
-				"A": ["patrol"],
-				"S": ["hold"],
+				"A": ["attack"],
+				"S": ["stop"],
 
 				"Z": ["chatwheel", 1],
 
 				"`": ["view", "base", "toggle"],
 
-				"1": ["phrase", 9],
-				"2": ["phrase", 10],
-				"3": ["phrase", 11],
+				"1": ["select", "quick-view-both", "hero"],
+				"2": ["select", "quick-view-both", "other-units"],
+				"3": ["select", "quick-view-both", "control-group", 3],
+				"4": ["select", "quick-view-both", "control-group", 4],
+				"5": ["select", "quick-view-both", "courier"],
 
 				"F3": ["courier", "burst"],
 
 				"SPACE": ["layout", 0]
+			}
+		}, {
+			"keybinds": {
+				"SPACE": ["select", "view", "next-unit"],
+				"TAB": ["layout", 0],
+				"1": ["phrase", 9],
+				"2": ["phrase", 10],
+				"3": ["phrase", 11],
+
+				"Q": ["ability", "normal", 0],
+				"W": ["ability", "normal", 1],
+				"E": ["ability", "normal", 2],
+				"D": ["ability", "normal", 3],
+				"F": ["ability", "normal", 4],
+				"R": ["ability", "normal", 5],
+
+				"T": ["item", "normal", 0],
+				"X": ["item", "normal", 1],
+				"C": ["item", "normal", 2],
+				"V": ["item", "normal", 3],
+				"B": ["item", "normal", 4],
+				"N": ["item", "normal", 5]
 			}
 		}
 	],
@@ -174,5 +198,5 @@
 	},
 	"title": "Dodekeract's Config",
 	"description": "Dodekeract's personal config.",
-	"version": "1.8.2"
+	"version": "1.9.0"
 }
