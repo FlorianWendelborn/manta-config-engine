@@ -33,11 +33,11 @@
 				"F6": ["buy", "sticky"],
 				"F9": ["pause"],
 
-				"1": ["select", "normal", "hero"],
+				"1": ["select", "view", "hero"],
 				"2": ["select", "quick", "other-units"],
 				"3": ["select", "quick", "control-group", 3],
 				"4": ["select", "quick", "control-group", 4],
-				"5": ["select", "normal", "courier"],
+				"5": ["select", "quick-view-both", "courier"],
 
 				"UPARROW": ["camera", "up"],
 				"LEFTARROW": ["camera", "left"],

@@ -2,6 +2,9 @@
 
 All dates are in Central European Standard Time (GMT+1).
 
+## 1.9.1 (2016.04.27-23.30)
+- updated items for 6.87
+
 ## 1.9.0 (2016.04.21-18.27)
 - added new select methods
 	- normal is the default Dota 2 method

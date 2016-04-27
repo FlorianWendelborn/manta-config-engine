@@ -4,6 +4,14 @@
 		"row": false,
 		"name": "Aegis of the Immortal"
 	},
+	"item_blight_stone": {
+		"tab": 2,
+		"row": 5
+	},
+	"item_blood_thorn": {
+		"tab": 7,
+		"row": 14
+	},
 	"item_courier": {
 		"tab": 0,
 		"row": 9,
@@ -26,32 +34,32 @@
 	},
 	"item_blades_of_attack": {
 		"tab": 2,
-		"row": 5,
+		"row": 7,
 		"name": "Blades of Attack"
 	},
 	"item_blink": {
 		"tab": 3,
-		"row": 13,
+		"row": 14,
 		"name": "Blink Dagger"
 	},
 	"item_boots": {
 		"tab": 3,
-		"row": 4,
+		"row": 5,
 		"name": "Boots of Speed"
 	},
 	"item_bottle": {
 		"tab": 0,
-		"row": 13,
+		"row": 14,
 		"name": "Bottle"
 	},
 	"item_broadsword": {
 		"tab": 2,
-		"row": 9,
+		"row": 11,
 		"name": "Broadsword"
 	},
 	"item_chainmail": {
 		"tab": 2,
-		"row": 6,
+		"row": 8,
 		"name": "Chainmail"
 	},
 	"item_cheese": {
@@ -71,12 +79,12 @@
 	},
 	"item_claymore": {
 		"tab": 2,
-		"row": 10,
+		"row": 12,
 		"name": "Claymore"
 	},
 	"item_cloak": {
 		"tab": 3,
-		"row": 6,
+		"row": 7,
 		"name": "Cloak"
 	},
 	"item_demon_edge": {
@@ -93,6 +101,10 @@
 		"tab": false,
 		"row": false,
 		"name": "Eaglesong"
+	},
+	"item_echo_sabre": {
+		"tab": 9,
+		"row": 6
 	},
 	"item_enchanted_mango": {
 		"tab": 0,
@@ -121,17 +133,17 @@
 	},
 	"item_gem": {
 		"tab": 3,
-		"row": 9,
+		"row": 10,
 		"name": "Gem of True Sight"
 	},
 	"item_ghost": {
 		"tab": 3,
-		"row": 12,
+		"row": 13,
 		"name": "Ghost Scepter"
 	},
 	"item_gloves": {
 		"tab": 3,
-		"row": 5,
+		"row": 6,
 		"name": "Gloves of Haste"
 	},
 	"item_flask": {
@@ -141,7 +153,7 @@
 	},
 	"item_helm_of_iron_will": {
 		"tab": 2,
-		"row": 8,
+		"row": 10,
 		"name": "Helm of Iron Will"
 	},
 	"item_hyperstone": {
@@ -156,12 +168,12 @@
 	},
 	"item_javelin": {
 		"tab": 2,
-		"row": 11,
+		"row": 13,
 		"name": "Javelin"
 	},
 	"item_magic_stick": {
 		"tab": 3,
-		"row": 1,
+		"row": 2,
 		"name": "Magic Stick"
 	},
 	"item_mantle": {
@@ -171,12 +183,12 @@
 	},
 	"item_mithril_hammer": {
 		"tab": 2,
-		"row": 12,
+		"row": 14,
 		"name": "Mithril Hammer"
 	},
 	"item_lifesteal": {
 		"tab": 3,
-		"row": 10,
+		"row": 11,
 		"name": "Morbid Mask"
 	},
 	"item_mystic_staff": {
@@ -196,7 +208,7 @@
 	},
 	"item_orb_of_venom": {
 		"tab": 2,
-		"row": 4,
+		"row": 6,
 		"name": "Orb of Venom"
 	},
 	"item_platemail": {
@@ -211,7 +223,7 @@
 	},
 	"item_quarterstaff": {
 		"tab": 2,
-		"row": 7,
+		"row": 9,
 		"name": "Quarterstaff"
 	},
 	"item_quelling_blade": {
@@ -226,7 +238,7 @@
 	},
 	"item_ring_of_health": {
 		"tab": 3,
-		"row": 7,
+		"row": 8,
 		"name": "Ring of Health"
 	},
 	"item_ring_of_protection": {
@@ -236,7 +248,7 @@
 	},
 	"item_ring_of_regen": {
 		"tab": 3,
-		"row": 3,
+		"row": 4,
 		"name": "Ring of Regen"
 	},
 	"item_robe": {
@@ -251,7 +263,7 @@
 	},
 	"item_sobi_mask": {
 		"tab": 3,
-		"row": 2,
+		"row": 3,
 		"name": "Sage's Mask"
 	},
 	"item_ward_sentry": {
@@ -261,7 +273,7 @@
 	},
 	"item_shadow_amulet": {
 		"tab": 3,
-		"row": 11,
+		"row": 12,
 		"name": "Shadow Amulet"
 	},
 	"item_slippers": {
@@ -299,6 +311,10 @@
 		"row": false,
 		"name": "Tango (Shared)"
 	},
+	"item_tome_of_knowledge": {
+		"tab": 0,
+		"row": 13
+	},
 	"item_tpscroll": {
 		"tab": 0,
 		"row": 7,
@@ -316,7 +332,7 @@
 	},
 	"item_void_stone": {
 		"tab": 3,
-		"row": 8,
+		"row": 9,
 		"name": "Void Stone"
 	},
 	"item_abyssal_blade": {
@@ -346,7 +362,7 @@
 	},
 	"item_assault": {
 		"tab": 8,
-		"row": 12,
+		"row": 13,
 		"name": "Assault Cuirass"
 	},
 	"item_bfury": {
@@ -436,12 +452,12 @@
 	},
 	"item_desolator": {
 		"tab": 9,
-		"row": 8,
+		"row": 9,
 		"name": "Desolator"
 	},
 	"item_diffusal_blade_1": {
 		"tab": 9,
-		"row": 7,
+		"row": 8,
 		"name": "Diffusal Blade 1"
 	},
 	"item_diffusal_blade_2": {
@@ -471,7 +487,7 @@
 	},
 	"item_skadi": {
 		"tab": 9,
-		"row": 11,
+		"row": 12,
 		"name": "Eye of Skadi"
 	},
 	"item_force_staff": {
@@ -501,12 +517,12 @@
 	},
 	"item_heart": {
 		"tab": 8,
-		"row": 13,
+		"row": 14,
 		"name": "Heart of Tarrasque"
 	},
 	"item_heavens_halberd": {
 		"tab": 9,
-		"row": 9,
+		"row": 10,
 		"name": "Heaven's Halberd"
 	},
 	"item_helm_of_the_dominator": {
@@ -518,6 +534,10 @@
 		"tab": 8,
 		"row": 1,
 		"name": "Hood of Defiance"
+	},
+	"item_infused_raindrop": {
+		"tab": 2,
+		"row": 4
 	},
 	"item_iron_talon": {
 		"tab": 5,
@@ -536,7 +556,7 @@
 	},
 	"item_maelstrom": {
 		"tab": 9,
-		"row": 6,
+		"row": 7,
 		"name": "Maelstrom"
 	},
 	"item_magic_wand": {
@@ -566,7 +586,7 @@
 	},
 	"item_mjollnir": {
 		"tab": 9,
-		"row": 12,
+		"row": 13,
 		"name": "Mjollnir"
 	},
 	"item_monkey_king_bar": {
@@ -681,12 +701,12 @@
 	},
 	"item_sange_and_yasha": {
 		"tab": 9,
-		"row": 10,
+		"row": 11,
 		"name": "Sange and Yasha"
 	},
 	"item_satanic": {
 		"tab": 9,
-		"row": 13,
+		"row": 14,
 		"name": "Satanic"
 	},
 	"item_sheepstick": {
@@ -753,6 +773,10 @@
 		"tab": 5,
 		"row": 12,
 		"name": "Vladmir's Offering"
+	},
+	"item_wind_lace": {
+		"tab": 3,
+		"row": 1
 	},
 	"item_wraith_band": {
 		"tab": 4,
