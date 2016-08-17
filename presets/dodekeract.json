@@ -62,7 +62,9 @@
 				"KP_7": ["chat", "all", "> That just happened."],
 				"KP_8": ["phrase", 53],
 				"KP_9": ["phrase", 85],
-				"F11": ["reload"]
+				"F11": ["reload"],
+
+				"CAPSLOCK": ["command", "+cameragrip"]
 			}
 		}, {
 			"keybinds": {
@@ -91,7 +93,7 @@
 				"2": ["select", "quick-view-both", "other-units"],
 				"3": ["select", "quick-view-both", "control-group", 3],
 				"4": ["select", "quick-view-both", "control-group", 4],
-				"5": ["select", "quick-view-both", "courier"],
+				"5": ["select", "quick", "courier"],
 
 				"F3": ["courier", "burst"],
 
@@ -117,7 +119,13 @@
 				"C": ["item", "normal", 2],
 				"V": ["item", "normal", 3],
 				"B": ["item", "normal", 4],
-				"N": ["item", "normal", 5]
+				"N": ["item", "normal", 5],
+
+				"1": ["select", "normal", "hero"],
+				"2": ["select", "normal", "other-units"],
+				"3": ["select", "normal", "control-group", 3],
+				"4": ["select", "normal", "control-group", 4],
+				"5": ["select", "normal", "courier"]
 			}
 		}
 	],
